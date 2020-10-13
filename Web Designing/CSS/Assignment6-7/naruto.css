@@ -1,0 +1,77 @@
+#img1{
+	content: url(../../RESOURCES/n.jpg);
+	height: 500px;
+	float: left;
+}
+#img2{
+	content: url(../../RESOURCES/s.jpg);
+	height: 500px;
+	float: right;
+}
+#img3{
+	content: url(../../RESOURCES/k.png);
+	height: 500px;
+	float: left;
+}
+#p1{
+	padding-left: 300px;
+	word-spacing: 10px;
+	font-size: 26px;
+}
+#p2{
+	padding-right: 300px;
+	word-spacing: 5px;
+	font-size: 26px;
+}
+#p3{
+	padding-top: 70px;
+	padding-left: 400px;
+	word-spacing: 10px;
+	font-size: 26px;
+}
+body{
+	background-color: #000000;
+}
+#h1{
+	padding-top: 90px;
+	font-family: OpenDyslexic;
+	letter-spacing: 3px;
+	text-align: left;
+	color: #F48256;
+}
+#h2{
+	font-family: OpenDyslexic;
+	letter-spacing: 3px;
+	text-align: right;
+	color: #BA7BA1;
+}
+#h3{
+	padding-top: 60px;
+	font-family: OpenDyslexic;
+	letter-spacing: 3px;
+	text-align: left;
+	color: #1B7FBD;
+}
+#hr1{
+	overflow: visible;
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+#hr2{
+	display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 0 1px 0; /*top,right,bottom,left*/
+    border-radius: 20px;
+}
+p{
+	font-family: Open Sans Condensed;
+	font-size: 25px;
+	color: #EEEEEE;
+}
