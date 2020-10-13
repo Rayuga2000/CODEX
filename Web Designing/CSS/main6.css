@@ -1,0 +1,52 @@
+body{
+	font-family: Open Sans;
+}
+h1{
+	font-family: Courier New;
+	text-align: center;
+}
+p{
+	font-size: 20px;
+}
+div{
+	background-color: #FCF9EC;
+	width: 450px;
+	float: right;
+	margin-right: 35%;
+	padding: 15px;
+}
+input.c{
+	width: 5%;
+	height: 15px;
+}
+input{
+	width: 98%;
+	vertical-align: center;
+	background-color: #EEEEEE;
+	height: 30px;
+	border: 0px;
+}
+textarea{
+	width: 98%;
+	background-color: #EEEEEE;
+	border: 0px;
+}
+select{
+	width: 98%;
+	height: 30px;
+	background-color: #EEEEEE;
+	border: 0px;
+}
+#submit{
+	background-color: #00BD56;
+	padding: 2px;
+	border: 0px;
+	font-family: Source Code Pro Black;
+	font-size: 25px;
+	color: white;
+	height: 50px;
+}
+lebel{
+	vertical-align: left;	
+}
+
