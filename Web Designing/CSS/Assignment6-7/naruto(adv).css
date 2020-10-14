@@ -89,24 +89,6 @@ body{
 	text-align: left;
 	color: #1B7FBD;
 }
-#hr1{
-	overflow: visible;
-    height: 30px;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
-}
-#hr2{
-	display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: white;
-    border-width: 0 0 1px 0; /*top,right,bottom,left*/
-    border-radius: 20px;
-}
 p{
 	font-family: Open Sans Condensed;
 	font-size: 25px;
