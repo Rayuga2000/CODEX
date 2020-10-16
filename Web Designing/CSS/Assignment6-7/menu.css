@@ -1,0 +1,56 @@
+body,.wrapper{
+    background-color: #2EC4B6;
+}
+.wrapper{
+    width: 100%;
+    height: auto;
+    min-width: 1080px;
+    display: flex;
+}
+.card{
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    font-family: Manjari Bold;
+    border-radius: 20px;
+    width: 17%;
+    height: auto;
+    padding: auto;
+    box-shadow: 2.5px 2.5px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+p{
+    font-family: Gochi Hand;
+    color: #EA5455;
+    text-align: left;
+    padding: 5%;
+    margin-top: 5px;
+    margin-bottom: -40px;
+    font-size: 25px;
+}
+hr{
+    border: thin solid black;
+}
+h1{
+    font-family: Open Sans Extrabold;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+td.item{
+    font-size: 20px;
+    text-align: left;
+    font-family: Open Sans Condensed;
+    color: #00BD56;
+}
+td.price{
+    font-size: 20px;
+    text-align: right;
+    font-family: Balsamiq Sans;
+    color: #EA5455;
+}

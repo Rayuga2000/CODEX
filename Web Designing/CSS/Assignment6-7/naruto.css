@@ -3,27 +3,38 @@
     padding: 0px;
 }
 body{
-	background-color: #393e46;
 }
-
+.text h1{
+    text-align: right;
+    font-family: Balsamiq Sans;
+    color: #ff9a00;
+    padding: 1%;
+}
 .wrapper{
-	padding-top: 250px;
     display: flex;
-    padding: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
     align-items: center;
     align-content: center;
-	margin: auto;
+    margin: auto;
+    background-color: #393e46;
+    width: 100%;
+    height: auto;
+    min-width: 1920px;
 }
 .naruto{
 	text-justify: auto;
 	background-color: white;
     border-radius: 20px;
     margin: auto;
-    height: 90%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 9%;
-    padding: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: auto;
+    padding: 1.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
     transition: 0.5s ease;
     cursor: pointer;
@@ -37,11 +48,13 @@ body{
 	background-color: white;
     border-radius: 20px;
     margin: auto;
-    height: 90%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 9%;
-	padding: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: auto;
+	padding: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 	box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
     transition: 0.5s ease;
     cursor: pointer;
@@ -55,11 +68,13 @@ body{
     text-justify: auto;
     border-radius: 20px;
     margin: auto;
-    height: 90%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 9%;
-	padding: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: auto;
+	padding: 1.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 	box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
     transition: 0.5s ease;
     cursor: pointer;
@@ -68,7 +83,27 @@ body{
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
-h1{
+.kakashi{
+	background-color: white;
+    text-justify: auto;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 90%;
+    width: 9%;
+	padding: 1.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+	box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.kakashi:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.wrapper h1{
     font-family: Open Sans Extrabold;
     background-size: cover;
     background-clip: text;
@@ -84,13 +119,29 @@ h1{
 .sasuke h1{
     background-image: linear-gradient(to right,#916C80 30%,#BA7BA1);
 }
-.image img{
+.kakashi h1{
+    background-image: linear-gradient(to right,#6CD4FF 30%,#30BCED);
+}
+img{
 	width: 100%;
 	height: 100%;
 }
 .image{
-	height: 188px;
-	width: 150px;
+	height: 70%;
+    width: 70%;
+    padding: 3%;
+}
+.kakashi .image{
+    height: 100%;
+    width: 100%;
+    padding: 3%;
+}
+.logo{
+    width: 15%;
+    height: 15%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 b{
     color: #00BD56;
