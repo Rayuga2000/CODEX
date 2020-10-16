@@ -3,13 +3,6 @@ read lang;
 printf "Enter the Project Name: ";
 read proj;
 
-echo -ne '##########                     (30%)\r'
-sleep 1
-echo -ne '##################            (60%)\r'
-sleep 1
-echo -ne '############################   (100%)\r'
-echo -ne '\n'
-
 case "$lang" in
 "c")
         mkdir /home/rayuga/Documents/C/$proj

@@ -1,114 +1,101 @@
-#img1{
-	content: url(../../RESOURCES/n.jpg);
-	height: 500px;
-	float: left;
-	margin-top: 0px;
-}
-#img2{
-	content: url(../../RESOURCES/s.png);
-	height: 500px;
-	float: right;
-	margin-top: 0px;
-}
-#img3{
-	content: url(../../RESOURCES/k.png);
-	height: 500px;
-	float: left;
-	margin-top: 0px;
-	position: relative;
-}
-#img{
-	background-image: url(../../RESOURCES/logo.png);
-	height: 200px;
-	width: 500px;
-	background-size: 100%;
-	background-position: center;
-	padding: 11px;
-}
-div.p1{
-	padding-left: 50px;
-	padding-top: 140px;
-}
-div.p2{
-	padding-top: 70px;
-}
-div.p3{
-	padding-left: 30px;
-	padding-top: 100px;
-}
-
-h1{
-	color: white;
-	text-align: center;
-	margin-top: 0px;
-	font-family: Open Sans Extrabold;
-}
-#p1{
-	word-spacing: 10px;
-	font-size: 26px;
-	height: 500px;
-	padding: 0px;
-	margin-bottom: 0px;
-	display: flex;
-}
-#p2{
-	word-spacing: 5px;
-	font-size: 26px;
-	height: 500px;
-	padding: 0px;
-	margin-bottom: 0px;
-	display: flex;
-	flex-direction: row-reverse;
-}
-#p3{
-	height: 500px;
-	word-spacing: 10px;
-	font-size: 26px;
-	display: flex;
+*{
+    margin: 0px;
+    padding: 0px;
 }
 body{
-	background-color: #000000;
+	background-color: #393e46;
 }
-#h1{
-	font-family: OpenDyslexic;
-	letter-spacing: 3px;
-	text-align: left;
-	
-	color: #F48256;
+
+.wrapper{
+	padding-top: 250px;
+    display: flex;
+    padding: auto;
+    align-items: center;
+    align-content: center;
+	margin: auto;
 }
-#h2{
-	font-family: OpenDyslexic;
-	letter-spacing: 3px;
-	text-align: right;
-	color: #BA7BA1;
-}
-#h3{
-	padding-top: 60px;
-	font-family: OpenDyslexic;
-	letter-spacing: 3px;
-	text-align: left;
-	color: #1B7FBD;
-}
-#hr1{
-	overflow: visible;
-    height: 30px;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px 0 0 0;
+.naruto{
+	text-justify: auto;
+	background-color: white;
     border-radius: 20px;
+    margin: auto;
+    height: 400px;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 150px;
+    box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
+    transition: 0.5s ease;
+    cursor: pointer;
+} 
+.naruto:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
-#hr2{
-	display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: white;
-    border-width: 0 0 1px 0; /*top,right,bottom,left*/
+.sakura{
+	text-justify: auto;
+	background-color: white;
     border-radius: 20px;
+    margin: auto;
+    height: 400px;
+	padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+	width: 150px;
+	box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.sakura:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+.sasuke{
+	background-color: white;
+    text-justify: auto;
+    border-radius: 20px;
+    margin: auto;
+    height: 400px;
+	padding: 50px;
+	padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+	width: 150px;
+	box-shadow: 2.5px 2.5px 5px rgba(0,0,0,0.6);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.sasuke:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+h1{
+    font-family: Open Sans Extrabold;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.naruto h1{
+    background-image: linear-gradient(to right,#ff9a00 40%,#ff5700);
+}
+.sakura h1{
+    background-image: linear-gradient(to right,#FF9B9C 20%,#ff6768);
+}
+.sasuke h1{
+    background-image: linear-gradient(to right,#916C80 30%,#BA7BA1);
+}
+.image img{
+	width: 100%;
+	height: 100%;
+}
+.image{
+	height: 188px;
+	width: 150px;
+}
+b{
+    color: #00BD56;
 }
 p{
-	font-family: Open Sans Condensed;
-	font-size: 25px;
-	color: #EEEEEE;
+    font-family: 'Courier New', Noto Sans Mono, Courier, monospace;
 }

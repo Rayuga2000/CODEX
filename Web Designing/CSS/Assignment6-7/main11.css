@@ -1,0 +1,10 @@
+ul{
+	list-style-type: square;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+ol{
+    list-style-type: upper-roman;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+}
