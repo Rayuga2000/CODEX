@@ -63,7 +63,7 @@ void push(Stack* s,char c)
 
 void evaluate(Stack* d,Stack* o)
 {
-    while(o->stack[o->top]!=')')
+    while(o->stack[o->top]!='(')
     {
         push(d,pop(o));
     }
@@ -82,26 +82,30 @@ void compare(Stack* d,Stack* o,char c)
 
 void convert(Stack* d,Stack* o,char exp[])
 {
-    for(int i=strlen(exp)-1;i>=0;i--)
+    for(int i=0;i<strlen(exp);i++)
     {
         if(isdigit(exp[i]) || isalpha(exp[i]))
         {
             push(d,exp[i]);
         }
-        else if(ispunct(exp[i]) && exp[i]!='(')
+        else if(ispunct(exp[i]) && exp[i]!=')')//!isdigit(exp[i]) && !isalpha(exp[i]))//
         {
             compare(d,o,exp[i]);
             push(o,exp[i]);
         }
-        else if(exp[i]=='(')
+        else if(exp[i]==')')
         {
             evaluate(d,o);
         }
     }
 
-    for(int i=d->top;i>=0;i--)
+    for(int i=0;i<=d->top;i++)
     {
         printf("%c ",d->stack[i]);
+    }
+    for(int i=0;i<=o->top;i++)
+    {
+        printf("%c ",o->stack[i]);
     }
 }
 

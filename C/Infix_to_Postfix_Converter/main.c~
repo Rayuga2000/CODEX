@@ -1,13 +1,12 @@
 #include<stdio.h>
 #include<string.h>
-#include<ctype.h>
 #include<stdlib.h>
+#include<ctype.h>
 #define max 100
 
 struct stk
 {
     char* stack;
-    int capacity;
     int top;
 };
 typedef struct stk Stack;
@@ -18,7 +17,7 @@ int isEmpty(Stack* s)
 }
 int isFull(Stack* s)
 {
-    return(s->top>=(s->capacity-1));
+    return(s->top>=(strlen(s->stack)-1));
 }
 
 int priority(char x)
@@ -37,8 +36,6 @@ int priority(char x)
         return(2);
     case '^':
         return(3);
-    default:
-        return(0);
     }
 }
 
@@ -63,7 +60,7 @@ void push(Stack* s,char c)
 
 void evaluate(Stack* d,Stack* o)
 {
-    while(o->stack[o->top]!=')')
+    while(o->stack[o->top]!='(')
     {
         push(d,pop(o));
     }
@@ -73,7 +70,7 @@ void compare(Stack* d,Stack* o,char c)
 {
     if(!isEmpty(o))
     {
-        while(priority(o->stack[o->top])>=priority(c) && priority(c)!=0)
+        while(priority(o->stack[o->top])>=priority(c))
         {
             push(d,pop(o));
         }
@@ -82,26 +79,30 @@ void compare(Stack* d,Stack* o,char c)
 
 void convert(Stack* d,Stack* o,char exp[])
 {
-    for(int i=strlen(exp)-1;i>=0;i--)
+    for(int i=0;i<strlen(exp);i++)
     {
         if(isdigit(exp[i]) || isalpha(exp[i]))
         {
             push(d,exp[i]);
         }
-        else if(ispunct(exp[i]) && exp[i]!='(')
+        else if(ispunct(exp[i]) && exp[i]!=')')
         {
             compare(d,o,exp[i]);
             push(o,exp[i]);
         }
-        else if(exp[i]=='(')
+        else if(exp[i]==')')
         {
             evaluate(d,o);
         }
     }
 
-    for(int i=d->top;i>=0;i--)
+    /*for(int i=0;i<=d->top;i++)
     {
         printf("%c ",d->stack[i]);
+    }*/
+    for(int i=0;i<=o->top;i++)
+    {
+        printf("%c ",o->stack[i]);
     }
 }
 
@@ -121,12 +122,9 @@ int main()
 
         display->stack=(char*) malloc(n*sizeof(char));
         display->top=-1;
-        display->capacity=n;
         
         operator->stack=(char*) malloc(n*sizeof(char));
         operator->top=-1;
-        operator->capacity=n;
-
         convert(display,operator,exp);
 
         printf("\nDo you want to continue?(1/0): ");
