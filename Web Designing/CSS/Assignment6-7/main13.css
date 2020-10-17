@@ -9,13 +9,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.text h1{
-    text-align: right;
-    font-family: Balsamiq Sans;
-    font-size: 5em;
-    color: #ff9a00;
-    padding: 1%;
-}
 .wrapper{
     display: grid;
     grid-gap: 1em;
@@ -66,30 +59,16 @@
     -webkit-background-clip: text;
     color: transparent;
 }
-.naruto h1{
-    background-image: linear-gradient(to right,#ff9a00,#ff5700);
-}
-.sasuke h1{
-    background-image: linear-gradient(to right,#0F3974,#BA7BA1);
-}
-.kakashi h1{
-    background-image: linear-gradient(to right,#34A7B2,#207DFF);
-}
 img{
 	width: 100%;
     height: 100%;
 }
 .image{
     height: auto;
-    width: 100%;
+    width: 70%;
     margin: auto;
-}
+}   
 .kakashi .image{
-    height: 65%;
-}
-b{
-    color: #00BD56;
-}
-p{
-    font-family: 'Courier New', Noto Sans Mono, Courier, monospace;
+    width: 100%;
+    margin-bottom: 40px;
 }
