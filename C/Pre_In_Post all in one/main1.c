@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<string.h>
 #include<ctype.h>
-#include<math.h>
 #define max 100
 
 struct stk{
@@ -37,12 +36,10 @@ int getResult(int a,char x,int b)
         return(a/b);
         break;
     case '^':
-        return((int)pow(a,b));
+        return(a^b);
         break;
     
     default:
-        printf("Wrong Operator");
-        return(0);
         break;
     }
 }
@@ -54,7 +51,7 @@ int pop(Stack* s)
         return(s->stack[s->top--]);
     }
     else
-    printf("Stack Underflow");
+    printf("Stack Overflow");
 }
 void push(Stack* s,int c)
 {
@@ -78,7 +75,16 @@ void convert(Stack* d,char c[])
         }
         else if(ispunct(c[i]))
         {
-            push(d,getResult(pop(d),c[i],pop(d)));
+            int op1=0,op2=0;
+            for(int j=0;j<countDigit(c,i);j++)
+            {
+                op2=op2*10+pop(d);
+            }
+            for(int j=0;j<countDigit(c,i);j++)
+            {
+                op1=op1*10+pop(d);
+            }
+            push(d,getResult(op1,c[i],op2));
         }
     }
 
@@ -101,5 +107,4 @@ int main()
         printf("\nDo you want to continue?(1/0): ");
         scanf("%d",&opt);
     }
-    return(0);
 }

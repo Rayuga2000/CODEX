@@ -2,17 +2,10 @@
 #include<string.h>
 #include<ctype.h>
 #include<stdlib.h>
+#include "main1.c"
 #define max 100
 
-struct stk
-{
-    char* stack;
-    int capacity;
-    int top;
-};
-typedef struct stk Stack;
-
-int main()
+int func()
 {
     int opt=1,choice;
 
@@ -23,63 +16,24 @@ int main()
         printf("Infix_to_Prefix(2)");
         printf("Postfix_Evaluation(3)");
         printf("Prefix_Evaluation(4)");
-        scanf("%d",choice);
-
-        char exp[max];
-        printf("Enter the Expression: ");
-        scanf("%s",exp);
-        int n=strlen(exp);
+        scanf("%d",&choice);
 
         switch(choice)
         {
-        case 1:
-            Stack* display=(Stack*) malloc(n*sizeof(Stack));
-            Stack* operator=(Stack*) malloc(n*sizeof(Stack));
+        case 1:            
             
-            display->stack=(char*) malloc(n*sizeof(char));
-            display->top=-1;
-            display->capacity=n;
-            
-            operator->stack=(char*) malloc(n*sizeof(char));
-            operator->top=-1;
-            operator->capacity=n;
-            
-            convert(display,operator,exp);
             break;
 
         case 2:
-            Stack* display=(Stack*) malloc(n*sizeof(Stack));
-            Stack* operator=(Stack*) malloc(n*sizeof(Stack));
             
-            display->stack=(char*) malloc(n*sizeof(char));
-            display->top=-1;
-            display->capacity=n;
-            
-            operator->stack=(char*) malloc(n*sizeof(char));
-            operator->top=-1;
-            operator->capacity=n;
-            
-            convert(display,operator,exp);
             break;
 
         case 3:
-            Stack* display=(Stack*) malloc(n*sizeof(Stack));
-            
-            display->stack=(char*) malloc(n*sizeof(char));
-            display->top=-1;
-            display->capacity=n;
-            
-            convert(display,exp);
+            main();
             break;
 
         case 4:
-            Stack* display=(Stack*) malloc(n*sizeof(Stack));
             
-            display->stack=(char*) malloc(n*sizeof(char));
-            display->top=-1;
-            display->capacity=n;
-            
-            convert(display,exp);
             break;
         
         default:
