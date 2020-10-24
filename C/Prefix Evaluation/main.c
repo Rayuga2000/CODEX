@@ -37,12 +37,11 @@ int getResult(int a,char x,int b)
         return(a/b);
         break;
     case '^':
-        return((int)pow(a,b));
+        return((int)pow((double)a,(double)b));
         break;
     
     default:
         printf("Wrong Operator");
-        return(0);
         break;
     }
 }
@@ -54,7 +53,10 @@ int pop(Stack* s)
         return(s->stack[s->top--]);
     }
     else
-    printf("Stack Underflow");
+    {
+        printf("Stack Underflow");
+        exit(1);
+    }
 }
 void push(Stack* s,int c)
 {
@@ -78,7 +80,8 @@ void convert(Stack* d,char c[])
         }
         else if(ispunct(c[i]))
         {
-            push(d,getResult(pop(d),c[i],pop(d)));
+            int op1=pop(d),op2=pop(d);
+            push(d,getResult(op1,c[i],op2));
         }
     }
 
