@@ -20,16 +20,6 @@ int isFull(Stack* s)
     return(s->top>=(s->capacity-1));
 }
 
-int countDigit(char c[],int i)
-{
-    int x=0;
-    for(int j=i-1;j>=0;j--)
-    {
-        x++;
-    }
-    return(x/2);
-}
-
 int getResult(int a,char x,int b)
 {
     switch(x)
@@ -47,10 +37,11 @@ int getResult(int a,char x,int b)
         return(a/b);
         break;
     case '^':
-        return(a^b);
+        return((int)pow((double)a,(double)b));
         break;
     
     default:
+        printf("Wrong Operator");
         break;
     }
 }
@@ -62,7 +53,10 @@ int pop(Stack* s)
         return(s->stack[s->top--]);
     }
     else
-    printf("Stack Overflow");
+    {
+        printf("Stack Underflow");
+        exit(1);
+    }
 }
 void push(Stack* s,int c)
 {
@@ -86,15 +80,7 @@ void convert(Stack* d,char c[])
         }
         else if(ispunct(c[i]))
         {
-            int op1=0,op2=0;
-            for(int j=0;j<countDigit(c,i);j++)
-            {
-                op2=op2*10+pop(d);
-            }
-            for(int j=0;j<countDigit(c,i);j++)
-            {
-                op1=op1*10+pop(d);
-            }
+            int op2=pop(d),op1=pop(d);
             push(d,getResult(op1,c[i],op2));
         }
     }
