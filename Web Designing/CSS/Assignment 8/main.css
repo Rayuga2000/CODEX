@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: wheat;
+}
+.wrapper{
+    width: 90%;
+    background-color: whitesmoke;
+    margin: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 50px;
+}
+.header{
+    padding-top: 20px;
+    background-color: #394359;
+    height: 55px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+#logo{
+    margin-left: 20px;
+}
+#buy{
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+#stuff{
+    word-spacing: 5px;
+    margin-left: 59%;
+}
+.laptop{
+    padding-top: 30px;
+}
+.laptop,.phone{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+.laptop,.phone,.details{
+    margin: 0%;
+    padding: auto;
+    align-self: center;
+    font-family: Oswald;
+}
+.details{
+    height: auto;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    width: 100%;
+}
+#mid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+    margin-top: 15%;
+}
+.laptop .para{
+    width: 160%;
+    direction: rtl;
+}
+.phone .para{
+    width: 160%;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.laptop .image{
+    width: 50%;
+    height: auto;
+    margin-right: -3%;
+}
+.phone .image{
+    width: 50%;
+    height: auto;
+    margin-left: -12%;
+}
