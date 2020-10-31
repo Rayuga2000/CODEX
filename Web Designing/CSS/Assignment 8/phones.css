@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: whitesmoke;
+}
+a:link,a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: lightblue;
+}
+.wrapper{
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+}
+.header{
+    padding-top: 20px;
+    margin: auto;
+    background-color: #222831;
+    height: 55px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#logo{
+    margin-left: 20px;
+}
+#buy{
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 5px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+#stuff{
+    word-spacing: 5px;
+    float: right;
+    padding-right: 20px;
+}
+div{
+    border: 1px solid black;
+}
