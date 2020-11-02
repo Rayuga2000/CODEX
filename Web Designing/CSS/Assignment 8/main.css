@@ -23,33 +23,53 @@ a:hover{
     grid-template-rows: auto auto;
     grid-row-gap: 50px;
 }
+.logo{
+    width: 200px;
+}
+.header ul ul a:link,.header ul ul a:visited{
+    color: black;
+}
 .header{
-    padding-top: 20px;
-    margin: auto;
+    padding: 10px;
     background-color: #222831;
     height: 55px;
+    display: flex;
     color: white;
     font-family: 'Courier New', Courier, monospace;
     position: fixed;
     top: 0;
     width: 100%;
 }
-#logo{
-    margin-left: 20px;
-}
-#buy{
-    background-color: red;
-    border-radius: 50%;
-    border: 1px solid black;
+.header ul{
+    display: inline-flex;
+    list-style-type: none;
+    position: relative;
     padding: 5px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
+    margin: auto;
+    margin-left: 1360px;
 }
-#stuff{
-    word-spacing: 5px;
-    float: right;
-    padding-right: 20px;
+.header p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+.header ul ul{
+    display: none;
+    position: absolute;
+    top: 90%;
+    right: 0;
+}
+.header ul ul li{
+    width: 120px;
+    background-color: white;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+.header ul ul li:hover{
+    border-right: 3px solid red;
+}
+.header ul li:hover ul{
+    display: block;
 }
 .laptop{
     margin-top: 500px;

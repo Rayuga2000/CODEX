@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body{
-    background-color: whitesmoke;
+    background-color: #f2eaec;
 }
 a:link,a:visited{
     color: white;
@@ -12,46 +12,130 @@ a:link,a:visited{
 a:hover{
     color: lightblue;
 }
-.wrapper{
-    width: 90%;
-    background-color: white;
-    margin: auto;
-    margin-top: 100px;
-    height: 100%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    grid-row-gap: 50px;
-    grid-column-gap: 50px;
+.logo{
+    width: 200px;
+}
+.header ul ul a:link,.header ul ul a:visited{
+    color: black;
 }
 .header{
-    padding-top: 20px;
-    margin: auto;
+    padding: 10px;
     background-color: #222831;
     height: 55px;
+    display: flex;
     color: white;
     font-family: 'Courier New', Courier, monospace;
     position: fixed;
     top: 0;
     width: 100%;
 }
-#logo{
-    margin-left: 20px;
-}
-#buy{
-    background-color: red;
-    border-radius: 50%;
-    border: 1px solid black;
+.header ul{
+    display: inline-flex;
+    list-style-type: none;
+    position: relative;
     padding: 5px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
+    margin: auto;
+    margin-left: 1360px;
 }
-#stuff{
-    word-spacing: 5px;
+.header p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+.header ul ul{
+    display: none;
+    position: absolute;
+    top: 90%;
+    right: 0;
+}
+.header ul ul li{
+    width: 120px;
+    background-color: white;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+.header ul ul li:hover{
+    border-right: 3px solid red;
+}
+.header ul li:hover ul{
+    display: block;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    margin-top: 77px;
+}
+.sidebar{
+    width: 15%;
+    padding: 20px;
+    background-color: white;
+    font-family: Oswald;
+}
+.sidebar h1{
+    font-family: Ubuntu;
+    font-size: 30px;
+}
+ul{
+    padding-left: 20px;
+    list-style-type: disc;
+}
+select:focus{
+    outline: none;
+}
+.wrapper{
+    width: 78%;
+    height: 100%;
     float: right;
-    padding-right: 20px;
+    padding-bottom: 50px;
+    margin: auto;
+    margin-right: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 38px;
 }
-div{
-    border: 1px solid black;
+.image{
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+.laptop{
+    margin: auto;
+    width: 100%;
+    height: 295px;
+    padding-top: 20px;
+    background-color: white;
+    transition: ease-in 0.3s;
+    font-family: Gayathri Thin;
+}
+.laptop:hover{
+    transform: scale(1.05);
+    box-shadow: 0.5px 0.5px 5px rgb(211, 206, 206);
+}
+.laptop h1{
+    font-family: Samanata;
+}
+button{
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: initial;
+    background-color: beige;
+    border: 2px solid black;
+    transition: ease-out 0.5s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+button:focus{
+    outline: none;
 }
