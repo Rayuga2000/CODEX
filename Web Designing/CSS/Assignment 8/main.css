@@ -16,7 +16,7 @@ a:hover{
     width: 90%;
     background-color: white;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 170px;
     height: 100%;
     display: grid;
     grid-template-columns: auto;
@@ -46,7 +46,7 @@ a:hover{
     position: relative;
     padding: 5px;
     margin: auto;
-    margin-left: 75.5%;
+    margin-right: 20px;
 }
 .header p{
     font-family: 'Courier New', Courier, monospace;
@@ -70,9 +70,6 @@ a:hover{
 }
 .header ul li:hover ul{
     display: block;
-}
-.laptop{
-    margin-top: 500px;
 }
 .laptop,.phone{
     display: flex;

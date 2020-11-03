@@ -35,7 +35,10 @@ a:hover{
     position: relative;
     padding: 5px;
     margin: auto;
-    margin-left: 75.5%;
+    margin-right: 20px;
+}
+.dropdown:hover{
+    border-bottom: 3px solid red;
 }
 .header p{
     font-family: 'Courier New', Courier, monospace;
@@ -44,32 +47,36 @@ a:hover{
 .header ul ul{
     display: none;
     position: absolute;
-    top: 90%;
-    right: 0;
+    float: right;
 }
 .header ul ul li{
-    width: 120px;
+    width: 100px;
     background-color: white;
     text-align: right;
     padding: 10px;
     cursor: pointer;
 }
 .header ul ul li:hover{
+    border: none;
     border-right: 3px solid red;
 }
 .header ul li:hover ul{
     display: block;
+    margin-top: 4.5px;
+    margin-right: 0px;
+    margin-left: 25px;
 }
 .container{
     display: flex;
     justify-content: center;
     width: 90%;
-    padding-top: 1%;
-    margin: auto;
+    padding: 10px;
+    height: auto;
     margin-top: 4.5%;
 }
 .sidebar{
     width: 15%;
+    height: 350px;
     padding: 20px;
     background-color: white;
     font-family: Oswald;
@@ -78,24 +85,40 @@ a:hover{
     font-family: Ubuntu;
     font-size: 30px;
 }
-ul{
-    padding-left: 20px;
-    list-style-type: disc;
-}
 select:focus{
     outline: none;
 }
+.btn{
+    width: 100%;
+    display: flex;
+    float: right;
+}
+.btn button{
+    border-radius: 0px;
+}
+#clr{
+    border: none;
+    width: 50%;
+    margin-right: 5px;
+    background-color: #EEEEEE;
+}
+#apl{
+    color: white;
+    border: none;
+    width: 50%;
+    font-weight: bolder;
+    background-color: #FF8C42;
+}
 .wrapper{
-    width: 78%;
+    width: 75%;
     height: auto;
     float: right;
-    padding: auto;
     margin: auto;
+    padding-bottom: 50px;
     margin-right: 0px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 50px;
+    grid-template-columns: auto auto auto auto; 
+    grid-gap: 50px 0px;
 }
 img{
     width: 100%;
@@ -104,15 +127,12 @@ img{
 .image{
     width: 75%;
     height: auto;
-    padding: 0px;
     margin: auto;
 }
 .laptop{
-    width: 90%;
-    height: auto;
-    margin: auto;
-    font-family: Gayathri Thin;
+    width: 266px;
     background-color: white;
+    font-family: Gayathri Thin;
     transition: ease-in 0.3s;
 }
 .laptop:hover{
@@ -120,11 +140,8 @@ img{
     box-shadow: 0.5px 0.5px 5px rgb(211, 206, 206);
 }
 .card-foot{
-    transition: 1s;
-    padding: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: auto;
+    transition:  ease-in-out 0.5s;
+    padding: 10px 0px;
 }
 .laptop:hover .card-foot{
     background-color: #fa4659;
@@ -137,12 +154,9 @@ button{
     padding: 10px;
     margin-top: 20px;
     border-radius: 20px;
-    font-size: medium;
-    font-weight: initial;
-    color: black;
     background-color: white;
     border: 2px solid black;
-    transition: ease-out 0.5s;
+    transition: ease-in-out 0.5s;
 }
 .laptop:hover button{
     color: white;
