@@ -3,7 +3,8 @@
     padding: 0px;
 }
 body{
-    background-color: #f2eaec;
+    background-color: hsl(0, 0%, 98%);
+    min-width: 1300px;
 }
 a:link,a:visited{
     color: white;
@@ -44,29 +45,21 @@ a:hover{
 .header ul ul{
     display: none;
     position: absolute;
-    top: 90%;
-    right: 0;
 }
 .header ul ul li{
-    width: 120px;
+    width: 100px;
     background-color: white;
     text-align: right;
     padding: 10px;
+    box-shadow: -5px 5px 25px -4px rgba(30,30,60,0.25);
     cursor: pointer;
 }
 .header ul ul li:hover{
+    border: none;
     border-right: 3px solid red;
 }
 .header ul li:hover ul{
     display: block;
-}
-#buy{
-    background-color: red;
-    border-radius: 50%;
-    padding: 5px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
 }
 img{
     width: 100%;
@@ -85,6 +78,7 @@ img{
     padding: 20px;
     background-color: white;
     font-family: Oswald;
+    box-shadow: 0px 2px 25px -4px rgba(30,30,60,0.25);
 }
 .sidebar h1{
     font-family: Ubuntu;
@@ -104,8 +98,13 @@ select:focus{
 #clr{
     border: none;
     width: 50%;
+    font-weight: bolder;
     margin-right: 5px;
+    transition: ease-in-out 0.2s;
     background-color: #EEEEEE;
+}
+#clr:active{
+    background-color: #7A9E9F;
 }
 #apl{
     color: white;
@@ -113,6 +112,10 @@ select:focus{
     width: 50%;
     font-weight: bolder;
     background-color: #FF8C42;
+    transition: ease-in-out 0.2s;
+}
+#apl:active{
+    background-color: #222831;
 }
 .wrapper{
     width: 78%;
@@ -123,8 +126,7 @@ select:focus{
     margin-right: 0px;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 8%;
+    grid-gap: 50px 0px;
 }
 .image{
     width: 75%;
@@ -137,11 +139,12 @@ select:focus{
     padding-top: 20px;
     background-color: white;
     transition: ease-in 0.3s;
+    box-shadow: 0px 2px 6px 0px rgba(30,30,60,0.25);
     font-family: Gayathri Thin;
 }
 .laptop:hover{
     transform: scale(1.05);
-    box-shadow: 0.5px 0.5px 5px rgb(211, 206, 206);
+    box-shadow: 0px -15px 25px -4px rgba(30,30,60,0.25), 0px 15px 25px -4px rgba(30,30,60,0.25);
 }
 .card-foot{
     transition: 1s;
