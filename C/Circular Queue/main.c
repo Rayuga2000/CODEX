@@ -1,3 +1,9 @@
+/*
+Logic==> 
+Enqueue=> just like normal Queue(rear+1);
+Dequeue=> first increase front by 1 and check if rear is at max-1 or not, if true then change rear to -1
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -8,22 +14,22 @@ typedef struct q{
     int queue[max];
 }Queue;
 
-//if rear=-1 Queue is empty
+//if rear=-1 and front=0 Queue is empty
 int isEmpty(Queue* Q)
 {
-    return(Q->rear==-1);
+    return(Q->rear==-1 && Q->front==0);
 }
-//if rear=max-1 Queue is full
+//if rear=max-1 or rear=-1 and rear=front-1 Queue is full
 int isFull(Queue* Q)
 {
-    return(Q->rear==max-1);
+    return(Q->rear==max-1 || (Q->rear!=-1 && Q->rear==Q->front-1));
 }
 
 void enqueue(Queue* Q,int x)
 {
     if(!isFull(Q))
     {
-        Q->queue[++Q->rear]=x;
+        Q->queue[++Q->rear]=x;//increase rear by 1 then add the value
     }
     else
     {
@@ -34,16 +40,11 @@ void dequeue(Queue* Q)
 {
     if(!isEmpty(Q))
     {
-        int i=Q->front;
-        
-        printf("\n%d dequeued",Q->queue[Q->front]);
-        
-        while(i<Q->rear)
+        printf("\n%d dequeued",Q->queue[Q->front++]);
+        if(Q->rear==max-1)
         {
-            Q->queue[i]=Q->queue[i+1];//when in a loop this line won't increament the value of i increament/decreament will only happen in the while parenthesis
-            i++;
+            Q->rear=-1;
         }
-        Q->rear--;//Decrease rear by 1
     }
     else
     {
@@ -52,9 +53,25 @@ void dequeue(Queue* Q)
 }
 void display(Queue* Q)
 {
-    for(int i=0;i<=Q->rear;i++)
+    int i;
+
+    if(Q->rear > Q->front)//if rear greater than front print the array from front to rear
     {
-        printf("%d ",Q->queue[i]);
+        for(i=Q->front;i<=Q->rear;i++)
+        {
+            printf("%d ",Q->queue[i]);
+        }
+    }
+    if(Q->rear < Q->front)//if rear smaller than front print the array from front to max-1 and then print from 0 to rear
+    {
+        for(i=Q->front;i<max;i++)
+        {
+            printf("%d ",Q->queue[i]);
+        }
+        for(i=0;i<=Q->rear;i++)
+        {
+            printf("%d ",Q->queue[i]);
+        }
     }
 }
 
@@ -68,7 +85,7 @@ int main()
 
     while(opt==1)
     {
-        printf("#######################");
+        printf("#####################");
         printf("\n     Enqueue(1)");
         printf("\n     Dequeue(2)");
         printf("\n     Display(3)");
