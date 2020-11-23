@@ -12,6 +12,8 @@ sudo apt-add-repository -y ppa:teejee2008/ppa;
 sudo apt update;
 sudo apt-get install timeshift;
 
+sudo apt install htop;
+
 sudo apt update;
 sudo apt install snapd -y;
 sudo snap install spotify;
@@ -26,3 +28,4 @@ sudo snap install spotify;
 timedatectl set-local-rtc 1 --adjust-system-clock;#adjust system time in windows as well as other os
 
 echo "Make sure to download VS-code from web";
+printf "Also check the netdata";#netdata use=> ip:19999
