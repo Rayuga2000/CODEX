@@ -5,26 +5,41 @@ typedef struct Node
 {
     int data;
     struct Node *next;
-}node;
+}Node;
 
 int main()
 {
-    node* head=(node*)malloc(sizeof(node));
-    node* node1=(node*)malloc(sizeof(node));
-    node* node2=(node*)malloc(sizeof(node));
-    node* node3=(node*)malloc(sizeof(node));
+    Node *head,*node;
+    int n;
 
-    printf("Enter your data(Upto 3): ");
-    scanf("%d%d%d",&node1->data,&node2->data,&node3->data);
+    head=(Node*)malloc(sizeof(Node));//create new node dynamicalyy and store pointer into head
+    node=head;//node is now pointing at the same node where head is pointing
 
-    head->next=node1;
-    node1->next=node2;
-    node2->next=node3;
-    node3->next=NULL;
+    printf("How many elements you want to store?: ");
+    scanf("%d",&n);
 
-    while(head!=NULL)
+    printf("Enter your data: ");
+    for(int i=0;i<n;i++)
     {
-        printf("%d ",head->data);
-        head=head->next;
+        scanf("%d",&node->data);
+        if(i==n-1)
+        {
+            node->next=NULL;//assign null to the last node->next
+            node=head;//return node pointer to head 
+        }
+        else
+        {
+            node->next=(Node*)malloc(sizeof(Node));//node->next pointing to a new node
+            node=node->next;//node now points to the newly created node as well
+        }
     }
+
+    while(node!=NULL)
+    {
+        printf("%d ",node->data);
+        node=node->next;
+    }
+    printf("\n");
+
+    return (0);
 }
