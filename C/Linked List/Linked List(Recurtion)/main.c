@@ -7,6 +7,19 @@ typedef struct Node
     struct Node *next;
 }Node;
 
+void display(Node* head)
+{
+    if(head==NULL)
+    {
+        return;
+    }
+    else
+    {
+        printf("%d ",head->data);
+        display(head->next);
+    }
+}
+
 int main()
 {
     Node *head,*node;
@@ -34,11 +47,8 @@ int main()
         }
     }
 
-    while(node!=NULL)
-    {
-        printf("%d ",node->data);
-        node=node->next;
-    }
+    printf("The data elements are===> ");
+    display(head);
     printf("\n");
 
     return (0);
