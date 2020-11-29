@@ -6,10 +6,7 @@ body{
     background-color: hsl(0, 0%, 98%);
     min-width: 1300px;
 }
-
-a{
-    transition: ease-in-out;
-}
+/*#f2eaec*/
 a:link,a:visited{
     color: white;
     text-decoration: none;
@@ -17,7 +14,12 @@ a:link,a:visited{
 a:hover{
     color: lightblue;
 }
-
+.logo{
+    width: 200px;
+}
+.header ul ul a:link,.header ul ul a:visited{
+    color: black;
+}
 .header{
     padding: 10px;
     background-color: #222831;
@@ -29,21 +31,37 @@ a:hover{
     top: 0;
     width: 100%;
 }
-.logo{
-    width: 200px;
+.header ul{
+    display: inline-flex;
+    list-style-type: none;
+    position: relative;
+    padding: 5px;
+    margin: auto;
+    margin-right: 20px;
 }
-.products{
-    padding: auto;
-    margin-left: 77%;
-    margin-right: 0.3%;
-    margin-top: 12px;
+.header p{
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
 }
-.products a:hover{
-    border-bottom: 3px solid #C14545;
+.header ul ul{
+    display: none;
+    position: absolute;
 }
-
+.header ul ul li{
+    width: 100px;
+    background-color: white;
+    text-align: right;
+    padding: 10px;
+    box-shadow: -5px 5px 25px -4px rgba(30,30,60,0.25);
+    cursor: pointer;
+}
+.header ul ul li:hover{
+    border: none;
+    border-right: 3px solid red;
+}
+.header ul li:hover ul{
+    display: block;
+}
 .container{
     display: flex;
     justify-content: center;
