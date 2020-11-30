@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment 10</title>
+  </head>
+  <body>
+    <script>
+      var n=parseInt(prompt("Enter the Number: "));
+      var x=0;
+
+      if(n==1 || n==0)
+      {
+          alert(n+"is not a prime number");
+      }
+      else
+      {
+        for(var i=2;i<n;i++)
+        {
+            if(n%i==0)
+            {
+                alert("The number is not a prime number");
+                break;
+            }
+            x++;
+        }
+        if(x!=0)
+        {
+            alert("The number is a prime number");
+        }
+      }
+    </script>
+  </body>
+</html>
