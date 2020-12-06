@@ -1,6 +1,21 @@
 import java.util.*;
 import java.lang.*;
 
+class Armstrong{
+    static int temp,r,sum=0;
+
+    public int CheckArmstrong(int n){
+        temp=n;
+
+        while(n>0){
+            r=n%10;
+            sum=sum+(int)Math.pow(r,3);
+            n=n/10;
+        }
+
+        return(sum);
+    }
+}
 public class arm{
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
@@ -16,20 +31,5 @@ public class arm{
         else{
             System.out.println("The Number is not Armstrong");
         }
-    }
-}
-class Armstrong{
-    static int temp,r,sum=0;
-
-    public static int CheckArmstrong(int n){
-        temp=n;
-
-        while(n>0){
-            r=n%10;
-            sum=sum+(int)Math.pow(r,3);
-            n=n/10;
-        }
-
-        return(sum);
     }
 }
