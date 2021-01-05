@@ -5,10 +5,17 @@
 </head>
 <body>
     <script>
-        var x=parseInt(prompt("Enter the Height:"));
-        var y=parseInt(prompt("Enter the Base:"));
+        var a=parseFloat(prompt("Enter Side 1:"));
+        var b=parseFloat(prompt("Enter Side 2:"));
+        var c=parseFloat(prompt("Enter Side 3:"));
 
-        alert("Area of the Triangle is=> "+(x*y/2));
+        if(a+b>c && b+c>a && c+a>b){
+            var s=(a+b+c)/2;
+            alert("Area of the Triangle is=> "+Math.sqrt(s*(s-a)*(s-b)*(s-c)));
+        }
+        else{
+            alert("Not a Valid Triangle");
+        }
     </script>
 </body>
 </html>
