@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 13</title>
+</head>
+<body>
+    <script>
+        var n=parseInt(prompt("Enter the array length:"));
+        var arr=new Array(n);
+        
+        for(var i=0;i<n;i++){
+            arr[i]=parseInt(prompt("Enter the data"+(i+1)+":"));
+        }
+
+        var max=arr[0];
+        for(var i=1;i<n;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+
+        alert("The Largest Number is=> "+max);
+    </script>
+</body>
+</html>
