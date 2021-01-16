@@ -4,7 +4,7 @@ void binarySearch(int arr[],int low,int high,int value)
 {
     int mid=(low+high)/2;
 
-    if(low<high)
+    if(low<=high)
     {
         if(value<arr[mid])
         {
