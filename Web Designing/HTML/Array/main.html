@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var num,max=0,occur=0,n=parseInt(prompt("Enter the size:"));
+        var arr=[];
+
+        for(var i=0;i<n;i++){
+            arr[i]=parseInt(prompt("Enter the data:"));
+        }
+
+        for(var i=0;i<n;i++){
+            var temp=arr[i];
+            for(var j=i+1;j<n;j++){
+                if(temp==arr[j]){
+                    occur++;
+                }
+            }
+            if(max<occur){
+                max=occur;
+                num=temp;
+            }
+            occur=0;
+        }
+
+        alert("No. "+num+" occured "+(max+1)+" times");
+    </script>
+</body>
+</html>
