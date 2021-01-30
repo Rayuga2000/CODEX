@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 14</title>
+</head>
+<body>
+    <script>
+        var max,min,arr=new Array(parseInt(prompt("Enter the size of 1st Array:"))),temp=new Array();
+
+        for(var i=0;i<arr.length;i++){
+            arr[i]=parseInt(prompt("Enter the data for 1st Array:"));
+        }
+
+        var ar=new Array(parseInt(prompt("Enter the size of 2nd Array:")));
+
+        for(var i=0;i<ar.length;i++){
+            ar[i]=parseInt(prompt("Enter the data for 2nd Array:"));
+        }
+
+        if(arr.length>ar.length)
+        {
+            for(var i=0;i<ar.length;i++){
+                for(var j=0;j<arr.length;j++){
+                    if(ar[i]==arr[j]){
+                        temp.push(ar[i]);
+                        continue;
+                    }
+                }
+            }
+        }
+        else{
+            for(var i=0;i<arr.length;i++){
+                for(var j=0;j<ar.length;j++){
+                    if(ar[j]==arr[i]){
+                        temp.push(arr[i]);
+                        continue;
+                    }
+                }
+            }
+        }
+
+       alert("The Unique elements are=> "+temp);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 14</title>
+</head>
+<body>
+    <script>
+        var arr=new Array(parseInt(prompt("Enter the size:")));
+
+        for(var i=0;i<arr.length;i++){
+            arr[i]=parseInt(prompt("Enter the data:"));
+        }
+
+        var x=parseInt(prompt("Enter the position of the data to change: "));
+        var y=parseInt(prompt("Enter the position of the data to change with: "));
+
+        var temp=arr[x-1];
+        arr[x-1]=arr[y-1];
+        arr[y-1]=temp;
+
+       alert("New Array is=> "+arr);
+    </script>
+</body>
+</html>
