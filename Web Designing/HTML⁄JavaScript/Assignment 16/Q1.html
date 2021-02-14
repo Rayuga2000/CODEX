@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 16</title>
+</head>
+<body>
+    <script>
+        var r,num=0,n=parseInt(promt("Enter the Number:"));
+
+        while(n>0){
+            r=parseInt(n%10);
+            num=parseInt(num*10+r);
+            n=parseInt(n/10);
+        }
+
+        alert("Reverse of the Number is=> "+num);
+    </script>
+</body>
+</html>
