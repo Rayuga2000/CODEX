@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 18</title>
+    <style>
+        input{
+            width: 100%;
+            height: auto;
+        }
+        div{
+            margin: auto;
+            margin-top: 10%;
+            width: 200px;
+            border: 1px solid black;
+        }
+        button{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center>
+        <input type="text" id="input"><br>
+        <button onclick="show(7)">7</button><button onclick="show(8)">8</button>
+        <button onclick="show(9)">9</button><button onclick="show('+')">+</button><br>
+
+        <button onclick="show(4)">4</button><button onclick="show(5)">5</button>
+        <button onclick="show(6)">6</button><button onclick="show('-')">-</button><br>
+
+        <button onclick="show(1)">1</button><button onclick="show(2)">2</button>
+        <button onclick="show(3)">3</button><button onclick="show('*')">*</button><br>
+
+        
+        <button onclick="initialize()">=</button><button onclick="">C</button>
+        <button onclick="show('/')">/</button><br>
+    </center>
+    </div>
+    <script>
+        var op;
+
+        function show(n){
+            document.getElementById('input').value+=n;
+            if(n=='+'||n=='-'||n=='*'||n=='/'){
+                op=n;
+            }
+        }
+        function initialize(){
+            var arr=document.getElementById('input').value;
+            arr=arr.split(op);
+            var x=parseInt(arr[0]);
+            var y=parseInt(arr[1]);
+            calculate(x,y);
+        }
+        function calculate(x,y){
+            switch(op){
+                case '+': document.getElementById('input').value=(x+y);
+                break;
+
+                case '-': document.getElementById('input').value=(x-y);
+                break;
+
+                case '*': document.getElementById('input').value=(x*y);
+                break;
+
+                case '/': document.getElementById('input').value=(x/y);
+                break;
+
+                default: document.getElementById('input').value=("Error");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 16</title>
+</head>
+<body>
+    <p>Enter the Number:</p><input type="text" id="input">
+    <button onclick="check(parseInt(document.getElementById('input').value))">Check</button>
+    <script>
+        function check(n){
+            if(n==1 || n==0)
+            {
+                document.write(n+" is not a prime number");
+            }
+            else
+            {
+                for(var i=2;i<parseInt(n/2);i++)
+                {
+                    if(parseInt(n%i)==0)
+                    {
+                        return document.write("The number is not a prime number");
+                        break;
+                    }
+                }
+                return document.write("The number is a prime number");
+            }
+        }
+    </script>
+</body>
+</html>
