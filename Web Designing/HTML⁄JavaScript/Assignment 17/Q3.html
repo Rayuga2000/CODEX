@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 17</title>
+</head>
+<body>
+    Name: <input type="text" id="name"><br>
+    Email: <input type="text" id="email"><br>
+    Age: <input type="text" id="age"><br>
+    <button onclick="submit()">Submit</button>
+
+    <script>
+        function submit(){
+            var n=0,a=0,e=0;
+
+            var name=document.getElementById('name').value;
+            if(name.length>10){
+                alert("Name must be under 10 characters");
+                n++;
+            }
+
+            var email=document.getElementById('email').value;
+            if(email.search("@gmail.com")<=0){
+                alert("Enter a vaild Email");
+                e++;
+            }
+
+            var age=parseInt(document.getElementById('age').value);
+            if(age>100){
+                alert("Enter a valid age");
+                a++;
+            }
+
+            if(n||a||e){
+
+            }
+            else{
+                alert("Welcome "+name);
+            }
+        }
+    </script>
+</body>
+</html>

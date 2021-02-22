@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 18</title>
+    <style>
+        .display{
+            width: 100%;
+            height: auto;
+        }
+        input{
+            width: 97%;
+            height: 70px;
+            font-size: 50px;
+        }
+        button{
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+        }
+        .wrapper{
+            width: 13.8%;
+            margin: auto;
+            margin-top: 10%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        #eq{
+            grid-column: 1/3;
+        }
+        .funcBtn{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="display">
+            <input type="text" id="input">
+        </div>
+        <div class="container">
+            <div class="buttons">
+                <button onclick="show(7)">7</button><button onclick="show(8)">8</button>
+                <button onclick="show(9)">9</button><button onclick="show('+')">+</button>
+    
+                <button onclick="show(4)">4</button><button onclick="show(5)">5</button>
+                <button onclick="show(6)">6</button><button onclick="show('-')">-</button>
+    
+                <button onclick="show(1)">1</button><button onclick="show(2)">2</button>
+                <button onclick="show(3)">3</button><button onclick="show('*')">*</button>
+    
+                <button id="eq" onclick="initialize()">=</button><button onclick="show('0')">0</button>
+                <button onclick="show('/')">/</button>
+            </div>
+            <div class="funcBtn">
+                <button onclick="">C</button>
+                <button id="AC" onclick="clear()">AC</button>
+            </div>
+        </div> 
+    </div>
+    <script>
+        var op;
+
+        function show(n){
+            document.getElementById('input').value+=n;
+            if(n=='+'||n=='-'||n=='*'||n=='/'){
+                op=n;
+            }
+        }
+        function initialize(){
+            var arr=document.getElementById('input').value;
+            arr=arr.split(op);
+            var x=parseInt(arr[0]);
+            var y=parseInt(arr[1]);
+            calculate(x,y);
+        }
+        function calculate(x,y){
+            switch(op){
+                case '+': document.getElementById('input').value=(x+y);
+                break;
+
+                case '-': document.getElementById('input').value=(x-y);
+                break;
+
+                case '*': document.getElementById('input').value=(x*y);
+                break;
+
+                case '/': document.getElementById('input').value=(x/y);
+                break;
+
+                default: document.getElementById('input').value=("Error");
+                break;
+            }
+        }
+        function clear(){
+            document.getElementById('input').value+='0';
+        }
+    </script>
+</body>
+</html>

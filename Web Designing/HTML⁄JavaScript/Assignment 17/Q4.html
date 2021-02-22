@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 17</title>
+    <style>
+        body{
+            font-size: 50px;
+        }
+        div{
+            width: 900px;
+            font-size: 175px;
+            text-align: center;
+            margin: auto;
+        }
+        button{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        <button onclick="showTime()">Start</button>
+    </div>
+    <script>
+        function showTime(){
+            var time=new Date();
+            var hh=time.getHours();
+            var mm=time.getMinutes();
+            var ss=time.getSeconds();
+            var am_pm;
+
+            if(hh>12){
+                hh-=12;
+                am_pm="PM";
+            }
+            else{
+                am_pm="AM";
+            }
+
+            document.getElementById('clock').innerHTML=(hh+":"+mm+":"+ss+" "+am_pm);
+            setInterval(showTime, 1000);
+        }    
+    </script>
+</body>
+</html>

@@ -102,13 +102,13 @@ int main()
         scanf("%d",&tail->data);
         if(i==n-1)
         {
-            tail->next=head;
+            tail->next=head;//tail->next pointing to head Node at end of the loop, creating circular linked list
             break;
         }
         else
         {
-            tail->next=(Node*)malloc(sizeof(Node));
-            tail=tail->next;
+            tail->next=(Node*)malloc(sizeof(Node));//tail->next pointing to new Node
+            tail=tail->next;//tail pointing to new Node
         }
     }
 
