@@ -8,7 +8,7 @@ void binarySearch(int arr[],int low,int high,int value)
     {
         if(value<arr[mid])
         {
-        binarySearch(arr,low,mid-1,value);
+            binarySearch(arr,low,mid-1,value);
         }
         else if(value==arr[mid])
         {

@@ -1,55 +1,65 @@
 <!DOCTYPE html>
 <head>
     <title>Assignment 18</title>
-    <style>
-        input{
-            width: 100%;
-            height: auto;
-        }
-        div{
-            margin: auto;
-            margin-top: 10%;
-            width: 200px;
-            border: 1px solid black;
-        }
-        button{
-            width: 20%;
-        }
-    </style>
+    <link rel="stylesheet" href="/home/rayuga/Documents/BCA-3rd-Sem/Web Designing/CSS/Assignment 18/main.css">
 </head>
 <body>
-    <div>
-        <center>
-        <input type="text" id="input"><br>
-        <button onclick="show(7)">7</button><button onclick="show(8)">8</button>
-        <button onclick="show(9)">9</button><button onclick="show('+')">+</button><br>
-
-        <button onclick="show(4)">4</button><button onclick="show(5)">5</button>
-        <button onclick="show(6)">6</button><button onclick="show('-')">-</button><br>
-
-        <button onclick="show(1)">1</button><button onclick="show(2)">2</button>
-        <button onclick="show(3)">3</button><button onclick="show('*')">*</button><br>
-
-        
-        <button onclick="initialize()">=</button><button onclick="">C</button>
-        <button onclick="show('/')">/</button><br>
-    </center>
+    <div class="calculator">
+        <div><input type="text" id="input" value="0"></div>
+        <div>
+            <table>
+                <tr>
+                    <td><button onclick="show(7)">7</button></td>
+                    <td><button onclick="show(8)">8</button></td>
+                    <td><button onclick="show(9)">9</button></td>
+                    <td><button onclick="show('+')">+</button></td>
+                    <td rowspan="2"><button class="fbtn" onclick="del()">C</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="show(4)">4</button></td>
+                    <td><button onclick="show(5)">5</button></td>
+                    <td><button onclick="show(6)">6</button></td>
+                    <td><button onclick="show('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="show(1)">1</button></td>
+                    <td><button onclick="show(2)">2</button></td>
+                    <td><button onclick="show(3)">3</button></td>
+                    <td><button onclick="show('*')">*</button></td>
+                    <td rowspan="2"><button class="fbtn" onclick="clr()">AC</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="initialize()">=</button></td>
+                    <td><button onclick="show(0)">0</button></td>
+                    <td><button onclick="show('/')">/</button></td>
+                </tr>
+            </table>
+        </div>
     </div>
+    
     <script>
-        var op;
+        var op=0;
 
         function show(n){
-            document.getElementById('input').value+=n;
-            if(n=='+'||n=='-'||n=='*'||n=='/'){
-                op=n;
+            if(document.getElementById('input').value==0){
+                document.getElementById('input').value=n;
+            }
+            else{
+                document.getElementById('input').value+=n;
+                if(n=='+'||n=='-'||n=='*'||n=='/'){
+                    op=n;                    
+                }
             }
         }
         function initialize(){
             var arr=document.getElementById('input').value;
-            arr=arr.split(op);
-            var x=parseInt(arr[0]);
-            var y=parseInt(arr[1]);
-            calculate(x,y);
+            if(arr.indexOf(op)>0){
+                arr=arr.split(op);
+                let x=parseInt(arr[0]);
+                let y=parseInt(arr[1]);
+                
+                calculate(x,y);
+            }            
         }
         function calculate(x,y){
             switch(op){
@@ -68,6 +78,18 @@
                 default: document.getElementById('input').value=("Error");
                 break;
             }
+        }
+        function clr(){
+            document.getElementById("input").value="0";
+        }
+        function del(){
+            let str=document.getElementById('input').value;
+            let ar=str.slice(0,str.length-1);
+            if(ar==""){
+                document.getElementById('input').value="0";
+                return;
+            }
+            document.getElementById('input').value=ar;
         }
     </script>
 </body>

@@ -27,7 +27,7 @@
                 first=str.indexOf(key,first+1);
                 last=str.lastIndexOf(key,last-1);
 
-                if(first==last){
+                if(first==last && first!=-1){
                     occur++;
                     break;
                 }

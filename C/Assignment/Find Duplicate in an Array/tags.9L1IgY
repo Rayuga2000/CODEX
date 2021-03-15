@@ -1,2 +1,0 @@
-belongsTo	main.c	/^int belongsTo(int i,int arr[])$/;"	f
-main	main.c	/^int main()$/;"	f

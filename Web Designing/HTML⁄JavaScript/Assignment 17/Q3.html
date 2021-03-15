@@ -4,8 +4,8 @@
 </head>
 <body>
     Name: <input type="text" id="name"><br>
-    Email: <input type="text" id="email"><br>
-    Age: <input type="text" id="age"><br>
+    Email: <input type="email" id="email"><br>
+    Age: <input type="number" id="age"><br>
     <button onclick="submit()">Submit</button>
 
     <script>
@@ -13,29 +13,29 @@
             var n=0,a=0,e=0;
 
             var name=document.getElementById('name').value;
-            if(name.length>10){
-                alert("Name must be under 10 characters");
+            if(name.length>10 || name==""){
+                alert("Name must be under 10 characters and Name can't be empty");
                 n++;
             }
 
             var email=document.getElementById('email').value;
-            if(email.search("@gmail.com")<=0){
+            var at=email.indexOf('@');
+            var dot=email.indexOf('.');
+            if(at<1 || dot<at+2 || dot>=email.length || at!=email.lastIndexOf('@') || dot!=email.lastIndexOf('.')){
                 alert("Enter a vaild Email");
                 e++;
             }
 
             var age=parseInt(document.getElementById('age').value);
-            if(age>100){
+            if(age>100 || isNaN(age)){
                 alert("Enter a valid age");
                 a++;
             }
 
             if(n||a||e){
-                document.location.href="Q1.html";
             }
             else{
                 alert("Welcome "+name);
-                document.location.href="Q2.html";
             }
         }
     </script>
