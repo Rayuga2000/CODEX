@@ -27,7 +27,7 @@ int main()
         }
     }
 
-    printf("The First occurence of element %d is at index: %d\nThe First occurence of element %d is at index: %d\n",v,first+1,v,last+1);
+    printf("The First occurence of element %d is at index: %d\nThe Last occurence of element %d is at index: %d\n",v,first+1,v,last+1);
 
     return 0;
 }

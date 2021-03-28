@@ -20,12 +20,12 @@ int main()
     {
         if(arr[i]==v)
         {
-            printf("The index of the value is %d\n",i+1);
+            printf("The value is in position %d\n",i+1);
             break;
         }
         else if(i==n-1)
         {
-            printf("The value is not in the array");
+            printf("The value is not in the array\n");
         }
     }
 }

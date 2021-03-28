@@ -1,6 +1,8 @@
+#!/bin/bash
 printf "Enter the Range: ";
 read n;
 
+printf "The Fibonacci Series are: "
 printf "0 1 ";
 n1=0;
 n2=1;

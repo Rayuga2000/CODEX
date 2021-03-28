@@ -2,7 +2,7 @@
 
 void search(int arr[],int n,int x)
 {
-    int mid=(n-1)/2,low=0,high=n-1;
+    int low=0,high=n-1;
 
     if(x<arr[low])
     {
@@ -14,20 +14,6 @@ void search(int arr[],int n,int x)
     }
     else
     {
-        if(x>arr[mid])
-        {
-            low=mid+1;
-        }
-        else if(x<arr[mid])
-        {
-            high=mid;
-        }
-        else
-        {
-            printf("Ceil=> %d\nFloor=> %d\n",arr[mid],arr[0]);
-            return;
-        }
-
         for(int i=low;i<=high;i++)
         {
             if(arr[i]>=x)
@@ -41,7 +27,7 @@ void search(int arr[],int n,int x)
 
 int main()
 {
-    int i,n,x,floor,ceil;
+    int i,n,x;
 
     printf("Enter the range: ");
     scanf("%d",&n);

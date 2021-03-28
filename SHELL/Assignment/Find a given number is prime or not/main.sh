@@ -1,3 +1,4 @@
+#!/bin/bash
 printf "Enter the Number: ";
 read num;
 
