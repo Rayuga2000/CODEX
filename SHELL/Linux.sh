@@ -17,6 +17,7 @@ sudo apt install htop;
 sudo apt update;
 sudo apt install snapd -y;
 sudo snap install spotify;
+sudo snap install code --classic;
 
 #sudo apt install -y git;
 #git config --global user.name "Rayuga2000";git config --global user.email "tsarkar431@gmail.com"
@@ -26,6 +27,4 @@ sudo snap install spotify;
 #61.54.25.98 community-packages.deepin.com
 
 timedatectl set-local-rtc 1 --adjust-system-clock;#adjust system time in windows as well as other os
-
-echo "Make sure to download VS-code from web";
 printf "Also check the netdata";#netdata use=> ip:19999
