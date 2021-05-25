@@ -4,6 +4,14 @@ using namespace std;
 
 int main()
 {
-	cout<<parseInt("20")<<endl;
+	int x=9,y=10;
+
+	const int* p=&x;
+	cout<<*p<<endl;
+	cout<<p<<endl;
+
+	p=&y;
+	cout<<p<<endl;
+
 	return 0;
 }

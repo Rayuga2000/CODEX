@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int calculate(int a,char op,int b)
+float calculate(float a,char op,float b)
 {
     switch (op)
     {
@@ -23,7 +23,6 @@ int calculate(int a,char op,int b)
 
 int main(int argc,char* argv[])
 {
-    cout<<"Result=> "<<calculate(atoi(argv[1]),*argv[2],atoi(argv[3]))<<endl;
-    //cout<<"Result=> "<<(int)*argv[1]<<" "<<*argv[2]<<" "<<(int)*argv[3]<<endl;
+    cout<<"Result=> "<<calculate(atof(argv[1]),*argv[2],atof(argv[3]))<<endl;
     return 0;
 }
