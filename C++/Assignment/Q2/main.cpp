@@ -1,3 +1,4 @@
+/*Write a C++ program to find the largest of three numbers using inline function.*/
 #include<iostream>
 using namespace std;
 

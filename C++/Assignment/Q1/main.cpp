@@ -1,3 +1,4 @@
+/*Define a macro Cube1(a) in C++ and call it from main( ) with long and integer argument.*/
 #include<iostream>
 using namespace std;
 

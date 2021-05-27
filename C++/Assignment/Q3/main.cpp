@@ -1,3 +1,5 @@
+/*Define a class for complex number. Write a C++ program to
+read, print and add two complex number.*/
 #include<iostream>
 using namespace std;
 
