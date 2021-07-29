@@ -8,15 +8,15 @@ using namespace std;
 class rectangle{
     public:
 
-    double area(double l,double w){
+    inline double area(double l,double w){
         return(l*w);
     }
 
-    double perimeter(double l,double w){
+    inline double perimeter(double l,double w){
         return(2*(l+w));
     }
 
-    double diagonal(double l,double w){
+    inline double diagonal(double l,double w){
         return(sqrt((l*l)+(w*w)));
     }
 };

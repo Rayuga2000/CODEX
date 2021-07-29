@@ -1,19 +1,18 @@
 $(document).ready(function(){
-    $('div').add().text('Hello World').css('color','green').css('font-size','60px')
-    .css('border','1px solid black').css('background','blue');
-    
-    $('div').on({
-        mousedown: function(){
-            $(this).text('Hello World').css('color','red').css('font-size','60px')
-        .css('border','1px solid black');
-        },
-        mouseup: function(){
-            $(this).text('Hello World').css('color','green').css('font-size','60px')
-        .css('border','1px solid black');
-        }
+    $('div').click(function(){
+        var div=$('div');
+        div.animate({marginLeft: '+=250px',height: '+=150px',width: '+=150px'},'slow');
+        div.animate({marginTop: '+=250px',height: '-=150px',width: '-=150px'},'slow');
+        div.animate({marginLeft: '-=250px',height: '+=150px',width: '+=150px'},'slow');
+        div.animate({marginTop: '-=250px',height: '-=150px',width: '-=150px'},'slow',function(){
+            alert("Animation Ended");
+        });
     });
 
-    $('button').click(function(){
-        $('div').fadeToggle(2000);
+    $('input').keyup(function(){
+        var value=$(this).val().toLowerCase();
+        $('#tbody tr').filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1);
+        });
     });
 });
