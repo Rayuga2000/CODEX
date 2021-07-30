@@ -1,3 +1,5 @@
+/*Write a C++ program using constructor overloading to find out sum of integer arrays 
+and sum of float arrays with 5 elements.*/
 #include<iostream>
 
 using namespace std;
@@ -5,22 +7,25 @@ using namespace std;
 int i;
 
 class myClass{
-    int sum=0;
-    float sum2=0;
+    float sum=0;
 
     public:
-    myClass(int arr){
+    myClass(int x[]){
         for(i=0;i<5;i++)
         {
-            sum+=arr[i];
+            sum+=x[i];
         }
     }
 
-    myClass(float ar){
+    myClass(float y[]){
         for(i=0;i<5;i++)
         {
-            sum2+=ar[i];
+            sum+=y[i];
         }
+    }
+    void display()
+    {
+        cout<<"Result=> "<<sum<<endl;
     }
 };
 
@@ -39,9 +44,12 @@ int main()
     for(i=0;i<5;i++)
     {
         cin>>y[i];
-    }
+    }    
 
     myClass cls1(x),cls2(y);
+
+    cls1.display();
+    cls2.display();
 
     return 0;
 }
