@@ -5,9 +5,7 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [
-        "Enter"
-      ],
+      "args": [],
       "stopAtEntry": false,
       "cwd": "/home/rayuga/Documents/BCA/Web Designing/Bootstrap 4",
       "environment": [],

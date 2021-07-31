@@ -3,18 +3,22 @@
 
 using namespace std;
 
-class x{
-    int x;
+class cls{
+    int x=25;
+
     public:
     friend void display();
 };
 
 void display()
 {
-    cout<<"This is a private member in Class x=> "<<x<<endl;
+    cls obj;
+    cout<<"This is a private member in Class x=> "<<obj.x<<endl;
 }
+
 int main()
 {
     display();
+
     return 0;
 }
