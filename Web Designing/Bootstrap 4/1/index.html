@@ -13,12 +13,50 @@
     <title>Document</title>
 </head>
 <body>
-    <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">c</a></li>
-        <li class="breadcrumb-item"><a href="#">c++</a></li>
-        <li class="breadcrumb-item"><a href="#">java</a></li>
-    </ul>
-    <div class="container">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top">
+        <a href="#" class="navbar-brand">
+            <img src="logo0.png" alt="logo">
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About Bhutan</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Places to Visit</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Cultural Tour</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Trek</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Travel Requirements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <form action="" class="form-inline">
+                <input type="text" placeholder="Search" class="form-control mr-2">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+        </div>        
+    </nav>
+    
+    <div class="container mt-5">
         <div class="card mx-auto mb-4">
             <img src="img.jpg" alt="Profile Pic" class="card-img-top">
             <div class="card-body">
@@ -39,33 +77,7 @@
                 </div>                
             </div>
         </div>
-        
-        <div id="accordion">
-            <div class="card mx-auto">
-                <div class="card-header">
-                    <a href="#c1" class="collapsed card-link" data-toggle="collapse">Item 1</a>
-                </div>
-                <div id="c1" class="collapse" data-parent="#accordion">
-                    <div class="card-body">Lorem Ipsum Dolor</div>
-                </div>
-            </div>
-            <div class="card mx-auto">
-                <div class="card-header">
-                    <a href="#c2" class="collapsed card-link" data-toggle="collapse">Item 2</a>
-                </div>
-                <div id="c2" class="collapse" data-parent="#accordion">
-                    <div class="card-body">Lorem Ipsum Dolor</div>
-                </div>
-            </div>
-            <div class="card mx-auto">
-                <div class="card-header">
-                    <a href="#c3" class="collapsed card-link" data-toggle="collapse">Item 3</a>
-                </div>
-                <div id="c3" class="collapse" data-parent="#accordion">
-                    <div class="card-body">Lorem Ipsum Dolor</div>
-                </div>
-            </div>
-        </div>
+               
     </div>
     
     <script src="../JQuery/jquery-3.6.0.js"></script>
