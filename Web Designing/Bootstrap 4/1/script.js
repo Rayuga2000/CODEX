@@ -1,22 +1,24 @@
-$(document).ready(function(){
-    $('#x').click(function(){
-        $('.row div').hide();
-    });
-    $('#y').click(function(){
-        $('.row div').show();
-    });
-    $('#z').click(function(){
-        $('.row div').toggle();
-    });
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Get the forms we want to add validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
 
-    $('.dropdown-menu a:first-child').click(function(){
-        $('#w span').html('');
-    });
-    $('.dropdown-menu a:last-child').click(function(){
-        $('#w span').html('1');
-    });
-    $('#v').click(function(){
-        $('.progress').toggle();
-    });
-    
+$(document).ready(function(){
+  $(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
 });

@@ -4,3 +4,10 @@
 .navbar-brand img{
     width: 60px;
 }
+#row-2{
+    color: white;
+    font-weight: bolder;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 20px;
+}
