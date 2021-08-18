@@ -1,8 +1,6 @@
-/*Define a table of the
-names of months of the year and the number of days in each month. Do this
-twice; once using an array of char
-for the names and an array of integer for the number of days and
-once using an array of structures, with each structure
+/*Define a table of the names of months of the year and the number of days in each month.
+Do this twice; once using an array of char for the names and an array of integer for the number of days
+and once using an array of structures, with each structure
 holding the name of a month and the number of days in it. Write out that table
 using two functions.*/
 #include<iostream>

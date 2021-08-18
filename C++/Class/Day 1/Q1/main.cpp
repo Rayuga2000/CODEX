@@ -1,5 +1,6 @@
 /*Write a program that prints out the letters ‘a’....’z’ and the digits ‘0’....’9’ and their ASCII values using recursion.*/
 #include<iostream>
+
 using namespace std;
 
 void number(char c)
@@ -21,7 +22,7 @@ void alphabet(char c)
 
 int main()
 {
-	cout <<"Numbers" <<endl;
+	cout <<"Numbers:" <<endl;
 	number('0');
 	cout <<"Alphabets:" <<endl;
 	alphabet('a');
