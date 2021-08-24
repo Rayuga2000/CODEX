@@ -4,3 +4,38 @@ img{
 .col img{
     height: 400px;
 }
+.header{
+    box-shadow: 0px 1px 4px -1px rgba(30, 30, 60, 0.16);
+    font-family: Courier New;
+}
+.header i img{
+    width: 18px;
+}
+.header-container{
+    display: flex;
+    margin: 0px 202.5px;
+}
+.header-left{
+    display: flex;
+    flex-basis: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-right{
+    flex-basis: 40%;
+    align-items: center;
+}
+.textgroup a{
+    color: #707070;
+}
+.textgroup a:hover{
+    text-decoration: none;
+}
+.header-right button{
+    background-color: none;
+    border: none;
+}
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
