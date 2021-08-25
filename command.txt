@@ -1,0 +1,3 @@
+//update-grub for Fedora
+sudo grub2-mkconfig -o "$(readlink -e /etc/grub2.cfg)"
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg

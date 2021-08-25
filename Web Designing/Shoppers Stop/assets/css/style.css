@@ -22,13 +22,18 @@ img{
     align-items: center;
 }
 .header-right{
+    display: flex;
     flex-basis: 40%;
+    justify-content: space-between;
     align-items: center;
 }
 .textgroup a{
     color: #707070;
 }
-.textgroup a:hover{
+a{
+    color: #ff5d3b;
+}
+a:hover{
     text-decoration: none;
 }
 .header-right button{
@@ -38,4 +43,42 @@ img{
 .form-control:focus {
   border: none;
   box-shadow: none;
+}
+.search-bar{
+    flex-basis: 72.9%;
+}
+.user-icons img{
+    width: 44px;
+}
+#wishpop{
+    display: none;
+    font-size: 14px;
+    width: 15%;
+    position: absolute;
+    background-color: white;
+    padding: 17px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 6px 6px;
+    margin: 0px 0px 0px -250px;
+    line-height: 20px;
+    box-shadow: 0px 11px 29px -11px #999999;
+}
+#wish:hover~#wishpop{
+    display: block;
+}
+#userpop{
+    display: none;
+    font-size: 14px;
+    width: 15%;
+    position: absolute;
+    background-color: white;
+    padding: 17px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 6px 6px;
+    margin: 0px 0px 0px -150px;
+    line-height: 20px;
+    box-shadow: 0px 11px 29px -11px #999999;
+}
+#user:hover~#userpop{
+    display: block;
 }

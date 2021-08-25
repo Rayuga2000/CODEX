@@ -9,8 +9,9 @@
     <title>Shoppers Stop</title>
 </head>
 <body>
+    <!--Heaader Start-->
     <div class="header mb-5">
-        <div class="header-container  my-2 py-3">
+        <div class="header-container  my-2 py-2">
             <div class="header-left">
                 <div class="textgroup">
                     <i>
@@ -28,20 +29,47 @@
                     </a>
                 </div>
             </div>
-            <div class="header-right p-1">
-                <form>
-                    <div class="input-group">
-                      <input type="search" class="form-control border-0" placeholder="Search Products & Brands">
-                      <div class="input-group-append">
-                        <span>
-                            <img src="assets/img/iconsearch.png">
-                        </span>
-                      </div>
+            <div class="header-right ml-4 p-1">
+                <div class="search-bar">
+                    <form>
+                        <div class="input-group">
+                          <input type="search" class="form-control border-0" placeholder="Search Products & Brands">
+                          <div id="search-icon" class="input-group-append">
+                            <span>
+                                <img src="assets/img/iconsearch.png">
+                            </span>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="user-icons">
+                    <a href="#" id="wish">
+                        <img src="assets/img/iconwishlist.png">
+                    </a>
+                    <div id="wishpop">
+                        <p><strong>Your Saved Items Are Empty</strong></p>
+                        <hr>
+                        <p>
+                            Please <a href="#">LOGIN</a> or <a href="#">REGISTER</a> to add products
+                        </p>
                     </div>
-                </form> 
+                    <a href="#">
+                        <img src="assets/img/iconaddtobag.png"> 
+                    </a>
+                    <a id="user" href="#">
+                        <img src="assets/img/iconuser.png">
+                    </a>
+                    <div id="userpop">
+                        <p>SIGN IN</p>
+                        <hr>
+                        <p>SIGN UP</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <!--Header End-->
+
     <img src="assets/img/FC-Strip-Web.jpg">
     <!--Add Slider-->
     <img src="assets/img/mensWomenswear-mltClk_web.jpg" class="my-1">
@@ -51,9 +79,9 @@
     <img src="assets/img/frgranceHim&her_mltClck_web.jpg">
     <img src="assets/img/Top-selling-brands-Strip-Web.jpg">
     <!--Add Slider-->
-    <h2 class="mb-3">Featured Categories</h2>
+    
     <div class="px-3">
-
+        <h2 class="mb-3">Featured Categories</h2>
         <div class="row">
             <div class="col my-4"><img src="assets/img/Men-Shirts-------WEB.jpg"></div>
             <div class="col my-4"><img src="assets/img/Women-Dresses------WEB.jpg"></div>
@@ -78,10 +106,39 @@
     <img src="assets/img/Homepage-Kids-LP-Static-Kids-Web.jpg" class="mt-4">
     <img src="assets/img/Budget-Store-Strip-Web.jpg">
     <!--Add Slider-->
-    
-    
-    
+    <div class="px-3">
+        <h2 class="mb-3">Top Brands For Men</h2>
+        <div class="row">
+            <div class="col my-4"><img src="assets/img/Tommy-Hilfger-&-CK-----web-01.jpg"></div>
+            <div class="col my-4"><img src="assets/img/guess----web-01.jpg"></div>
+            <div class="col my-4"><img src="assets/img/Stop-&-Life--------web-01.jpg"></div>
+        </div>
+        <div class="row">
+            <div class="col my-4"><img src="assets/img/Lee-Cooper------web-01.jpg"></div>
+            <div class="col my-4"><img src="assets/img/Men-Grooming-----web-01.jpg"></div>
+            <div class="col my-4"><img src="assets/img/Men-Fragrances-------web-01.jpg"></div>
+        </div>
+    </div>
 
+    <div class="px-3">
+        <h2 class="mb-3 mt-5">Top Brands For Women</h2>
+        <div class="row">
+            <div class="col my-4"><img src="assets/img/Juniper-&-Varanga----web-01208.jpg"></div>
+            <div class="col my-4"><img src="assets/img/STOP-&-LIFE-----web-010820.jpg"></div>
+            <div class="col my-4"><img src="assets/img/Titan-----web-010820.jpg"></div>
+        </div>
+        <div class="row">
+            <div class="col my-4"><img src="assets/img/Lipsticks------web-01.jpg"></div>
+            <div class="col my-4"><img src="assets/img/Handbags------web-010820.jpg"></div>
+            <div class="col my-4"><img src="assets/img/Fragrances----web-012098.jpg"></div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="assets/jQuery/jquery-3.6.0.js"></script>
     <script src="assets/BootStrap4/bootstrap.min.js"></script>
+    <script src="assets/BootStrap4/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
