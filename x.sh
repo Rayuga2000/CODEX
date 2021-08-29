@@ -1,3 +1,5 @@
-echo "Enter file name"
+printf "Enter first name: \n"
 read fname
-nano $fname
+printf "Enter last name: \n"
+read lname
+echo "Hello" $fname" "$lname
