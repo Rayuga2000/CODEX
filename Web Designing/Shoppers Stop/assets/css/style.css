@@ -113,3 +113,18 @@ nav li:hover{
 .dropdown-toggle::after {
     content: none;
 }
+
+.slick-dots li button:before,.slick-next:before,.slick-prev:before{
+    margin-top: -50px !important;
+    font-size: 50px !important;
+}
+
+/*.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.download,.delivery,.follow{
+    display: flex;
+    flex-direction: row;
+}*/
