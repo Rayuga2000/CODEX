@@ -6,7 +6,7 @@ class A{
     public:
     int i,j,k;
 
-    virtual void pattern()
+    void pattern()
     {
         for(i=1;i<5;i++)
         {
