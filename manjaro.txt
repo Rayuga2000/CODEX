@@ -1,0 +1,49 @@
+menuentry 'Manjaro Linux' --class manjaro --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-f390b1e8-216a-4c46-854f-83c7fd02cf22' {
+	savedefault
+	load_video
+	set gfxpayload=keep
+	insmod gzio
+	insmod part_gpt
+	insmod ext2
+	set root='hd0,gpt11'
+	if [ x$feature_platform_search_hint = xy ]; then
+	  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt11 --hint-efi=hd0,gpt11 --hint-baremetal=ahci0,gpt11  f390b1e8-216a-4c46-854f-83c7fd02cf22
+	else
+	  search --no-floppy --fs-uuid --set=root f390b1e8-216a-4c46-854f-83c7fd02cf22
+	fi
+	linux	/boot/vmlinuz-5.13-x86_64 root=UUID=f390b1e8-216a-4c46-854f-83c7fd02cf22 rw  quiet apparmor=1 security=apparmor udev.log_priority=3
+	initrd	/boot/intel-ucode.img /boot/initramfs-5.13-x86_64.img
+}
+submenu 'Advanced options for Manjaro Linux' $menuentry_id_option 'gnulinux-advanced-f390b1e8-216a-4c46-854f-83c7fd02cf22' {
+	menuentry 'Manjaro Linux (Kernel: 5.13.19-2-MANJARO x64)' --class manjaro --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-5.13.19-2-MANJARO x64-advanced-f390b1e8-216a-4c46-854f-83c7fd02cf22' {
+	savedefault
+		load_video
+		set gfxpayload=keep
+		insmod gzio
+		insmod part_gpt
+		insmod ext2
+		set root='hd0,gpt11'
+		if [ x$feature_platform_search_hint = xy ]; then
+		  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt11 --hint-efi=hd0,gpt11 --hint-baremetal=ahci0,gpt11  f390b1e8-216a-4c46-854f-83c7fd02cf22
+		else
+		  search --no-floppy --fs-uuid --set=root f390b1e8-216a-4c46-854f-83c7fd02cf22
+		fi
+		linux	/boot/vmlinuz-5.13-x86_64 root=UUID=f390b1e8-216a-4c46-854f-83c7fd02cf22 rw  quiet apparmor=1 security=apparmor udev.log_priority=3
+		initrd	/boot/intel-ucode.img /boot/initramfs-5.13-x86_64.img
+	}
+	menuentry 'Manjaro Linux (Kernel: 5.13.19-2-MANJARO x64 - fallback initramfs)' --class manjaro --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-5.13.19-2-MANJARO x64-fallback-f390b1e8-216a-4c46-854f-83c7fd02cf22' {
+		load_video
+		set gfxpayload=keep
+		insmod gzio
+		insmod part_gpt
+		insmod ext2
+		set root='hd0,gpt11'
+		if [ x$feature_platform_search_hint = xy ]; then
+		  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt11 --hint-efi=hd0,gpt11 --hint-baremetal=ahci0,gpt11  f390b1e8-216a-4c46-854f-83c7fd02cf22
+		else
+		  search --no-floppy --fs-uuid --set=root f390b1e8-216a-4c46-854f-83c7fd02cf22
+		fi
+		linux	/boot/vmlinuz-5.13-x86_64 root=UUID=f390b1e8-216a-4c46-854f-83c7fd02cf22 rw  quiet apparmor=1 security=apparmor udev.log_priority=3
+		initrd	/boot/initramfs-5.13-x86_64-fallback.img
+	}
+}
