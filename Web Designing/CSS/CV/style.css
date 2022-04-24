@@ -1,0 +1,39 @@
+body{
+    background: rgb(70,69,75);
+    background: linear-gradient(90deg, rgba(70,69,75,1) 100%,
+    rgba(110,120,121,1) 100%, rgba(0,212,255,1) 100%);
+}
+.container{
+    padding: 50px;
+}
+h1{
+    color: #ff9a00;
+    font-family: Balsamiq Sans;
+}
+b{
+    color: #00BD56;
+}
+p{
+    font-family: 'Courier New', Noto Sans Mono, Courier, monospace;
+}
+.card,.form{
+    box-shadow: 20px 5px 31px -5px rgba(30,30,60,0.25);
+}
+.card{
+    border-radius: 20px;
+    width: 300px;
+    margin: auto;
+    
+}
+.card-body{
+    margin-top: -15px;
+}
+.form{
+    background-color: white;
+    border-radius: 20px;
+    width: 300px;
+    margin: auto;
+}
+#submit{
+    width: 100%;
+}
