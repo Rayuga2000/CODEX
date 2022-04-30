@@ -1,3 +1,4 @@
+%print fibbonacci series
 clc;
 
 prev1=0;
