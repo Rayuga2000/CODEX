@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculate</title>
+    <style>
+        .card{
+            margin: 21% 33%;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        input,button,.card,li{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <label for="x">Enter the Numbers: </label>
+        <input id="x" type="text"><br>
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="clear()">Clear</button>
+
+        <p id="add"></p>
+        <p id="multiply"></p>
+        <p id="divide"></p>
+        <p id="modulo"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
