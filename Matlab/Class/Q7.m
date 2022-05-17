@@ -1,9 +1,11 @@
 %find sum of array elements
-x=[1 2 3 4 5 6];
+clc;
+
+x=input('Enter the array: ');
 sum=0;
 
 for i=1:length(x)
     sum=sum+x(i);
 end
 
-fprintf('The sum is:%u\n',sum);
+fprintf('The sum is: %u\n',sum);

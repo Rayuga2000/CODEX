@@ -1,4 +1,6 @@
 %find if the year is a leap year
+clc;
+
 y=input('Enter the year:');
 
 if mod(y,400)==0

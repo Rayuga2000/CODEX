@@ -1,5 +1,7 @@
-y=add(a, b)
-%a=65;
-%b=67;
-y=a+b;
-fprintf('%4u',c)
+clc;
+
+a=input('Enter value of A: ');
+b=input('Enter value of B: ');
+
+c=a+b;
+fprintf('Sum =%3u\n',c);

@@ -1,10 +1,8 @@
 %GCD,LCM
 clc
-clear all;
-close all;
 
-x=input('Enter the Numbers:');
-y=input('Enter the Numbers:');
+x=input('Enter 1st Number: ');
+y=input('Enter 2nd Number: ');
 
 temp=y;
 if x<y
@@ -17,5 +15,5 @@ for i=1:temp
     end
 end
 
-fprintf("GCD:%3u\n",gcd);
-fprintf("LCM:%3u\n",(x*y)/gcd);
+fprintf("GCD: %u\n",gcd);
+fprintf("LCM: %u\n",(x*y)/gcd);
