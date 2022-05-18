@@ -1,16 +1,16 @@
 %Matrix Multiplication
 clc
 
-x=[1 2;
-    3 4];
-y=[2 3;
-    4 5];
+n=input('Enter range: ');
+x=input('Enter the 1st Matrix: ');
+y=input('Enter the 2nd Matrix: ');
+
 z=[];
 sum=0;
 
-for i=1:2
-    for j=1:2
-        for k=1:2
+for i=1:n
+    for j=1:n
+        for k=1:n
             sum=sum+(x(i,k)*y(k,j));
         end
         z(i,j)=sum;
@@ -18,10 +18,10 @@ for i=1:2
     end
 end
 
-fprintf('Multiplied Matrix:\n');
-for i=1:2
-    for j=1:2
-        fprintf("%3u",z(i,j));
+fprintf('\nMultiplied Matrix:\n');
+for i=1:n
+    for j=1:n
+        fprintf(" %u",z(i,j));
     end
     fprintf("\n");
 end

@@ -3,7 +3,7 @@
     <title>Calculate</title>
     <style>
         .card{
-            margin: 21% 33%;
+            margin: 21% 37%;
             border: 1px solid black;
             padding: 20px;
         }
@@ -14,10 +14,14 @@
 </head>
 <body>
     <div class="card">
-        <label for="x">Enter the Numbers: </label>
-        <input id="x" type="text"><br>
+        <label for="x">Enter 1st Number: </label>
+        <input id="x" maxlength="10" size="8" type="text"><br><br>
+
+        <label for="y">Enter 2nd Number: </label>
+        <input id="y" maxlength="10" size="8" type="text"><br><br>
+
         <button onclick="calculate()">Calculate</button>
-        <button onclick="clear()">Clear</button>
+        <button onclick="clearText()">Clear</button>
 
         <p id="add"></p>
         <p id="multiply"></p>

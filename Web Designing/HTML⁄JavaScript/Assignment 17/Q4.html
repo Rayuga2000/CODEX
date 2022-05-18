@@ -20,7 +20,9 @@
     <div id="clock">
         <button onclick="showTime()">Start</button>
     </div>
+    <button id='clear' onclick="cleartime()">clear</button>
     <script>
+        const x=setInterval(showTime, 1000);
         function showTime(){
             var time=new Date();
             var hh=time.getHours();
@@ -37,8 +39,11 @@
             }
 
             document.getElementById('clock').innerHTML=(hh+":"+mm+":"+ss+" "+am_pm);
-            setInterval(showTime, 1000);
-        }    
+            
+        }
+        function cleartime(){
+            clearInterval(x);
+        }
     </script>
 </body>
 </html>
