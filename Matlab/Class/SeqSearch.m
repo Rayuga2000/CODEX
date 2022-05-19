@@ -1,5 +1,5 @@
 function x=SeqSearch(arr,target)
-    x=-1;
+    x=0;
     for i=1:length(arr)
         if target==arr(i)
             x=i;
