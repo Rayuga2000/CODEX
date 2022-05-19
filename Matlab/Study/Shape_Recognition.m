@@ -1,6 +1,4 @@
-clc;
-clear;
-close all;
+clc
 
 img=imread('y.jpg');%read image file
 img=imresize(img,[255,255]);%resize image into 300x300
@@ -38,6 +36,19 @@ title('Filterd Image');
 subplot(2,2,4);
 imshow(BW);
 title('Binary');
+
+
+[L,n]=bwlabel(BW);%get label matrix(check/detect no. of objects in the image)
+fprintf(' %u\n',n);
+a=regionprops(L,'Area');%get Areas in a structure
+box=regionprops(L,'BoundingBox');
+% box_table=struct2table(box, 'AsArray', true);
+% box_table
+% hold on;
+% rectangle('Position',box(1));
+% hold off;
+box(1)
+%stat=regionprops(BW,'Centroid');
 
 
 
