@@ -3,10 +3,9 @@ clc
 arr=[32,6,34,22,98,77,45,99,12];
 arr=sort(arr);
 
-target=input('Enter the Value to search: ');
 fprintf('Sorted array:');
 fprintf(' %u',arr);
-
+target=input('\nEnter the Value to search: ');
 temp=BinarySearch(arr,target,1,length(arr));
 
 if temp ~= 0
