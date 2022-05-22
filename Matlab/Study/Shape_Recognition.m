@@ -36,19 +36,40 @@ title('Filterd Image');
 subplot(2,2,4);
 imshow(BW);
 title('Binary');
-
-
+vislabels(L);
 [L,n]=bwlabel(BW);%get label matrix(check/detect no. of objects in the image)
+
 fprintf(' %u\n',n);
 a=regionprops(L,'Area');%get Areas in a structure
+p=regionprops(L,'Perimeter');
+major=regionprops(L,'MajorAxisLength');
+minor=regionprops(L,'MinorAxisLength');
+% c=regionprops(L,'ConvexArea');
 box=regionprops(L,'BoundingBox');
-% box_table=struct2table(box, 'AsArray', true);
-% box_table
-% hold on;
-% rectangle('Position',box(1));
-% hold off;
-box(1)
-%stat=regionprops(BW,'Centroid');
 
+for i=1:n
+    rectangle('Position',box(i).BoundingBox,'EdgeColor','b','LineWidth',2);%show rectangle around the objects
+    %pause;
+end
+
+for i=1:n
+    circularity=floor((4*pi*(a(i).Area)/p(i).Perimeter^2));
+    
+    if circularity==1
+        shape='Circle';
+    elseif circularity==0
+        if major(i).MajorAxisLength==minor(i).MinorAxisLength
+            shape='Square';
+        elseif major(i).MajorAxisLength~=minor(i).MinorAxisLength
+            shape='Rectangle';
+        else
+            shape='Something else';
+        end
+    end
+    
+    fprintf('%u) %u',i,circularity);
+    fprintf(' %s\n',shape);
+%     fprintf(' %u\n',c(i).ConvexArea);
+end
 
 
