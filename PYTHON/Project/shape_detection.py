@@ -6,10 +6,10 @@ cv2.imshow("original", img)
 #lets detect shapes
 imggray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 _,thresh=cv2.threshold(imggray, 240,255,cv2.THRESH_BINARY) #find the threshold of color in image
-contours,_=cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #IT WILL FIND THE CONTOUR IN IMAGE
+contours,_=cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #FIND THE CONTOUR IN IMAGE
 for contour in contours:
-    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximate polygonal curve
-    cv2.drawContours(img,[approx],0,(0,0,0),3) #to draw contour
+    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True)#get approximate polygonal curve
+    cv2.drawContours(img,[approx],0,(0,0,0),3) #draw contour
     x=approx.ravel()[0]
     y=approx.ravel()[1]-7 #defining the x and y point of shape to write text on it
     #now if else conditions to find different shapes
