@@ -1,4 +1,4 @@
-function circularity()
+function c=circularity(img,contour)
 clc 
     img=imread('y.jpg');%read image file
     img=imresize(img,[255,255]);%resize image into 300x300
@@ -27,7 +27,11 @@ clc
 
     for i=1:n
         arr=floor(stats(i).Perimeter.^2)./(4*pi*(stats(i).Area));
-        fprintf(' %u\n',arr);
+        if (arr<1.05)
+            c=true;
+        else
+            c=false;
+        end
     end
     
 end

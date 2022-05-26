@@ -1,4 +1,4 @@
-function vislabels(L)
+function vislabels(L,i,str)
 %VISLABELS Visualize labels of connected components
 %   VISLABELS is used to visualize the output of BWLABEL.
 %
@@ -42,13 +42,20 @@ s = regionprops(L, 'Extrema');
 % for each object.  Turn clipping on so that the text doesn't
 % display past the edge of the image when zooming.
 hold(axesHandle, 'on');
-for k = 1:numel(s)
-   e = s(k).Extrema;
-   text(e(1,1), e(1,2), sprintf('%d', k), ...
+% for k = 1:numel(s)
+%    e = s(k).Extrema;
+%    text(e(1,1), e(1,2), sprintf('%d %s',k,str), ...
+%       'Parent', axesHandle, ...
+%       'Clipping', 'on', ...
+%       'Color', 'b', ...
+%       'FontWeight', 'bold');
+% end
+
+e = s(i).Extrema;
+   text(e(1,1), e(1,2), sprintf('%d %s',i,str), ...
       'Parent', axesHandle, ...
       'Clipping', 'on', ...
       'Color', 'b', ...
       'FontWeight', 'bold');
-end
 hold(axesHandle, 'off');
 

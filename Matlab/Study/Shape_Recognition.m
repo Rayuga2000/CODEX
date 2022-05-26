@@ -57,8 +57,8 @@ imshow(BW);
 title('Binary');
 
 [L,n]=bwlabel(BW);%get label matrix(check/detect no. of objects in the image)
-vislabels(L);
-fprintf(' %u\n',n);
+% vislabels(L);
+% fprintf(' %u\n',n);
 
 stats=regionprops(L,'all');%get all properties of the objects in a structure
 
@@ -66,18 +66,17 @@ for i=1:n
     rectangle('Position',stats(i).BoundingBox,'EdgeColor','b','LineWidth',2);%show rectangle around the objects
 %     pause;
 end
-% for i=1:n
-%     circularity=floor((4*pi*(stats(i).Area)/stats(i).Perimeter^2));
-%     
-%     if circularity==1
-%         shape='Circle';
-%     elseif circularity==0
-%         py.Area;
-%     end
-% end
-%     
-%     fprintf('%u) %u',i,circularity);
-%     fprintf(' %s\n',shape);
-%     fprintf(' %u\n',c(i).ConvexArea);
-% end
+
+for i=1:n
+    arr=floor(stats(i).Perimeter.^2)./(4*pi*(stats(i).Area));
+    
+    if (arr<1.05)
+       vislabels(L,i,'Circle');
+       fprintf('Circle');
+    else
+        vislabels(L,i,'Else');
+        fprintf('Else');
+    end
+    fprintf(' %d\n',arr);
+end
 
