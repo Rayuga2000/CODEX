@@ -1,0 +1,51 @@
+,Title,Type,Genres,Release_year,IMDB_Popularity,IMDB_Score
+0,365 Days: This Day,MOVIE,"['romance', 'drama']",2022,1823.374,2.5
+1,The Marked Heart,SHOW,"['thriller', 'drama']",2022,1455.085,6.3
+2,Wheel of Fortune,SHOW,['family'],1983,1440.855,6.7
+3,Yaksha: Ruthless Operations,MOVIE,"['action', 'thriller', 'crime']",2022,1275.252,6.2
+4,Grey's Anatomy,SHOW,"['drama', 'romance']",2005,1215.393,7.6
+5,Peaky Blinders,SHOW,"['drama', 'crime', 'european']",2013,971.727,8.8
+6,Black Crab,MOVIE,"['war', 'action', 'drama', 'scifi', 'thriller']",2022,944.405,5.6
+7,Heartstopper,SHOW,"['drama', 'romance']",2022,926.362,8.9
+8,The Adam Project,MOVIE,"['drama', 'action', 'comedy', 'scifi']",2022,919.599,6.7
+9,Fistful of Vengeance,MOVIE,"['fantasy', 'action', 'crime', 'drama']",2022,829.005,4.5
+10,The Walking Dead,SHOW,"['action', 'drama', 'scifi', 'thriller', 'horror']",2010,773.19,8.2
+11,Lucifer,SHOW,"['scifi', 'crime', 'drama', 'fantasy']",2016,761.064,8.1
+12,The Flash,SHOW,"['scifi', 'drama', 'action']",2014,751.315,7.6
+13,All of Us Are Dead,SHOW,"['action', 'scifi', 'thriller', 'drama', 'fantasy', 'horror']",2022,678.734,7.5
+14,Honeymoon With My Mother,MOVIE,['comedy'],2022,642.372,5.8
+15,Battle: Freestyle,MOVIE,"['romance', 'drama', 'music']",2022,570.879,4.3
+16,Conversations with a Killer: The John Wayne Gacy Tapes,SHOW,"['crime', 'documentation']",2022,534.857,7.2
+17,Elite,SHOW,"['crime', 'drama', 'thriller']",2018,531.821,7.4
+18,Last Man Down,MOVIE,"['thriller', 'scifi', 'action']",2021,505.736,5
+19,Vikings: Valhalla,SHOW,"['war', 'action', 'drama', 'history', 'romance']",2022,504.811,7.1
+20,Restless,MOVIE,"['thriller', 'action', 'crime']",2022,493.927,5.8
+21,The Vampire Diaries,SHOW,"['scifi', 'drama', 'thriller', 'fantasy', 'horror', 'romance']",2009,463.661,7.7
+22,Once Upon a Time... Happily Never After,SHOW,"['scifi', 'comedy', 'fantasy']",2022,456.283,5.4
+23,Texas Chainsaw Massacre,MOVIE,"['thriller', 'crime', 'horror']",2022,437.842,4.8
+24,The Privilege,MOVIE,"['scifi', 'thriller', 'drama', 'horror']",2022,415.203,4.6
+25,Supernatural,SHOW,"['scifi', 'thriller', 'drama', 'fantasy', 'horror']",2005,406.666,8.5
+26,Criminal Minds,SHOW,"['thriller', 'crime', 'drama']",2005,401.416,8.1
+27,Silverton Siege,MOVIE,"['drama', 'action', 'crime', 'thriller']",2022,393.011,6.1
+28,Red Notice,MOVIE,"['comedy', 'crime', 'thriller', 'action']",2021,390.768,6.3
+29,Cobra Kai,SHOW,"['action', 'comedy', 'drama', 'sport']",2018,385.985,8.6
+30,Riverdale,SHOW,"['thriller', 'drama', 'romance', 'crime']",2017,369.341,6.7
+31,Naruto,SHOW,"['scifi', 'comedy', 'animation', 'action', 'fantasy', 'thriller']",2002,362.73,8.4
+32,The Guardians of Justice,SHOW,['scifi'],2022,359.74,4.8
+33,Looop Lapeta,MOVIE,"['comedy', 'crime', 'romance', 'thriller', 'action']",2022,356.051,5.1
+34,Better Call Saul,SHOW,"['comedy', 'drama', 'crime']",2015,352.657,8.8
+35,Through My Window,MOVIE,"['romance', 'comedy', 'drama']",2022,351.639,5.4
+36,Komi Can't Communicate,SHOW,"['drama', 'comedy', 'animation', 'romance']",2021,344.515,7.8
+37,Metal Lords,MOVIE,"['drama', 'comedy', 'music']",2022,343.77,6.7
+38,Breaking Bad,SHOW,"['drama', 'thriller', 'crime']",2008,337.419,9.5
+39,Baki Hanma,SHOW,"['thriller', 'animation', 'action', 'drama', 'sport']",2021,323.144,6.6
+40,Two,MOVIE,"['thriller', 'horror']",2021,317.06,4.3
+41,Pablo Escobar: The Drug Lord,SHOW,"['crime', 'drama', 'history', 'thriller']",2012,314.603,8.4
+42,Savage Rhythm,SHOW,"['drama', 'music']",2022,312.625,6.3
+43,Sex Education,SHOW,"['drama', 'comedy']",2019,309.755,8.3
+44,BAKI,SHOW,"['action', 'animation', 'drama', 'sport']",2018,309.314,6.7
+45,Without Saying Goodbye,MOVIE,"['romance', 'comedy']",2022,301.796,5.7
+46,All Hail,MOVIE,"['comedy', 'drama']",2022,301.572,5.6
+47,Erax,MOVIE,"['family', 'thriller']",2022,293.389,4.2
+48,The Weekend Away,MOVIE,"['thriller', 'crime', 'drama']",2022,293.216,5.6
+49,Ozark,SHOW,"['crime', 'thriller', 'drama']",2017,290.316,8.5
