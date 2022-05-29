@@ -2,7 +2,11 @@
 <head>
     <title>BGcolor</title>
     <link rel="stylesheet" href="../../BootStrap4/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        center{
+            margin-top:23%;
+        }
+    </style>
 </head>
 <body>
     <center>
@@ -14,6 +18,11 @@
     <script src="../../BootStrap4/popper.min.js"></script>
     <script src="../../BootStrap4/bootstrap.min.js"></script>
     <script src="../../BootStrap4/bootstrap.bundle.js"></script>
-    <script src="script.js"></script>
+    <script>
+        function color(a){
+            document.body.style.backgroundColor=a;
+            alert('Color is '+a);
+        }
+    </script>
 </body>
 </html>

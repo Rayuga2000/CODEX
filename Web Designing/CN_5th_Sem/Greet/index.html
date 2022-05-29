@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <head>
     <title>Greet</title>
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <center>
-        <input type="button" onclick="display_promt()" value="Display a Promt Box">
+        <input type="button" onclick="display_promt()" value="Display Promt Box">
         <p id="myp"></p>
     </center>
-    <script src="script.js"></script>
+    <script>
+        function display_promt(){
+            let person=prompt("Enter your Name:");
+
+            if(person!=null){
+                document.getElementById('myp').innerHTML="Greetings "+person;
+            }
+        }
+    </script>
 </body>
 </html>
