@@ -1,17 +1,29 @@
-from matplotlib import pyplot
-import pandas as pd
-from pandas import read_csv
-from pandas.plotting import scatter_matrix
+import numpy as np
 
-filename='../Class/Datasets/Netflix/titles.csv'
-col_subset=['title','type','genres','release_year','imdb_popularity','imdb_score']
-data=read_csv(filename,usecols=col_subset)
+def QuickSort(arr,low,high):
+    high-=1
+    l=low
+    h=high
+    pivot=l
 
-Netflix=pd.DataFrame(data,columns=col_subset)
-Netflix=pd.DataFrame(Netflix.sort_values('imdb_popularity',ascending=False).head(50).values,
-columns=['Title','Type','Genres','Release_year','IMDB_Popularity','IMDB_Score'])
-Netflix.to_csv('Netflix.csv')
+    while(low<high):
+        if(arr[low]<=arr[pivot]):
+            low+=1
+        elif(arr[high]>arr[pivot]):
+            high-=1
+        else:
+            arr[low],arr[high]=arr[high],arr[low]
 
-Netflix['IMDB_Score'][32,40,47]='4.8','4.3','4.2'
-Netflix.to_csv('Netflix.csv')
-print(Netflix)
+    arr[pivot],arr[high]=arr[high],arr[pivot]
+
+    if(pivot!=high):
+        QuickSort(arr,l,high-1)
+        QuickSort(arr,high+1,h)
+
+    return arr
+
+
+
+arr=np.array([16,17,9,5,8,25,27,32])
+print(QuickSort(arr,0,8))
+

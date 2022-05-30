@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <head>
     <title>Greet</title>
-    
+    <style>
+        input{
+            margin-top: 20%;
+        }
+        input,button,p{
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
     <center>
-        <input type="button" onclick="display_promt()" value="Display Promt Box">
+        <input type="text" id="name" placeholder="Enter your Name">
+        <button onclick="display_promt()">Submit</button>
         <p id="myp"></p>
     </center>
     <script>
         function display_promt(){
-            let person=prompt("Enter your Name:");
+            let person=document.getElementById('name').value;
 
-            if(person!=null){
+            if(person!=""){
                 document.getElementById('myp').innerHTML="Greetings "+person;
+            }
+            else{
+                alert("Name can't be null");
             }
         }
     </script>
