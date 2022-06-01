@@ -4,7 +4,7 @@
     <style>
         div{
             width: 900px;
-            font-size: 165px;
+            font-size: 175px;
             text-align: center;
             margin: auto;
         }
@@ -18,11 +18,14 @@
             var hh=time.getHours();
             var mm=time.getMinutes();
             var ss=time.getSeconds();
-            var am_pm="AM";
+            var am_pm;
 
             if(hh>12){
                 hh-=12;
                 am_pm="PM";
+            }
+            else{
+                am_pm="AM";
             }
 
             document.getElementById('clock').innerHTML=(hh+":"+mm+":"+ss+" "+am_pm);  
