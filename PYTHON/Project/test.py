@@ -4,7 +4,7 @@ import cv2
 
 #y.jpg
 img=cv2.imread('y.jpg')
-output = img.copy()
+#output = img.copy()
 img=cv2.resize(img, (600,500))
 #cv2.imshow("original", img)
 #lets detect shapes
