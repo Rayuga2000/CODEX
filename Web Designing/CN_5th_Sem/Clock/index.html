@@ -2,28 +2,17 @@
 <head>
     <title>Assignment 17</title>
     <style>
-        body{
-            font-size: 50px;
-        }
         div{
             width: 900px;
-            font-size: 175px;
+            font-size: 165px;
             text-align: center;
             margin: auto;
-        }
-        button{
-            font-size: 50px;
         }
     </style>
 </head>
 <body>
     <div id="clock"></div>
-    <center>
-        <button onclick="startTime()">Start</button>
-        <button id='clear' onclick="stopTime()">Stop</button>
-    </center>
     <script>
-        var x;
         function showTime(){
             var time=new Date();
             var hh=time.getHours();
@@ -38,12 +27,7 @@
 
             document.getElementById('clock').innerHTML=(hh+":"+mm+":"+ss+" "+am_pm);  
         }
-        function startTime(){
-            x=setInterval(showTime, 1000);
-        }
-        function stopTime(){
-            clearInterval(x);
-        }
+        setInterval(showTime, 1000);
     </script>
 </body>
 </html>
