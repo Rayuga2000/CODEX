@@ -3,9 +3,9 @@ import math
 import cv2
 
 #y.jpg
-img=cv2.imread('y.jpg')
+img=cv2.imread('x.png')
 #output = img.copy()
-img=cv2.resize(img, (600,500))
+#img=cv2.resize(img, (600,500))
 #cv2.imshow("original", img)
 #lets detect shapes
 imggray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
