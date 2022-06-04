@@ -3,10 +3,8 @@ import math
 import cv2
 
 #y.jpg
-img=cv2.imread('y.jpg')
-output = img.copy()
-img=cv2.resize(img, (700,700))
-#cv2.imshow("original", img)
+img=cv2.imread('shape.png')
+img=cv2.resize(img, (1280,720))
 #lets detect shapes
 imggray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 _,thresh=cv2.threshold(imggray, 240,255,cv2.THRESH_BINARY) #find the threshold of color in image
@@ -22,7 +20,6 @@ for contour in contours:
     Area = cv2.contourArea(approx)
     Perimeter=cv2.arcLength(approx,True)
     circularity=(Perimeter**2)/(4*math.pi*(Area))
-    print(circularity)
 
     #now if else conditions to find different shapes
     #for triangle
@@ -40,9 +37,8 @@ for contour in contours:
     elif len(approx)==5:
         cv2.putText(img, "Pentagon", (x-40, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
     else:
-        if circularity<=1.05:
+        if circularity<1.20:
             cv2.putText(img, "Circle", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
-            print('Circle')             
         else:
             cv2.putText(img, "Something Else", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
        
