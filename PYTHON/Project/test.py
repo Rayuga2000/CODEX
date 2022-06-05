@@ -43,6 +43,6 @@ for contour in contours:
         else:
             cv2.putText(img, "Something Else", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
        
-#cv2.imshow("Shape", img)
+cv2.imshow("Shape", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
