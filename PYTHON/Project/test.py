@@ -1,9 +1,9 @@
 import numpy as np
 import math
 import cv2
+import sys
 
-#y.jpg
-img=cv2.imread('x.png')
+img=cv2.imread(sys.argv[1])
 img=cv2.resize(img, (1280,720))
 imggray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) #convert img to Grayscale
 _,thresh=cv2.threshold(imggray, 240,255,cv2.THRESH_BINARY) #convert Grayscale image to Binary
@@ -18,7 +18,7 @@ for contour in contours:
     Area = cv2.contourArea(approx)
     Perimeter=cv2.arcLength(approx,True)
     circularity=(Perimeter**2)/(4*math.pi*(Area)) #find out the circularity of the object
-    print(circularity)
+    
     #if else conditions to find different shapes
     #for triangle
     if len(approx)==3: #triangle has 3 sides

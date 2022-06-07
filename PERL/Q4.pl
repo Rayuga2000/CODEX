@@ -1,10 +1,17 @@
 print "Enter the String: ";
-chomp($str=<>);
+chomp($string=<>);
 
 print "Enter the word or character to find: ";
 chomp($value=<>);
 
-$temp=($str=~/$value/);
+$temp=0;
+@str=split(' ',$string);
+foreach $x(@str){
+    if($x=~$value){
+        $temp++;
+    }
+}
+
 if($temp){
     print "Match: $temp";
 }
