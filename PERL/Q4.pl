@@ -7,7 +7,7 @@ chomp($value=<>);
 $temp=0;
 @str=split(' ',$string);
 foreach $x(@str){
-    if($x=~$value){
+    if($x=~/$value/){
         $temp++;
     }
 }

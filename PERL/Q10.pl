@@ -4,7 +4,7 @@ $size=@list;
 $first=0;
 $last=0;
     
-if($list[0]=~'MCA' && $list[--$size]=~'bw'){
+if($list[0]=='MCA' && $list[--$size]=='bw'){
     $first=1;
     $last=1;
 }
