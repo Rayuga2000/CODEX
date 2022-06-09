@@ -1,5 +1,5 @@
-print "Enter the Sentence: ";
+print "Enter the String: ";
 chomp($str=<>);
 
 $str=~tr/a-z/A-Z/;
-print "New Sentence is: $str";
+print "New String is: $str";

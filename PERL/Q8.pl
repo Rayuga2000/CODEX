@@ -1,4 +1,4 @@
-print "Enter a sentence: ";
+print "Enter a String: ";
 chomp($string=<>);
 
 @str=split('',$string);
@@ -12,4 +12,4 @@ for($i=0;$i<$size;$i++){
 $str[0]=~tr/[a-z]/[A-Z]/;
 
 $string=join('',@str);
-print "$string";
+print "New String: $string";

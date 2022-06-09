@@ -4,12 +4,8 @@ chomp($string=<>);
 @list = split(' ',$string);
 
 $size=@list;
-$first=0;
-$last=0;
-
-if($list[0]=~'MCA' && $list[--$size]=~'bw'){
-    $first=1;
-    $last=1;
-}
+    
+$first=($list[0]=~'MCA')?1:0;
+$last=($list[--$size]=~'bw')?1:0;
 
 print "First: $first\nLast: $last";

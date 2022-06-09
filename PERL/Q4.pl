@@ -12,9 +12,4 @@ foreach $x(@str){
     }
 }
 
-if($temp){
-    print "Match: $temp";
-}
-else{
-    print "Match: 0";
-}
+print "Match: $temp";
