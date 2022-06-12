@@ -1,17 +1,17 @@
 import numpy as np
 import math
 import cv2
+import sys
 
-#y.jpg
-img=cv2.imread('x.png')
+img=cv2.imread(sys.argv[1])
 img=cv2.resize(img, (1280,720))
 imggray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) #convert img to Grayscale
 _,thresh=cv2.threshold(imggray, 240,255,cv2.THRESH_BINARY) #convert Grayscale image to Binary
 contours,_=cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #IT WILL FIND THE CONTOUR IN IMAGE
 
 for contour in contours:
-    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximate polygonal curve
-    cv2.drawContours(img,[approx],0,(0,0,0),3) #to draw contour
+    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximates a polygonal curve
+    cv2.drawContours(img,[approx],-1,(0,0,0),3) #to draw contour
     x=approx.ravel()[0]
     y=approx.ravel()[1]-7 #defining the x and y point of shape to write text on it
 

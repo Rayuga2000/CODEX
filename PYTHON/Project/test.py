@@ -10,7 +10,7 @@ _,thresh=cv2.threshold(imggray, 240,255,cv2.THRESH_BINARY) #convert Grayscale im
 contours,_=cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #IT WILL FIND THE CONTOUR IN IMAGE
 
 for contour in contours:
-    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximate polygonal curve
+    approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximates a polygonal curve
     cv2.drawContours(img,[approx],0,(0,0,0),3) #to draw contour
     x=approx.ravel()[0]
     y=approx.ravel()[1]-7 #defining the x and y point of shape to write text on it
@@ -18,6 +18,9 @@ for contour in contours:
     Area = cv2.contourArea(approx)
     Perimeter=cv2.arcLength(approx,True)
     circularity=(Perimeter**2)/(4*math.pi*(Area)) #find out the circularity of the object
+    print(approx)
+    print('Contour\n')
+    print(contour)
     
     #if else conditions to find different shapes
     #for triangle
