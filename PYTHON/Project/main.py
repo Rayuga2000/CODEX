@@ -11,7 +11,7 @@ contours,_=cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #IT W
 
 for contour in contours:
     approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximates a polygonal curve
-    cv2.drawContours(img,[approx],-1,(0,0,0),3) #to draw contour
+    cv2.drawContours(img,[approx],0,(0,0,0),3) #to draw contour
     x=approx.ravel()[0]
     y=approx.ravel()[1]-7 #defining the x and y point of shape to write text on it
 
@@ -33,6 +33,8 @@ for contour in contours:
     # for Hexagon
     elif len(approx)==6:
         cv2.putText(img, "Hexagon", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
+    elif len(approx)==8:
+        cv2.putText(img, "Octagon", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
     # for Pentagon
     elif len(approx)==5:
         cv2.putText(img, "Pentagon", (x-40, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)

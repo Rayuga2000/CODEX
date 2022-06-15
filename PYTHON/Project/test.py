@@ -18,9 +18,6 @@ for contour in contours:
     Area = cv2.contourArea(approx)
     Perimeter=cv2.arcLength(approx,True)
     circularity=(Perimeter**2)/(4*math.pi*(Area)) #find out the circularity of the object
-    print(approx)
-    print('Contour\n')
-    print(contour)
     
     #if else conditions to find different shapes
     #for triangle
@@ -36,6 +33,8 @@ for contour in contours:
     # for Hexagon
     elif len(approx)==6:
         cv2.putText(img, "Hexagon", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
+    elif len(approx)==8:
+        cv2.putText(img, "Octagon", (x, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
     # for Pentagon
     elif len(approx)==5:
         cv2.putText(img, "Pentagon", (x-40, y), cv2.FONT_HERSHEY_COMPLEX, 0.7, (0, 0, 0), 2)
