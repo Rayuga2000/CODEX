@@ -16,7 +16,7 @@ def open_img():
     f_types = [('PNG Files','*.png'),('Jpg Files', '*.jpg')] 
     filename = filedialog.askopenfilename(title ='Open',filetypes=f_types)
     img1=Image.open(filename)
-    img1= img1.resize((1280,720), Image.ANTIALIAS)
+    #img1= img1.resize((1280,720), Image.ANTIALIAS)
     img1= ImageTk.PhotoImage(img1)
     lbl1.configure(image=img1)
     lbl1.image=img1
@@ -77,7 +77,7 @@ def verify(filename):
 
 def result():
     photo=Image.open("test.png")
-    photo= photo.resize((1280, 700), Image.ANTIALIAS)
+    #photo= photo.resize((1280, 700), Image.ANTIALIAS)
     photo= ImageTk.PhotoImage(photo)
     lbl1.configure(image=photo)
     lbl1.image=photo
