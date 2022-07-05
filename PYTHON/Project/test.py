@@ -11,7 +11,9 @@ contours,_=cv2.findContours(thresh, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #IT W
 
 for contour in contours:
     approx=cv2.approxPolyDP(contour,0.01*cv2.arcLength(contour,True),True) #this method approximates a polygonal curve
-    cv2.drawContours(img,[approx],0,(0,0,0),3) #to draw contour
+    print(contour)
+    print(approx)
+    """cv2.drawContours(img,[approx],0,(0,0,0),3) #to draw contour
     x=approx.ravel()[0]
     y=approx.ravel()[1]-7 #defining the x and y point of shape to write text on it
 
@@ -47,4 +49,4 @@ for contour in contours:
        
 cv2.imshow("Shape", img)
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows()"""

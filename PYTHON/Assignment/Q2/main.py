@@ -1,6 +1,6 @@
 """WAF to find all duplicates in a list"""
 
-def circle(l):
+def duplicate(l):
     l1=[]
     for i in l:
         if(l.count(i)>1):
@@ -9,7 +9,7 @@ def circle(l):
     
     print("The Duplicates are:",l1)
 
-circle(list(map(int,input("Enter the Numbers:").split())))
+duplicate(list(map(int,input("Enter the Numbers:").split())))
 
             
 

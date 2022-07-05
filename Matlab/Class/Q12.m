@@ -5,12 +5,12 @@ prev1=0;
 prev2=1;
 i=1;
 
-n=input('Enter the range: ');
+n=input('Enter the nth term: ');
 fprintf('Fibonacci series are: ');
 
-if n-1==0
+if n==1
     fprintf('0');
-elseif n-1==1
+elseif n==2
     fprintf('0 1');
 else
     fprintf('0 1');
