@@ -1,6 +1,0 @@
-Otishu algo
-greyscale
-gausian filter
-binary image
-
-shape detection

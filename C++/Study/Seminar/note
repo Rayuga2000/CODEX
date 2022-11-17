@@ -1,2 +1,0 @@
-++i;  // Fetch i, increment it, and return it
-i++;  // Fetch i, copy it, increment i, return copy
