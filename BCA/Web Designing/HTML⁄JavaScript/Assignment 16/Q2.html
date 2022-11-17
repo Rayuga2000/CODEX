@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 16</title>
+</head>
+<body>
+    Enter the String: <input type="text" id="input"><button onclick="check()">Check</button>
+    <script>
+        function check(){
+            var count=0;str=document.getElementById('input').value;
+
+            for(var i=0;i<parseInt(str.length/2);i++){
+                if(str[i]!=str[str.length-1-i]){
+                    break;
+                }
+                else{
+                    count++;
+                }
+            }
+
+            if(count==parseInt(str.length/2)){
+                document.write("String is palindrome");
+            }
+            else{
+                document.write("String is not palindrome");
+            }
+        }
+    </script>
+</body>
+</html>

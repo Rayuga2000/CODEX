@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+    min-width: 1300px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    transition: ease-in-out;
+}
+a:link,a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: lightblue;
+}
+
+.header{
+    padding: 10px;
+    background-color: #222831;
+    height: 55px;
+    display: flex;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.logo{
+    width: 200px;
+}
+
+.products{
+    padding: auto;
+    margin-left: 77%;
+    margin-right: 0.3%;
+    margin-top: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+.products a:hover{
+    border-bottom: 3px solid #C14545;
+}
+
+.container{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    margin-top: 5%;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 15px;
+    box-shadow: 0px 0px 25px -4px rgba(30,30,60,0.25);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.image{
+    width: 100%;
+    height: 88%;
+    padding: 10px;
+    padding-top: 0px;
+}
+
+.button{
+    display: flex;
+    width: 98%;
+    height: 25%;
+    padding: 5px;
+    margin: auto;
+}
+.button button{
+    color: white;
+}
+#cart{
+    border: none;
+    width: 50%;
+    margin-right: 5px;
+    border-radius: 0px;
+    font-weight: bolder;
+    background-color: #ffb515;
+}
+#cart:active{
+    background-color: #ff9a00;
+}
+#cart:focus{
+    outline: none;
+}
+#buy{
+    border: none;
+    width: 50%;
+    font-weight: bolder;
+    border-radius: 0px;
+    background-color: #ff5700;
+}
+#buy:active{
+    background-color: #da4302;
+}
+#buy:focus{
+    outline: none;
+}
+
+.mainview{
+    width: 70%;
+    box-shadow: 0px 0px 25px -4px rgba(30,30,60,0.25);
+}
+.textview{
+    padding: 30px;
+    line-height: 30px;
+}
+h2{
+    font-family: Ubuntu;
+}
+h3{
+    font-family: Mandali;
+}
+p{
+    font-family: Varela Round;
+}

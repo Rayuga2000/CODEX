@@ -1,0 +1,47 @@
+body{
+    background-color: #EEF3D2;
+}
+#row1{
+    background: rgb(70,69,75);
+    background: linear-gradient(90deg, rgba(70,69,75,1) 100%,
+    rgba(110,120,121,1) 100%, rgba(0,212,255,1) 100%);
+    border-radius: 20px;
+    margin: auto;
+}
+.container{
+    padding: 50px;
+}
+h1{
+    color: #ff9a00;
+    font-family: Salsa;
+}
+b{
+    color: #FDCF08;
+    font-family: Boogaloo;
+}
+p{
+    font-family: 'Courier New', Noto Sans Mono, Courier, monospace;
+    font-size: 2.5em;
+    color: #fafafa;
+}
+#row1,.form{
+    box-shadow: 20px 5px 31px -5px rgba(30,30,60,0.25);
+}
+.card{
+    border-radius: 20px;
+    width: 300px;
+    margin: auto;
+    
+}
+.card-body{
+    margin: -15px auto;
+}
+.form{
+    background-color: white;
+    border-radius: 20px;
+    width: 50%;
+    margin: auto;
+}
+#submit{
+    width: 100%;
+}

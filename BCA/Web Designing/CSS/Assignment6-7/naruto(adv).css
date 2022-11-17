@@ -1,0 +1,96 @@
+#img1{
+	content: url(../../RESOURCES/n.jpg);
+	height: 500px;
+	float: left;
+	margin-top: 0px;
+}
+#img2{
+	content: url(../../RESOURCES/s.png);
+	height: 500px;
+	float: right;
+	margin-top: 0px;
+}
+#img3{
+	content: url(../../RESOURCES/k.png);
+	height: 500px;
+	float: left;
+	margin-top: 0px;
+	position: relative;
+}
+#img{
+	background-image: url(../../RESOURCES/logo.png);
+	height: 200px;
+	width: 500px;
+	background-size: 100%;
+	background-position: center;
+	padding: 11px;
+}
+div.p1{
+	padding-left: 50px;
+	padding-top: 140px;
+}
+div.p2{
+	padding-top: 70px;
+}
+div.p3{
+	padding-left: 30px;
+	padding-top: 100px;
+}
+
+h1{
+	color: white;
+	text-align: center;
+	margin-top: 0px;
+	font-family: Open Sans Extrabold;
+}
+#p1{
+	word-spacing: 10px;
+	font-size: 26px;
+	height: 500px;
+	padding: 0px;
+	margin-bottom: 0px;
+	display: flex;
+}
+#p2{
+	word-spacing: 5px;
+	font-size: 26px;
+	height: 500px;
+	padding: 0px;
+	margin-bottom: 0px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+#p3{
+	height: 500px;
+	word-spacing: 10px;
+	font-size: 26px;
+	display: flex;
+}
+body{
+	background-color: #000000;
+}
+#h1{
+	font-family: OpenDyslexic;
+	letter-spacing: 3px;
+	text-align: left;
+	
+	color: #F48256;
+}
+#h2{
+	font-family: OpenDyslexic;
+	letter-spacing: 3px;
+	text-align: right;
+	color: #BA7BA1;
+}
+#h3{
+	padding-top: 60px;
+	font-family: OpenDyslexic;
+	letter-spacing: 3px;
+	text-align: left;
+	color: #1B7FBD;
+}
+p{
+	font-family: Open Sans Condensed;
+	font-size: 25px;
+	color: #EEEEEE;
+}

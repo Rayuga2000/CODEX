@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 17</title>
+    <style>
+        body,textarea,button,input{
+            font-size: 50px;
+        }
+        button{
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    Enter the String:<input type="text" id="input1"><br>
+    <input type="text" id="input2"><button onclick="calc()">Find</button><br><br>
+    The Word Occured: <textarea id="output" cols="2" rows="1"></textarea> times
+    <script>
+        function calc(){
+            var str=document.getElementById('input1').value;
+            var key=document.getElementById('input2').value;
+            var first=-1;
+            var last=str.length;
+            var occur=0;
+
+            while(first<last){
+                first=str.indexOf(key,first+1);
+                last=str.lastIndexOf(key,last-1);
+
+                if(first==last && first!=-1){
+                    occur++;
+                    break;
+                }
+                else if(first<last){
+                    occur=occur+2;
+                }
+            }
+            document.getElementById('output').value=occur;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 14</title>
+</head>
+<body>
+    <script>
+        var num,max=0,occur=0,n=parseInt(prompt("Enter the size:"));
+        var arr=[];
+
+        for(var i=0;i<n;i++){
+            arr[i]=parseInt(prompt("Enter the data:"));
+        }
+
+        for(var i=0;i<n;i++){
+            for(var j=i+1;j<n;j++){
+                if(arr[i]==arr[j]){
+                    occur++;
+                }
+            }
+            if(max<occur){
+                max=occur;
+                num=arr[i];
+            }
+            occur=0;
+        }
+
+        if(max==0){
+            alert("Nothing repeated");
+        }
+        else{
+            alert("No. "+num+" occured "+(max+1)+" times");
+        }
+    </script>
+</body>
+</html>

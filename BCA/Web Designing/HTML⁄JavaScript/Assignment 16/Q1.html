@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 16</title>
+</head>
+<body>
+    <p>Enter the Number:</p><input type="text" id="input">
+    <button onclick="reverse()">Reverse</button>
+    <h1></h1>
+    <script>
+        function reverse(){
+            var r,num=0,n=parseInt(document.getElementById('input').value);
+
+        while(n>0){
+            r=parseInt(n%10);
+            num=parseInt(num*10+r);
+            n=parseInt(n/10);
+        }
+
+        document.write("Reverse of the Number is=> "+num);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 6</title>
+        <link rel="stylesheet" type="text/css" href="../CSS/Assignment6-7/main6.css">
+    </head>
+    <body>
+    <div>
+    	<h1>Sign Up</h1>
+        <p>❶<b>Your basic info</b></p>
+        <form action="get">
+            Name:<br>
+            <input type="text" name="usr" required><br><br>
+            Email:<br>
+            <input type="text" name="email" required><br><br>
+            Password:<br>
+            <input type="password" name="pswd" required><br><br>
+            Age:<br>
+            <input class="c" type="radio" name="age">Under 18<br>
+            <input class="c" type="radio" name="age">18 or Older
+        </form>
+        <p>❷<b>Your profile</b></p>
+        Biography:<br>
+        <textarea name="bio" cols="50" rows="7"></textarea><br>
+        Job Role:<br>
+        <select name="job" required>
+            <option></option>
+            <option>Front-End Developer</option>
+            <option>Back-End Developer</option>
+            <option>Full-Stack Developer</option>
+        </select><br>
+        Interests:<br>
+        <input class="c" type="checkbox" name="dev">Development<br>
+        <input class="c"  type="checkbox" name="design">Design<br>
+        <input class="c" type="checkbox" name="bus">Business
+        
+        <br><br><input id="submit" type="submit" name="submit" value="Sign Up"><br><br>
+    </div>
+    </body>
+</html>

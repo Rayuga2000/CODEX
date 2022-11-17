@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 15</title>
+    <style>
+        body,textarea,button{
+            font-size: 50px;
+        }
+        button{
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <textarea id="text" cols="3" rows="1"></textarea>*Fahrenheit
+    <button onclick="convert()">=</button> <textarea id="result" cols="3" rows="1"></textarea>*Celcius
+    </center>
+
+    <script>
+        function convert(){
+            var f=parseInt(document.getElementById('text').value);
+            document.getElementById('result').value=((f-32)*5/9);
+        }
+    </script>
+</body>
+</html>

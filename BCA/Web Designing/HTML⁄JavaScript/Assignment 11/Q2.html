@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 11</title>
+</head>
+<body>
+    <script>
+        var x=parseInt(prompt("Enter the Number:"));
+        var temp=x;
+        var sum=0;
+
+        while(x>0){
+            r=parseInt(x%10);
+            sum=sum+Math.pow(r,3);
+            x=parseInt(x/10);
+        }
+
+        if(sum==temp){
+            alert("The Number is Armstrong");
+        }
+        else{
+            alert("The Number is not Armstrong");
+        }
+    </script>
+</body>
+</html>

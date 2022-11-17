@@ -1,0 +1,12 @@
+#CO CO MO
+Ei = a*(KDLOC)b
+
+Ei => Person Month
+b => Power level
+a => Constant for the group of the software product
+
+#Effort = a1*(KLOC)a2 PM(per month)
+
+#Tdev = b1*(Efforts)b2 Months
+Tdev => Estimated time needed to develope a software
+

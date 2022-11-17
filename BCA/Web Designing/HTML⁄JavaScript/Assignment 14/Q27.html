@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Assignment 14</title>
+</head>
+<body>
+    <script>
+        var num,n=parseInt(prompt("Enter the size:"));
+        var arr=[];
+
+        for(var i=0;i<n;i++){
+            arr[i]=parseInt(prompt("Enter the data:"));
+        }
+
+        for(var i=0;i<n;i++){
+            for(var j=i+1;j<n;j++){
+                if(arr[i]==arr[j]){
+                    arr.splice(j,1);
+                }
+            }
+        }
+
+       alert("After removing duplicates the Array is=> "+arr);
+    </script>
+</body>
+</html>
