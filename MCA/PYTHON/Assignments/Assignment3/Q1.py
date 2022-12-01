@@ -9,8 +9,9 @@ def fact(n):
 def nCr(n,r):
     return (fact(n)//(fact(r)*fact(n-r)))
 
-for i in range(int(input("Enter range: "))):
-    print(" "*(6-i),end="")
+n=int(input("Enter range: "))
+for i in range(n):
+    print(" "*(n-i),end="")
     for j in range(i+1):
         print(nCr(i,j),end=" ")
     print()
