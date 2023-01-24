@@ -1,17 +1,14 @@
 #Bubble Sort
 def BSort(l):
     n=len(l)
-    count=0
     
     for i in range(n):
-        for j in range(n-1):
+        """1st time it checks between 9 items 2nd time it checks between 8 items"""
+        for j in range(n-i-1):
             if l[j]>l[j+1]:
                 l[j],l[j+1]=l[j+1],l[j]
-                count+=1
-        if count==0:
-            break
 
-l=[1,2,5,3,4]
+l=[1,2,5,3,4,5,10,0]
 
 BSort(l)
 
