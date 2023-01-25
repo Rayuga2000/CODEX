@@ -1,13 +1,8 @@
 #Pascal Triangle
-def fact(n):
-    fact=1
-    if n!=0 or n!=1:
-        for i in range(2,n+1):
-            fact*=i
-    return fact
+import math
 
 def nCr(n,r):
-    return (fact(n)//(fact(r)*fact(n-r)))
+    return (math.factorial(n)//(math.factorial(r)*math.factorial(n-r)))
 
 n=int(input("Enter range: "))
 for i in range(n):
