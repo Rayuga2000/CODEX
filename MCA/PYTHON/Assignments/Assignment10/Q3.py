@@ -6,6 +6,7 @@ def add(n):
         return 0
     else:
         return (n%10)+add((n-(n%10))/10)
+        
 def fibo(count,r,x,y):
     if count<r:
         print(x+y,end=" ")

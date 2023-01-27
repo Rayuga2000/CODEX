@@ -7,5 +7,5 @@ def fact(n):
 def n_r(n,r):
     return fact(n)/fact(r)
 
-n,r=input("Enter value of n & r: ").split()
-print("Result: ",n_r(int(n),int(r)))
+n,r=map(int,input("Enter value of n & r: ").split())
+print("Result: ",n_r(n,r))

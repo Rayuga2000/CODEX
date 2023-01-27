@@ -11,8 +11,8 @@ def BSort(l):
         if count==0:
             break
 
-l=[1,2,5,3,4]
+l=list(map(int,input("Enter Data: ").split()))
 
 BSort(l)
 
-print("Sorted array: ",l)
+print("Sorted Data: ",l)

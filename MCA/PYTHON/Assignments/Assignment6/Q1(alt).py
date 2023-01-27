@@ -8,8 +8,8 @@ def BSort(l):
             if l[j]>l[j+1]:
                 l[j],l[j+1]=l[j+1],l[j]
 
-l=[1,2,5,3,4,5,10,0]
+l=list(map(int,input("Enter Data: ").split()))
 
 BSort(l)
 
-print("Sorted array: ",l)
+print("Sorted Data: ",l)

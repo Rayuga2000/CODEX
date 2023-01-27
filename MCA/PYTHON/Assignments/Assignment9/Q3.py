@@ -7,5 +7,5 @@ def fact(n):
 def nCr(n,r):
     return fact(n)/(fact(n-r)*fact(r))
 
-n,r=input("Enter value of n & r: ").split()
-print("nCr: ",nCr(int(n),int(r)))
+n,r=map(int,input("Enter value of n & r: ").split())
+print("nCr: ",nCr(n,r))
