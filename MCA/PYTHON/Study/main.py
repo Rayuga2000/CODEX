@@ -1,4 +1,4 @@
-file=open('t.txt','wr')
+file=open('t.txt','w+')
 file.write("hello world!!!")
 for i in file:
     print(i)
