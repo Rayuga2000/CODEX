@@ -6,7 +6,7 @@ typedef struct node{
     struct node* next;
 }node;
 
-void createList(int n,node *head,node *tail){
+node* createList(int n,node *head,node *tail){
     int i=1;
     
     while(i<=n){
@@ -16,7 +16,7 @@ void createList(int n,node *head,node *tail){
             scanf("%d",&head->data);
             head->next=NULL;
             tail=head;
-            printf("%d",head->data);
+            //printf("%d\n",head->data);
             i++;
         }
         else{
@@ -25,10 +25,11 @@ void createList(int n,node *head,node *tail){
             printf("Enter data for node%d: ",i);
             scanf("%d",&tail->data);
             tail->next=NULL;
-            printf("%d",tail->data);
+            //printf("%d\n",tail->data);
             i++;
         }
     }
+    return head;
 }
 
 void displayList(node *head){
@@ -37,23 +38,22 @@ void displayList(node *head){
 
     printf("Linked list: ");
     while(temp->next!=NULL){
-        printf("%d",temp->data);
+        printf("%d ",temp->data);
         temp=temp->next;
     }
+    printf("%d ",temp->data);
 }
 
 int main(){
     int n;
     node *head,*tail;
-    head=tail=NULL;
+    head=NULL;
+    tail=head;
 
     printf("Enter no. of data to insert: ");
     scanf("%d",&n);
 
-    createList(n,head,tail);
-    
-    //displayList(head);
-
+    displayList(createList(n,head,tail));
     
     return 0;
 }
