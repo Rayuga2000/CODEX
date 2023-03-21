@@ -11,10 +11,10 @@ public class Q3{
             System.out.print(" ".repeat(n-i)+" ");
             for(int j=1;j<=r;j++){
                 if(j==1){
-                    System.out.print(j+" ");
+                    System.out.print(j+"");
                 }
                 else{
-                    System.out.print(j%2+" ");
+                    System.out.print(j%2+"");
                 }
             }
             r+=2;
