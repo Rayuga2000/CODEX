@@ -1,24 +1,27 @@
+//Swap 2 numbers using call by value
 import java.util.Scanner;
+
 public class Q3{
+    static int[] swap(int a,int b){
+        a=a+b;
+        b=a-b;
+        a=a-b;
+
+        int arr[]={a,b};
+        return arr;
+    }
     public static void main(String[] args){
+        int arr[]=new int[2];
         Scanner sc=new Scanner(System.in);
-        int r=1;
 
-        System.out.print("Enter range: ");
-        int n=sc.nextInt();
+        System.out.print("Enter the numbers: ");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
 
-        for(int i=1;i<n;i++){
-            System.out.print(" ".repeat(n-i)+" ");
-            for(int j=1;j<=r;j++){
-                if(j==1){
-                    System.out.print(j+"");
-                }
-                else{
-                    System.out.print(j%2+"");
-                }
-            }
-            r+=2;
-            System.out.println();
-        }
+        arr=swap(a,b);
+        a=arr[0];
+        b=arr[1];
+
+        System.out.print("a: "+a+" b: "+b);
     }
 }

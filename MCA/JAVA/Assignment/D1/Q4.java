@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 //Sum of the digits of a given number
 import java.util.Scanner;
 
