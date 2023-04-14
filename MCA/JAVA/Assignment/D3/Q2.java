@@ -17,21 +17,15 @@ public class Q2{
             data=sc.next();
             String[] ch=data.split(",");
             for(int z=0;z<ch.length;z++){  
-                System.out.print(ch[z]+" ");
+                arr[++j]=ch[z];
             }
-            arr[++j]=ch[i];
         }
 
-        for(int i=0;i<arr.length;i++){  
-            System.out.print("\n"+arr[i]+" ");
-        }
-
-        /*j=-1;
+        j=-1;
+        System.out.print("Deatails of Employees having Monthly salary over 20000:(employee_id,employee_name,designation,monthly_salary) : ");
         for(int i=0;i<n;i++){
-            System.out.println("Employees having Monthly salary over 20000: ");
-            System.out.println("employee_id employee_name designation monthly_salary");
             new salary(Integer.parseInt(arr[++j]),arr[++j],arr[++j],Integer.parseInt(arr[++j]));
-        }*/
+        }
     }
 }
 class employee{
