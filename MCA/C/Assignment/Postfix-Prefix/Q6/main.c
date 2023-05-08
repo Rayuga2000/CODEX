@@ -1,3 +1,5 @@
+//INFIX TO POSTFIX
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -33,7 +35,7 @@ void enqueue(char data){
 void display(){
     if(!isNULL()){
         temp=front;
-        printf("Queue: ");
+        printf("Postfix: ");
         while(temp!=NULL){
             printf("%c",temp->data);
             temp=temp->next;
@@ -45,7 +47,7 @@ int main(){
     int i=0;
     char str[20];
 
-    printf("Enter infix notation: ");
+    printf("Enter infix: ");
     scanf("%s",str);
 
     enqueue(str[i++]);

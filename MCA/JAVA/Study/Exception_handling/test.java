@@ -7,7 +7,7 @@ public class test{
 
         try{
             if(size<0){
-                throw new IllegalArgumentException("Array size can't be negative");
+                throw new NegativeArraySizeException("Array size can't be negative");
             }
             else{
                 int[] arr={1,2,3};
@@ -16,10 +16,10 @@ public class test{
                 System.out.println("Value: "+arr[index]);
 
             }
-        }catch(IllegalArgumentException e){
+        }catch(NegativeArraySizeException e){
             System.out.print("Error: "+e.getMessage());
         }catch(ArrayIndexOutOfBoundsException e){
-            System.out.print("Wait: "+e.getMessage());
+            System.out.print("Error: "+e.getMessage());
         }
     }
 }

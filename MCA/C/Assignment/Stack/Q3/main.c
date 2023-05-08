@@ -3,15 +3,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-typedef struct node
-{
+typedef struct node{
     int data;
     struct node *next;
 }node;
 
 node *top=NULL,*temp,*head=NULL;
 
-node* push(){
+void push(){
     int n;
 
     printf("\nEnter no. of data to push: ");
@@ -70,23 +69,22 @@ int main(){
         printf("\n1)Push\n2)Pop\n3)Peek\n4)Exit\nEnter a Choice: ");
         scanf("%d",&ch);
 
-        switch(ch)
-        {
-        case 1:
-            push();          
-            break;
-        case 2:
-            pop();
-            break;
-        case 3:
-            peek();
-            break;
-        case 4:
-            printf("\nBye...");
-            break;
-        
-        default:
-            break;
+        switch(ch){
+            case 1:
+                push();          
+                break;
+            case 2:
+                pop();
+                break;
+            case 3:
+                peek();
+                break;
+            case 4:
+                printf("\nBye...");
+                break;
+
+            default:
+                break;
         }
     }
     

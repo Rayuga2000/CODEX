@@ -1,4 +1,4 @@
-//Find prime numbers within a range of values
+//Find prime numbers within a range
 import java.util.Scanner;
 
 public class Q3{

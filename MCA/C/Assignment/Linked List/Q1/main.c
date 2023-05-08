@@ -165,10 +165,10 @@ int main(){
                 displayList();
                 break;
             case 5:
-                printf("\nBye have great time---");
+                printf("\nBye have a great time---");
                 break;
             default:
                 break;
         }
     }
-}x
+}

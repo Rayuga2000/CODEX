@@ -7,7 +7,7 @@ typedef struct node{
     struct node *right;
 }node;
 
-node *root=NULL;
+node *root=NULL,*temp,*curr=NULL;
 int arr[5];
 
 void insert(){
@@ -41,7 +41,7 @@ void insert(){
                         break;
                     }
                 }
-                if(curr->data>temp->data){
+                else if(curr->data>temp->data){
                     if(temp->right!=NULL){
                         temp=temp->right;
                     }
@@ -56,40 +56,133 @@ void insert(){
     }
 }
 
-void preorder(node *root){
-    if(root!=NULL){
-        printf("%d ",root->data);
-        preorder(root->left);
-        preorder(root->right);
+node* successor(node *temp){
+    while(temp->left!=NULL)
+    {
+        curr=temp;
+        temp=temp->left;
     }
+
+    if(curr){
+        curr->left=NULL;
+    }
+    
+    return temp;
 }
 
-void inorder(node *root){
-    if(root!=NULL){
-        preorder(root->left);
-        printf("%d ",root->data);
-        preorder(root->right);
+node* predecessor(node *temp){
+    while(temp->right!=NULL)
+    {
+        curr=temp;
+        temp=temp->right;
     }
+
+    if(curr){
+        curr->right=NULL;
+    }
+    
+    return temp;
 }
 
-void postorder(node *root){
-    if(root!=NULL){
-        preorder(root->left);
-        preorder(root->right);
-        printf("%d ",root->data);
+node* delete(node* root,int n){
+    if(n>root->data){
+        root->right=delete(root->right,n);
     }
+    else if(n<root->data){
+        root->left=delete(root->left,n);
+    }
+    else{
+        if(root->left==NULL && root->right==NULL){
+            free(root);
+            return NULL;
+        }
+        else if(root->left==NULL){
+            temp=root->right;
+            free(root);
+            return temp;
+        }
+        else if(root->right==NULL){
+            temp=root->left;
+            free(root);
+            return temp;
+        }
+        else{
+            printf("\n0)Predecessor\n1)Successor\nChoose: ");
+            scanf("%d",&n);
+
+            if(n){
+                temp=successor(root->right);
+                temp->left=root->left;
+                if(temp->right){
+                    temp->right->right=root->right;
+                }
+                else{
+                    temp->right=root->right;
+                }
+                free(root);
+                return temp;
+            }
+            else{
+                temp=predecessor(root->left);
+                temp->right=root->right;
+                if(temp->left){
+                    temp->left->left=root->left;
+                }
+                else{
+                    temp->left=root->left;
+                }
+                free(root);
+                return temp;
+            }            
+        }
+        
+    }
+
+    return root;
+}
+
+void preorder(node *temp){
+    if(temp!=NULL){
+        printf("%d ",temp->data);
+        preorder(temp->left);
+        preorder(temp->right);
+    }
+    return;
+}
+
+void inorder(node *temp){
+    if(temp!=NULL){
+        inorder(temp->left);
+        printf("%d ",temp->data);
+        inorder(temp->right);
+    }
+    return;
+}
+
+void postorder(node *temp){
+    if(temp!=NULL){
+        postorder(temp->left);
+        postorder(temp->right);
+        printf("%d ",temp->data);
+    }
+    return;
 }
 
 int main(){    
     insert();
 
-    printf("Preorder: ");
+    printf("\nPreorder: ");
     preorder(root);
 
-    printf("Inorder: ");
+    printf("\nInorder: ");
     inorder(root);
 
-    printf("Postorder: ");
+    printf("\nPostorder: ");
     postorder(root);
+
+    root=delete(root,11);
+    printf("\nInorder: ");
+    inorder(root);
+
     return 0;
 }
