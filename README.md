@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Tushar.</h1>
-<h3 align="center">a computer science student in INDIA</h3>
+<h3 align="center">a computer science student from INDIA</h3>
 
 - 🌱 I’m currently studying **MCA**
 
