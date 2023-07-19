@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <signal.h>
 #include <unistd.h>
+#include<windows.h>
 
-void signal_handler(int sig) {
+int pid;
+
+void signal_handler(int sig){
     printf("Received signal %d\n", sig);
+    printf("Terminating Process...");
+    exit(0);
 }
 
-void interrupt_handler(int sig) {
+void interrupt_handler(int sig){
     printf("Received interrupt %d\n", sig);
+    sleep(3);
+    raise(SIGTERM);
 }
 
 int main() {

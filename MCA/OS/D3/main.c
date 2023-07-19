@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <signal.h>
 #include <unistd.h>
-#include <string.h>
-void abc();
-//main function
+#include <stdlib.h>
+
+void abc(){
+    printf("Child sending signal %d\n", SIGCHLD);
+    printf("\nParent existing");
+    exit(0);
+}
+
 int main()
 {
     int pid;
@@ -19,11 +24,4 @@ int main()
         signal(SIGCHLD, abc);
         for(;;);
     }
-}
-//abc() function definition
-void abc()
-{
-    printf("Child sending signal %d\n", SIGCHLD);
-    printf("\nParent existing");
-    exit(0);
 }

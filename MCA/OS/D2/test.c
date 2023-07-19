@@ -1,31 +1,16 @@
 #include <stdio.h>
 #include <signal.h>
 #include <stdlib.h>
-#include <unistd.h>
-
-void sighup()
-{  
-    signal(SIGHUP,sighup); /* reset signal */
-    printf("CHILD: I have received a SIGHUP\n");
-}
-
-void sigint()
-{  
-    signal(SIGINT,sigint); /* reset signal */
-    printf("CHILD: I have received a SIGINT\n");
-}
-
-void sigquit()
-{ 
-    printf("CHILD: I have received a SIGQUIT\n");
-    exit(0);
-}
-
+//function declaration
+void sighup(); 
+void sigint();
+void sigquit();
+//main function
 void main()
 { 
-    int pid = fork();
+    int pid;
     /* get child process */
-    if (pid < 0) 
+    if ((pid = fork()) < 0) 
     {
         perror("fork");
         exit(1);
@@ -49,4 +34,22 @@ void main()
        kill(pid,SIGQUIT);
        sleep(3);
     }
+}
+// sighup() function definition
+void sighup()
+{  
+    signal(SIGHUP,sighup); /* reset signal */
+    printf("CHILD: I have received a SIGHUP\n");
+}
+// sigint() function definition
+void sigint()
+{  
+    signal(SIGINT,sigint); /* reset signal */
+    printf("CHILD: I have received a SIGINT\n");
+}
+// sigquit() function definition
+void sigquit()
+{ 
+    printf("My DADDY has Killed me!!!\n");
+    exit(0);
 }

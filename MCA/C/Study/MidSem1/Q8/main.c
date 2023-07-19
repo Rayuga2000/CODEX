@@ -1,3 +1,4 @@
+//merge 2 linked list
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -15,14 +16,13 @@ node* insert(){
         printf("Enter data: ");
         if(head==NULL){
             head=(node*)malloc(sizeof(node));
-            scanf("%d",&head->data);
             tail=head;
         }
         else{
             tail->next=(node*)malloc(sizeof(node));
             tail=tail->next;
-            scanf("%d",&tail->data);
         }
+        scanf("%d",&tail->data);
         tail->next=NULL;
     }
 
@@ -39,26 +39,30 @@ void display(node *temp){
 }
 
 int main(){
-    node *h1,*h2,*temp;
+    node *h1,*h2;
 
     printf("List1--->\n");
     h1=insert();
     display(h1);
 
-    printf("\nList2--->\n");
+    printf("\n\nList2--->\n");
     h2=insert();
     display(h2);
 
-    temp=h2;
-    h2=h2->next;
-    temp->next=h1;
-    h1=temp;
-    temp=NULL;
+    node *temp1=h1->next,*temp2=h2->next;
+    head=h1;
+    while(h2->next!=NULL){
+        h1->next=h2;
+        h1=temp1;
+        h2->next=h1;
+        h2=temp2;
+        temp1=h1->next;
+        temp2=h2->next;
+    }
+    h1->next=h2;
 
-    printf("\n\nList1 after changes---> ");
-    display(h1);
+    printf("\n\nMerged ");
+    display(head);
 
-    printf("\nList2 after changes---> ");
-    display(h2);
     return 0;
 }

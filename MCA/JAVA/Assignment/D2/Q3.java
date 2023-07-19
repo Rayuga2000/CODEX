@@ -11,14 +11,13 @@ public class Q3{
         return arr;
     }
     public static void main(String[] args){
-        int arr[]=new int[2];
         Scanner sc=new Scanner(System.in);
 
         System.out.print("Enter the numbers: ");
         int a=sc.nextInt();
         int b=sc.nextInt();
 
-        arr=swap(a,b);
+        int[] arr=swap(a,b);
         a=arr[0];
         b=arr[1];
 

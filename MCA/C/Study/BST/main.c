@@ -147,7 +147,6 @@ void preorder(node *temp){
         preorder(temp->left);
         preorder(temp->right);
     }
-    return;
 }
 
 void inorder(node *temp){
@@ -156,7 +155,6 @@ void inorder(node *temp){
         printf("%d ",temp->data);
         inorder(temp->right);
     }
-    return;
 }
 
 void postorder(node *temp){
@@ -165,7 +163,6 @@ void postorder(node *temp){
         postorder(temp->right);
         printf("%d ",temp->data);
     }
-    return;
 }
 
 int main(){    

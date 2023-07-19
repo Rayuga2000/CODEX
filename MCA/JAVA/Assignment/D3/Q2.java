@@ -12,7 +12,6 @@ public class Q2{
 
         int j=-1;
         for(int i=0;i<n;i++){
-            
             System.out.println("Enter (id,name,designation,salary): ");
             data=sc.next();
             String[] ch=data.split(",");

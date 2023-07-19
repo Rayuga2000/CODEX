@@ -2,20 +2,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//create a node structure
 typedef struct node{
     int data;
-    struct node* next;
+    struct node *next;
 }node;
 
-node *head=NULL,*tail,*prev,*curr,*next;
+node *head=NULL,*temp,*prev,*curr,*next;
 
 void reverse(){
     curr=head;
-    next=curr->next;
     prev=curr;
+    next=curr->next;
     curr=next;
     next=next->next;
     prev->next=NULL;
+
     while(next!=NULL){
         curr->next=prev;
         prev=curr;
@@ -25,44 +27,39 @@ void reverse(){
     curr->next=prev;
     head=curr;
 }
-
+//insert data in node
 void insert(){
     for(int i=0;i<3;i++){
-        printf("Enter data: ");
+        printf("Enter Data: ");
         if(head==NULL){
             head=(node*)malloc(sizeof(node));
-            scanf("%d",&head->data);
-            tail=head;
+            temp=head;
         }
         else{
-            tail->next=(node*)malloc(sizeof(node));
-            tail=tail->next;
-            scanf("%d",&tail->data);
+            temp->next=(node*)malloc(sizeof(node));
+            temp=temp->next;
         }
-        tail->next=NULL;
+        scanf("%d",&temp->data);
+        temp->next=NULL;
     }
 }
 
 void display(){
-    node *temp=head;
-    printf("Linked List: ");
-    while(temp->next!=NULL){
+    temp=head;
+    
+    while(temp!=NULL){
         printf("%d ",temp->data);
         temp=temp->next;
     }
-    printf("%d ",temp->data);
 }
 
 int main(){
-    node *h1,*h2;
-
-    printf("List--->\n");
     insert();
+    printf("\nLinked List: ");
     display();
 
     reverse();
-
-    printf("\n\nReversed List--->\n");
+    printf("\nReversed Linked List: ");
     display();
 
     return 0;

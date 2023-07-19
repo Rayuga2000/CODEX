@@ -17,6 +17,7 @@ int isFULL(int size){
     }
     return 0;
 }
+
 void enqueue(int size,int *queue){
     if(!isFULL(size)){
         int n;
