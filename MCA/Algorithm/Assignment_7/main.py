@@ -9,7 +9,7 @@ def strassen_matrix_multiply(A, B):
     if len(A) <= 32:
         return np.dot(A, B)
     
-    size = len(A) // 2
+    size = len(A) // 2 
 
     A11 = A[:size, :size]
     A12 = A[:size, size:]
@@ -24,7 +24,7 @@ def strassen_matrix_multiply(A, B):
     P1 = strassen_matrix_multiply(A11 + A22, B11 + B22)
     P2 = strassen_matrix_multiply(A21 + A22, B11)
     P3 = strassen_matrix_multiply(A11, B12 - B22)
-    P4 = strassen_matrix_multiply(A22, B21 - B11)
+    P4 = strassen_matrix_multiply(A22, B21 - B11) 
     P5 = strassen_matrix_multiply(A11 + A12, B22)
     P6 = strassen_matrix_multiply(A21 - A11, B11 + B12)
     P7 = strassen_matrix_multiply(A12 - A22, B21 + B22)

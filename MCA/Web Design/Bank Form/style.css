@@ -1,0 +1,38 @@
+#container{
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
+}
+#sub-container1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    gap: 10px;
+    margin: auto;
+}
+.contents{
+    flex: 1;
+    flex-basis: 40%;
+    margin: auto;
+}
+input,select{
+    height: 20px;
+    width: 100%;
+}
+#chkbx{
+    width: auto;
+}
+.btn{
+    display: flex;
+}
+button{
+    background-color: green;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    border-style: hidden;
+    border-radius: 5px;
+}

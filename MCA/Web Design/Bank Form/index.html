@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Bank Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1 class="main-header">Account Application Form</h1>
+        <hr>
+        <h2>Basic Details</h2>  
+        <form>
+            <fieldset>
+                <div id="sub-container1">
+                    <div class="contents">
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" required>
+                    </div>
+                    <div class="contents">
+                        <label for="lname">Last Name</label><br> 
+                        <input type="text" id="lname" required>
+                    </div>
+                    <div class="contents">
+                        <label for="email">E-mail</label><br> 
+                        <input type="text" id="email" required>
+                    </div>
+                    <div class="contents">
+                        <label for="ph">Phone Number</label><br>
+                        <input type="text" id="ph" required>
+                    </div>
+                    <div class="contents">
+                        <label for="dob">Date of Birth</label><br>
+                        <input type="text" id="dob" required>
+                    </div>
+                    <div class="contents">
+                        <label for="acctype">Account Type</label><br>
+                        <select id="acctype">
+                            <option value="" selected>Please Select</option>
+                            <option value="Curent Account">Curent Account</option>
+                            <option value="Savings Account">Savings Account</option>
+                        </select>
+                    </div>
+
+                    <div class="contents">
+                        <label for="addr">Address</label><br>
+                        <input type="text" id="addr" required>
+                    </div>
+                    <div class="contents">
+                        <label for="city">City</label><br>
+                        <input type="text" id="city" required>
+                    </div>
+
+                    <div class="contents">
+                        <label for="state">State</label><br>
+                        <input type="text" id="state" required>
+                    </div>
+                    <div class="contents">
+                        <label for="pin">PIN</label><br>
+                        <input type="text" id="pin" required>
+                    </div>
+
+                    <div class="contents">
+                        <label for="country">Country</label><br>
+                        <input type="text" id="country" required>
+                    </div>
+                    <div class="contents">
+                        <label for="mstatus">Marital Status</label><br>
+                        <select id="mstatus">
+                            <option value="" selected>Please Select</option>
+                            <option value="married">Married</option>
+                            <option value="unmarried">Unmarried</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="btn">
+                    <button>Submit</button>
+                </div>   
+            </fieldset>
+        </form>
+        <h2>Acknowledgement</h2>
+        <p>By signing this form, I acknowledge that the information I've given in this form is accurate and I agree all the terms and conditions.</p>
+        <label for="chkbx"><input id="chkbx" type="checkbox">I agree to terms & conditions.</label>
+    </div>
+</body>
+</html>
