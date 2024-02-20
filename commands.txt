@@ -5,4 +5,12 @@ prime-select query -> show the currently selected gpu profile
 sudo fc-cache -fv -> refreshes font cache system wide
 # to create system wide bash files move the bash file in /bin folder and remove the extension and make it executable
 chmod +x filename -> makes the file executable
+sudo dpkg --remove --force-remove-reinstreq package_name -> remove broken packages in ubuntu
+sudo apt update --fix-missing -> fix broken packages
+# Broken packages may cause package manager configuration problems.
+sudo dpkg --configure -a -> Reconfigure DPKG, the base package management system
+sudo apt install -f -> Force APT to Correct Missing Dependencies or Broken Packages
+sudo dpkg -l | grep ^..R -> Check if DPKG marked some packages as needing a reinstall.
+# If the command above returns a list of one or more packages, try removing the packages -> sudo dpkg --purge --force-all [package-name]
+
 
