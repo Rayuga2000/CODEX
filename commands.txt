@@ -14,3 +14,4 @@ sudo dpkg -l | grep ^..R -> Check if DPKG marked some packages as needing a rein
 # If the command above returns a list of one or more packages, try removing the packages -> sudo dpkg --purge --force-all [package-name]
 
 
+WINEPREFIX "destination" winecfg -> create wineprefix in that folder
