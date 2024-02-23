@@ -1,0 +1,6 @@
+#!/bin/sh
+sudo dnf update
+#sudo dnf install opencv opencv-devel python3-opencv python3-matplotlib python3-numpy
+sudo dnf install python3-pip
+pip install scikit-learn
+pip install pandas
