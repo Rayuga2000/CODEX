@@ -1,0 +1,8 @@
+flatpak
+gdebi
+vscode
+steam
+bottle
+python libraries
+balena etcher
+

@@ -1,7 +1,7 @@
 nvidia-smi -> check nvidia gpu details along with cuda version
 lspci | grep -i nvidia -> show available nvidia components
 prime-select query -> show the currently selected gpu profile
-# to install fonts just move font files to usr/local/share/fonts folder with command 'sudo mv (source) (destination)' (This command is also used to rename files)
+# to install fonts just move font files to /usr/local/share/fonts folder with command 'sudo mv (source) (destination)' (This command is also used to rename files)
 sudo fc-cache -fv -> refreshes font cache system wide
 # to create system wide bash files move the bash file in /bin folder and remove the extension and make it executable
 chmod +x filename -> makes the file executable
@@ -13,5 +13,14 @@ sudo apt install -f -> Force APT to Correct Missing Dependencies or Broken Packa
 sudo dpkg -l | grep ^..R -> Check if DPKG marked some packages as needing a reinstall.
 # If the command above returns a list of one or more packages, try removing the packages -> sudo dpkg --purge --force-all [package-name]
 
+sudo apt-get --with-new-pkgs upgrade package_name -> install kept back packages
+env -> show environment variables and paths
+export var=path:path:path:etc. -> set environment variable (don't forget to mention the previous paths along with new ones with: separated lines, cause this method dosen't add rather reinitializes the path var)
+source ~/.bashrc -> refresh/restart bash terminal session
+
+#dont use fuse for appimages
 
 WINEPREFIX "destination" winecfg -> create wineprefix in that folder
+
+git config --global credential.helper store -> store git credentials
+mv 

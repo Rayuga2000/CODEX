@@ -1,0 +1,10 @@
+#!/bin/sh
+sudo apt update
+sudo apt upgrade -y
+
+sudo apt install python3-opencv python3-matplotlib python3-sklearn python3-pandas python3-numpy
+
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.usebottles.bottles
+flatpak install flathub com.valvesoftware.Steam
