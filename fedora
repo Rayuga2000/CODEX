@@ -4,3 +4,4 @@ sudo dnf update
 sudo dnf install python3-pip
 pip install scikit-learn
 pip install pandas
+bash -c  "$(wget -qO- https://git.io/vQgMr)" 
