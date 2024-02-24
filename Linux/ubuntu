@@ -2,10 +2,15 @@
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install python3-opencv python3-matplotlib python3-sklearn python3-pandas python3-numpy
+sudo apt install python3-opencv python3-matplotlib python3-sklearn python3-pandas python3-numpy -y
 
-sudo apt install flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.usebottles.bottles
-flatpak install flathub com.valvesoftware.Steam
+sudo apt install flatpak -y
+#flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.usebottles.bottles -y
+flatpak install flathub com.valvesoftware.Steam -y
+
+wget -qO - https://apt.packages.shiftkey.dev/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/shiftkey-packages.gpg > /dev/null
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/shiftkey-packages.gpg] https://apt.packages.shiftkey.dev/ubuntu/ any main" > /etc/apt/sources.list.d/shiftkey-packages.list'
+sudo apt update && sudo apt install github-desktop -y
+
 bash -c  "$(wget -qO- https://git.io/vQgMr)" 
