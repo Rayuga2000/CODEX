@@ -1,0 +1,1 @@
+#https://www.tecmint.com/install-nvidia-drivers-in-linux/ & https://rpmfusion.org/Howto/NVIDIA & https://youtu.be/cYSLW1qIzKE?si=3JY20-58BF7EggKg -> nvidia driver instructions

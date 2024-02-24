@@ -1,0 +1,8 @@
+sudo dpkg --remove --force-remove-reinstreq package_name -> remove broken packages in ubuntu
+sudo apt update --fix-missing -> fix broken packages
+# Broken packages may cause package manager configuration problems.
+sudo dpkg --configure -a -> Reconfigure DPKG, the base package management system
+sudo apt install -f -> Force APT to Correct Missing Dependencies or Broken Packages
+sudo dpkg -l | grep ^..R -> Check if DPKG marked some packages as needing a reinstall.
+# If the command above returns a list of one or more packages, try removing the packages -> sudo dpkg --purge --force-all [package-name]
+sudo apt-get --with-new-pkgs upgrade package_name -> install kept back packages
