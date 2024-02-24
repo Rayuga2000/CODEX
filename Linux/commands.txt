@@ -18,3 +18,6 @@ git config --global credential.helper store -> store git credentials
 
 lspci | grep -Ei 'VGA|3D' -> show available GPUs
 echo $XDG_SESSION_TYPE -> check which display system is being used
+
+chmod +rwx filename -> change read/write/execute permission to a file ('+' = give, '-' = block / permission)
+rm filename -> remove a file
