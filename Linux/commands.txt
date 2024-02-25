@@ -1,23 +1,36 @@
-nvidia-smi -> check nvidia gpu details along with cuda version
-lspci | grep -i nvidia -> show available nvidia components
-prime-select query -> show the currently selected gpu profile
-# to install fonts just move font files to /usr/local/share/fonts folder with command 'sudo mv (source) (destination)' (This command is also used to rename files)
-sudo fc-cache -fv -> refreshes font cache system wide
-# to create system wide bash files move the bash file in /bin folder and remove the extension and make it executable
-chmod +x filename -> makes the file executable
+##GPU & Display##
+	nvidia-smi -> check nvidia gpu details along with cuda version
+	lspci | grep -i nvidia -> show available nvidia components
+	prime-select query -> show the currently selected gpu profile
+	lspci | grep -Ei 'VGA|3D' -> show available GPUs
+	echo $XDG_SESSION_TYPE -> check which display system is being used
 
-env -> show environment variables and paths
-export var=path:path:path:etc. -> set environment variable (don't forget to mention the previous paths along with new ones with: separated lines, cause this method dosen't add rather reinitializes the path var)
-source ~/.bashrc -> refresh/restart bash terminal session
+##Fonts##
+	# to install fonts just move font files to /usr/local/share/fonts folder with command 'sudo mv (source) (destination)' (This command is also used to rename files)
+	sudo fc-cache -fv -> refreshes font cache system wide
+
+##System##
+	# to create system wide bash files move the bash file in /bin folder and remove the extension and make it executable
+	chmod +x filename -> makes the file executable
+	chmod +rwx filename -> change read/write/execute permission to a file ('+' = give, '-' = block / permission)
+	rm filename -> remove a file
+
+##Enironment Variables##
+	env -> show environment variables and paths
+	export var=path:path:path:etc. -> set environment variable (don't forget to mention the previous paths along with new ones with: separated lines, cause this method dosen't add rather reinitializes the path var)
+	source ~/.bashrc -> refresh/restart bash terminal session
 
 #dont use fuse for appimages
 
-WINEPREFIX "destination" winecfg -> create wineprefix in that folder
+##Wine##
+	WINEPREFIX "destination" winecfg -> create wineprefix in that folder
 
-git config --global credential.helper store -> store git credentials
+##Git##
+	git config --global credential.helper store -> store git credentials
 
-lspci | grep -Ei 'VGA|3D' -> show available GPUs
-echo $XDG_SESSION_TYPE -> check which display system is being used
+##Flatpak##
+	flatpak list -> list flatpak apps
+	flatpak uninstall --unused -> uninstall unused runtimes
+	flatpak uninstall --delete-data <application_id> -> uninstall app & delete it's data
+	flatpak uninstall --all -> uninstall all flatpak packages
 
-chmod +rwx filename -> change read/write/execute permission to a file ('+' = give, '-' = block / permission)
-rm filename -> remove a file
