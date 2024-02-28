@@ -14,9 +14,14 @@ cd paru
 makepkg -si
 
 #bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
-sudo pacman -S --needed zsh zsh-syntax-highlighting kvantum firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh python-pip gimp thunderbird gparted --noconfirm
+sudo pacman -S --needed zsh zsh-syntax-highlighting kvantum firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh python-pip gimp thunderbird gparted power-profiles-daemon --noconfirm
+
 sudo modprobe btusb
 sudo systemctl start bluetooth #start bluetooth service
+
+systemctl enable power-profiles-daemon
+systemctl start power-profiles-daemon
+
 #Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
 
 

@@ -14,6 +14,8 @@
 	chmod +x filename -> makes the file executable
 	chmod +rwx filename -> change read/write/execute permission to a file ('+' = give, '-' = block / permission)
 	rm filename -> remove a file
+	grep -E "opencv|numpy|scikit|pandas|matplotlib" -> search multiple patterns
+
 
 ##Enironment Variables##
 	env -> show environment variables and paths
