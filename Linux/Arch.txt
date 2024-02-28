@@ -1,0 +1,5 @@
+Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
+
+
+
+

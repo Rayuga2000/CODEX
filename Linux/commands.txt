@@ -33,4 +33,11 @@
 	flatpak uninstall --unused -> uninstall unused runtimes
 	flatpak uninstall --delete-data <application_id> -> uninstall app & delete it's data
 	flatpak uninstall --all -> uninstall all flatpak packages
+	
+##SHELL##
+echo $SHELL #check current shell
+command -v zsh #command -v will print the absolute filepath used when invoking the argument provided, in this case zsh. This gives us the path to Zsh's exectuable file.
+command -v zsh | sudo tee -a /etc/shells # The tee utility, takes an input and appends it to /etc/shells. The pipe symbol takes the output of the left-hand side and uses it as the input for the right-hand side.
+sudo chsh -s $(which zsh) $USER #change default shell. $(which zsh) - The shell we want to use as the default, $USER - The user whose default shell we are changing
+sudo usermod -s /bin/zsh  $USER (use this if above command doesn't work)
 
