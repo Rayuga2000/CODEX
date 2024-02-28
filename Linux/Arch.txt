@@ -1,5 +1,2 @@
-Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
-
-
-
-
+#Packages to pre install alongside arch
+nano neofetch curl wget reflector base-devel zsh ufw firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh

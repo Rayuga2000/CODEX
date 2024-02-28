@@ -1,9 +1,25 @@
-#change /etc/pacman.conf first
-sudo pacman -S reflector  #reflector is used to get fastest mirrors in Arch
+#change /etc/pacman.conf first mirrors, color, ILoveCandy
+sudo pacman -S --needed reflector --noconfirm  #reflector is used to get fastest mirrors in Arch
 sudo cp /etc/pacman.d/mirrorlist /home/rayuga/Documents/Backup/etc/pacman.d/mirrorlist.bak #make backup of mirrorlist
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
 sudo pacman -Syu #update pacman database
 
-sudo pacman -S firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk #bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
+sudo pacman -S --needed ufw --noconfirm
+sudo systemctl enable ufw
+sudo systemctl start ufw
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+#bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
+sudo pacman -S --needed zsh zsh-syntax-highlighting kvantum firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh python-pip gimp thunderbird gparted --noconfirm
 sudo modprobe btusb
 sudo systemctl start bluetooth #start bluetooth service
+#Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
+
+
+
+
+
