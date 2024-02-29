@@ -43,3 +43,5 @@ command -v zsh | sudo tee -a /etc/shells # The tee utility, takes an input and a
 sudo chsh -s $(which zsh) $USER #change default shell. $(which zsh) - The shell we want to use as the default, $USER - The user whose default shell we are changing
 sudo usermod -s /bin/zsh  $USER (use this if above command doesn't work)
 
+##Daemons##
+systemctl daemon-reload -> reloads the daemons

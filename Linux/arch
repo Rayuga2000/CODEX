@@ -1,20 +1,24 @@
 ﻿#change /etc/pacman.conf first mirrors, color, ILoveCandy
-sudo pacman -S --needed reflector --noconfirm  #reflector is used to get fastest mirrors in Arch
-sudo cp /etc/pacman.d/mirrorlist /home/rayuga/Documents/Backup/etc/pacman.d/mirrorlist.bak #make backup of mirrorlist
-sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
+#sudo pacman -S --needed reflector --noconfirm  #reflector is used to get fastest mirrors in Arch
+#sudo cp /etc/pacman.d/mirrorlist /home/rayuga/Documents/Backup/etc/pacman.d/mirrorlist.bak #make backup of mirrorlist
+#sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
 sudo pacman -Syu #update pacman database
 
-sudo pacman -S --needed ufw --noconfirm
-sudo systemctl enable ufw
-sudo systemctl start ufw
+#sudo pacman -S --needed ufw --noconfirm
 
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
+sudo pacman -S --needed base-devel --noconfirm
+#git clone https://aur.archlinux.org/paru.git
+#cd paru
+#makepkg -si
 
 #bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
-sudo pacman -S --needed zsh zsh-syntax-highlighting kvantum firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh python-pip gimp thunderbird gparted power-profiles-daemon --noconfirm
+#firefox flatpak gparted python-pip
+sudo pacman -S --needed ufw gufw python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas zsh zsh-syntax-highlighting bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh gimp thunderbird power-profiles-daemon --noconfirm
+
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+sudo systemctl enable ufw
+sudo systemctl start ufw
 
 sudo modprobe btusb
 sudo systemctl start bluetooth #start bluetooth service
