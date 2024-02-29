@@ -45,3 +45,4 @@ sudo usermod -s /bin/zsh  $USER (use this if above command doesn't work)
 
 ##Daemons##
 systemctl daemon-reload -> reloads the daemons
+systemctl list-units --type service -> list all daemons

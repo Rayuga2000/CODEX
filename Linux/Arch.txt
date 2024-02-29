@@ -1,10 +1,12 @@
 #pre install
 nano neofetch curl wget reflector
 #post install
-base-devel zsh ufw firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh
+base-devel zsh ufw gufw firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh
 
 pacman -Qs -> search local database
 pacman -Ss -> search remote database
+pacman -S package_name1 package_name2 ... -> install packages
+pacman -Rs package_name -> remove a package and its dependencies which are not required by any other installed package
 
 #Whitesur Themes
 https://github.com/vinceliuice/WhiteSur-gtk-theme
