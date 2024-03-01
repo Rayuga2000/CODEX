@@ -13,7 +13,7 @@ sudo pacman -S --needed base-devel --noconfirm
 
 #bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
 #firefox flatpak gparted python-pip
-sudo pacman -S --needed ufw gufw python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas zsh zsh-syntax-highlighting bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh gimp thunderbird power-profiles-daemon --noconfirm
+sudo pacman -S --needed man ufw gufw python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas zsh zsh-syntax-highlighting bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh gimp thunderbird power-profiles-daemon --noconfirm
 
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 

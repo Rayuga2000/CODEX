@@ -3,6 +3,7 @@
 	lspci | grep -i nvidia -> show available nvidia components
 	prime-select query -> show the currently selected gpu profile
 	lspci | grep -Ei 'VGA|3D' -> show available GPUs
+	lspci -k | grep -A 2 -E "(VGA|3D)" -> show available GPUs with more details
 	echo $XDG_SESSION_TYPE -> check which display system is being used
 
 ##Fonts##

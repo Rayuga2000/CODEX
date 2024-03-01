@@ -3,12 +3,12 @@ nano neofetch curl wget reflector
 #post install
 base-devel zsh ufw gufw firefox flatpak bluez blueman bluez-utils intel-ucode jdk-openjdk libreoffice-fresh
 
+#pacman
 pacman -Qs -> search local database
 pacman -Ss -> search remote database
 pacman -S package_name1 package_name2 ... -> install packages
 pacman -Rs package_name -> remove a package and its dependencies which are not required by any other installed package
 
-#Whitesur Themes
-https://github.com/vinceliuice/WhiteSur-gtk-theme
-https://github.com/vinceliuice/WhiteSur-icon-theme
-https://github.com/vinceliuice/WhiteSur-wallpapers
+#NVIDIA settings
+https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
+https://wiki.archlinux.org/title/NVIDIA

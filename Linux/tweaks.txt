@@ -1,3 +1,11 @@
 # .themes or .local/share/themes for app themes and/or Gnome Shell themes, .icons or .local/share/icons for icons and cursors -> apply themes locally
 # /usr/share/themes or /usr/local/share/themes for app and Gnome Shell theme, /usr/share/icons or /usr/local/share/icons for icons and cursors -> apply themes globally
 
+#Gogh terminal scheme
+https://mayccoll.github.io/Gogh/
+
+#Whitesur Themes
+https://github.com/vinceliuice/WhiteSur-gtk-theme
+https://github.com/vinceliuice/WhiteSur-icon-theme
+https://github.com/vinceliuice/WhiteSur-wallpapers
+
