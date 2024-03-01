@@ -51,3 +51,5 @@ systemctl list-units --type service -> list all daemons
 ##Boot##
 sudo mkinitcpio -P -> initial ram loading modifications
 
+##Install Packages##
+makepkg -si -> install a package from a PKGBUILD along with dependencies (if needed)
