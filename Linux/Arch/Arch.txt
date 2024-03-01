@@ -12,3 +12,4 @@ pacman -Rs package_name -> remove a package and its dependencies which are not r
 #NVIDIA settings
 https://github.com/korvahannu/arch-nvidia-drivers-installation-guide
 https://wiki.archlinux.org/title/NVIDIA
+https://dev.to/vitorvargas/how-to-install-the-nvidia-driver-on-archlinux-5bgc
