@@ -1,3 +1,6 @@
-//update-grub for Fedora
+//update grub in Fedora
 sudo grub2-mkconfig -o "$(readlink -e /etc/grub2.cfg)"
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+//update grub in Arch
+sudo grub-mkconfig -o /boot/grub/grub.cfg
