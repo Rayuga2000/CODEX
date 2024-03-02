@@ -5,5 +5,7 @@ steam
 bottle
 python libraries
 balena etcher
+hanabi extension
 
 CaesarDressing-Regular MetalMania-Regular
+
