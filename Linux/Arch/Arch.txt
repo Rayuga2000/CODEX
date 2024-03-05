@@ -8,7 +8,7 @@ pacman -Qs -> search local database
 pacman -Ss -> search remote database
 pacman -S package_name1 package_name2 ... -> install packages
 pacman -Rs package_name -> remove a package and its dependencies which are not required by any other installed package
-sudo pacman -Rs $(pacman -Qdtq) -> remove orphans (check man pacman for more)
+sudo pacman -Rs $(pacman -Qdtq) -> remove orphans (check man pacman for more) 
 
 #NVIDIA settings
 https://github.com/korvahannu/arch-nvidia-drivers-installation-guide

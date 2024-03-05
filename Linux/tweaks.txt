@@ -9,3 +9,9 @@ https://github.com/vinceliuice/WhiteSur-gtk-theme
 https://github.com/vinceliuice/WhiteSur-icon-theme
 https://github.com/vinceliuice/WhiteSur-wallpapers
 
+#GDM Themes
+https://www.gnome-look.org/p/1013030
+
+#Grub Themes
+https://www.gnome-look.org/p/2076542
+
