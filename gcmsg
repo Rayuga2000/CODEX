@@ -4,4 +4,4 @@ git add -A
 git commit -m "$1"
 
 
-(git config --global user.email "tsarkar431@gmail.com";git config --global user.name "Rayuga2000") | git push
+(git config --global user.name "Rayuga2000") | git push
