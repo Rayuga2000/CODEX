@@ -36,6 +36,8 @@
 	flatpak uninstall --unused -> uninstall unused runtimes
 	flatpak uninstall --delete-data <application_id> -> uninstall app & delete it's data
 	flatpak uninstall --all -> uninstall all flatpak packages
+	sudo flatpak update -> update all flatpaks
+	sudo flatpak update --app <package_name> -> update flatpaks individually
 	
 ##SHELL##
 echo $SHELL #check current shell
