@@ -1,3 +1,4 @@
+sudo dpkg -i <package> -> install .deb packages
 sudo dpkg --remove --force-remove-reinstreq package_name -> remove broken packages in ubuntu
 sudo apt update --fix-missing -> fix broken packages
 # Broken packages may cause package manager configuration problems.
