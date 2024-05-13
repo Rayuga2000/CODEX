@@ -9,21 +9,24 @@
 
 #sudo cp /etc/pacman.d/mirrorlist /home/rayuga/Documents/Backup/etc/pacman.d/mirrorlist.bak #make backup of mirrorlist
 
-sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
+#sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
 sudo pacman -Syu #update pacman database
 	
 #git clone https://aur.archlinux.org/visual-studio-code-bin.git
 
 #bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
 
-#gparted python-pip ufw gufw bluez blueman bluez-utils firefox flatpak nvidia nvidia-utils lib32-nvidia-utils
-sudo pacman -S --needed python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas zsh zsh-syntax-highlighting intel-ucode jdk-openjdk libreoffice-fresh gimp thunderbird power-profiles-daemon --noconfirm
+#gparted python-pip ufw gufw bluez blueman bluez-utils firefox flatpak nvidia nvidia-utils lib32-nvidia-utils zsh zsh-syntax-highlighting intel-ucode jdk-openjdk libreoffice-fresh power-profiles-daemon 
 
+sudo pacman -S --needed python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas gimp thunderbird --noconfirm
 #echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
-systemctl enable power-profiles-daemon
-systemctl start power-profiles-daemon
+# systemctl enable power-profiles-daemon
+# systemctl start power-profiles-daemon
 
+git clone https://github.com/pystardust/ani-cli.git # install ani-cli to watch anime on terminal
+cd ani-cli
+makepkg -si
 #Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
 
 
