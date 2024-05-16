@@ -9,6 +9,7 @@
 ##Fonts##
 	# to install fonts just move font files to /usr/local/share/fonts folder with command 'sudo mv (source) (destination)' (This command is also used to rename files)
 	sudo fc-cache -fv -> refreshes font cache system wide
+	fc-list : family | sort -> lists installed fonts sorted by family
 
 ##System##
 	# to create system wide bash files move the bash file in /bin folder and remove the extension and make it executable
