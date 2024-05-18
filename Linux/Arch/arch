@@ -4,9 +4,6 @@
 # sudo systemctl enable ufw
 # sudo systemctl start ufw
 
-#sudo modprobe btusb
-#sudo systemctl start bluetooth #start bluetooth service
-
 #sudo cp /etc/pacman.d/mirrorlist /home/rayuga/Documents/Backup/etc/pacman.d/mirrorlist.bak #make backup of mirrorlist
 
 #sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
@@ -18,15 +15,20 @@ sudo pacman -Syu #update pacman database
 
 #gparted python-pip ufw gufw bluez blueman bluez-utils firefox flatpak nvidia nvidia-utils lib32-nvidia-utils zsh zsh-syntax-highlighting intel-ucode jdk-openjdk libreoffice-fresh power-profiles-daemon 
 
-sudo pacman -S --needed python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas gimp thunderbird --noconfirm
+sudo pacman -S --needed base-devel linux-headers nvidia-dkms nvidia-utils lib32-nvidia-utils python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas gimp thunderbird bluez blueman bluez-utils power-profiles-daemon man-db --noconfirm
+
 #echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
-# systemctl enable power-profiles-daemon
-# systemctl start power-profiles-daemon
+sudo modprobe btusb
+sudo systemctl start bluetooth #start bluetooth service
 
-git clone https://github.com/pystardust/ani-cli.git # install ani-cli to watch anime on terminal
-cd ani-cli
-makepkg -si
+systemctl enable power-profiles-daemon
+systemctl start power-profiles-daemon
+
+git clone "https://github.com/pystardust/ani-cli.git"
+sudo cp ani-cli/ani-cli /usr/local/bin
+rm -rf ani-cli
+
 #Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
 
 
