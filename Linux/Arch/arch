@@ -13,13 +13,14 @@ sudo pacman -Syu #update pacman database
 
 #bluez blueman bluez-utils are essentials for enabling bluetooth service, intel-ucode used for intel microcodes
 
-#gparted python-pip ufw gufw bluez blueman bluez-utils firefox flatpak nvidia nvidia-utils lib32-nvidia-utils zsh zsh-syntax-highlighting intel-ucode jdk-openjdk libreoffice-fresh power-profiles-daemon 
+#gparted python-pip ufw gufw bluez blueman bluez-utils firefox flatpak nvidia nvidia-utils lib32-nvidia-utils zsh zsh-syntax-highlighting intel-ucode jdk-openjdk libreoffice-fresh power-profiles-daemon thunderbird
 
-sudo pacman -S --needed base-devel linux-headers nvidia-dkms nvidia-utils lib32-nvidia-utils python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas gimp thunderbird bluez blueman bluez-utils power-profiles-daemon man-db --noconfirm
+sudo pacman -S --needed base-devel linux-headers nvidia-dkms nvidia-utils lib32-nvidia-utils python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas fzf mpv gimp bluez blueman bluez-utils power-profiles-daemon man-db --noconfirm
 
 #echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
 sudo modprobe btusb
+sudo systemctl enable bluetooth
 sudo systemctl start bluetooth #start bluetooth service
 
 systemctl enable power-profiles-daemon
