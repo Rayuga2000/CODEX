@@ -1,1 +1,2 @@
-sudo pacman -Syu --needed nvidia-dkms nvidia-utils lib32-nvidia-utils --noconfirm
+#sudo pacman -Syu --needed nvidia nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia xorg-server-devel --noconfirm
+sudo pacman -Rs nvidia nvidia-utils lib32-nvidia-utils nvidia-settings opencl-nvidia xorg-server-devel --noconfirm

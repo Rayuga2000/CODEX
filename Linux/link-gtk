@@ -1,0 +1,10 @@
+#!/bin/bash
+
+THEME_DIR=$1
+echo $THEME_DIR
+
+mkdir -p "${HOME}/.config/gtk-4.0"
+
+ln -sf "$THEME_DIR/assets" "${HOME}/.config/gtk-4.0/assets"
+ln -sf "$THEME_DIR/gtk-4.0/gtk.css" "${HOME}/.config/gtk-4.0/gtk.css"
+ln -sf "$THEME_DIR/gtk-4.0/gtk-dark.css" "${HOME}/.config/gtk-4.0/gtk-dark.css"
