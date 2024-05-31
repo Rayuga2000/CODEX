@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 .logo{
     width: 350px;
     height: auto;
@@ -9,6 +10,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .text h1{
     text-align: right;
     font-family: Balsamiq Sans;
@@ -16,6 +18,7 @@
     color: #ff9a00;
     padding: 1%;
 }
+
 .wrapper{
     display: grid;
     grid-gap: 1em;
@@ -27,6 +30,7 @@
     width: 100%;
     height: auto;
 }
+
 .naruto,.sasuke,.kakashi{
 	text-justify: auto;
 	background-color: white;
@@ -44,6 +48,7 @@
     transform: scale(1.15);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
+
 .naruto{
     padding: 1.5%;
     padding-top: 2%;
@@ -59,6 +64,7 @@
     padding-top: 2%;
     padding-bottom: 2%;
 }
+
 .wrapper h1{
     font-family: Open Sans Extrabold;
     background-size: cover;
@@ -75,6 +81,7 @@
 .kakashi h1{
     background-image: linear-gradient(to right,#34A7B2,#207DFF);
 }
+
 img{
 	width: 100%;
     height: 100%;
