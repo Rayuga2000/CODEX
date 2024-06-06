@@ -1,3 +1,4 @@
+##Packages##
 flatpak
 gdebi
 vscode
@@ -6,6 +7,11 @@ bottle
 python libraries
 balena etcher
 hanabi extension
+
+##Themes##
+evolve gtk theme manager
+tela dark dracula nord
+graphite nord
 
 CaesarDressing-Regular MetalMania-Regular
 

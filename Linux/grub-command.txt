@@ -1,6 +1,9 @@
-//update grub in Fedora
+//update grub2
 sudo grub2-mkconfig -o "$(readlink -e /etc/grub2.cfg)"
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 
-//update grub in Arch
+//update grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+//reinstall grub
+sudo grub-install --target=x86_64-efi --bootloader-id="Arch Linux" --efi-directory=/boot
