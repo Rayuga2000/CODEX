@@ -1,4 +1,2 @@
-flatpak install flathub org.gaphor.Gaphor
-flatpak install flathub com.toolstack.Folio
-flatpak install flathub org.mozilla.firefox
-flatpak install flathub com.mattjakeman.ExtensionManager
+flatpak install flathub org.gaphor.Gaphor com.toolstack.Folio
+# flatpak install flathub org.mozilla.firefox com.mattjakeman.ExtensionManager
