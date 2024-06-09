@@ -1,27 +1,26 @@
 #!/bin/sh
 
-sudo dnf install opencv opencv-contrib opencv-doc python3-opencv python3-matplotlib python3-numpy -y
+#sudo dnf install opencv opencv-contrib opencv-doc python3-opencv python3-matplotlib python3-numpy -y
 #sudo dnf install opencv opencv-devel
-sudo dnf install python3-pip -y
-pip install scikit-learn
-pip install pandas
+#sudo dnf install python3-pip -y
+#pip install scikit-learn
+#pip install pandas
 
-sudo dnf install gnome-tweaks gnome-extensions-app -y
-sudo dnf install gimp gparted -y
+#sudo dnf install gnome-tweaks gnome-extensions-app -y
+sudo dnf install gimp -y
 
-#install multimedia codecs
-sudo dnf config-manager --set-enabled fedora-cisco-openh264
-sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264
-sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-plugin-libav --exclude=gstreamer1-plugins-bad-free-devel -y
-sudo dnf install lame\* --exclude=lame-devel -y
-sudo dnf group upgrade --with-optional Multimedia -y
+##Install code##
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf check-update
+sudo dnf install code
 
 #install github-desktop
-sudo rpm --import https://rpm.packages.shiftkey.dev/gpg.key
-sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://rpm.packages.shiftkey.dev/rpm/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://rpm.packages.shiftkey.dev/gpg.key" > /etc/yum.repos.d/shiftkey-packages.repo'
-sudo rpm --import https://mirror.mwt.me/shiftkey-desktop/gpgkey
-sudo sh -c 'echo -e "[mwt-packages]\nname=GitHub Desktop\nbaseurl=https://mirror.mwt.me/shiftkey-desktop/rpm\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://mirror.mwt.me/shiftkey-desktop/gpgkey" > /etc/yum.repos.d/mwt-packages.repo'
-sudo dnf install github-desktop
+#sudo rpm --import https://rpm.packages.shiftkey.dev/gpg.key
+#sudo sh -c 'echo -e "[shiftkey-packages]\nname=GitHub Desktop\nbaseurl=https://rpm.packages.shiftkey.dev/rpm/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://#rpm.packages.shiftkey.dev/gpg.key" > /etc/yum.repos.d/shiftkey-packages.repo'
+#sudo rpm --import https://mirror.mwt.me/shiftkey-desktop/gpgkey
+#sudo sh -c 'echo -e "[mwt-packages]\nname=GitHub Desktop\nbaseurl=https://mirror.mwt.me/shiftkey-desktop/rpm\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://#mirror.mwt.me/shiftkey-desktop/gpgkey" > /etc/yum.repos.d/mwt-packages.repo'
+#sudo dnf install github-desktop
 
 #install bottles
 #flatpak install flathub com.usebottles.bottles -y 
