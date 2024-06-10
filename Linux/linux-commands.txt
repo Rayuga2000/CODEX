@@ -63,3 +63,6 @@ ctrl+u -> clear current line
 
 ##Swap##
 cat /proc/sys/vm/swappiness -> check swappiness(how often swap is used)
+
+##Move##
+sudo mv **\Nerd* /usr/share/fonts -> move anything matching the word
