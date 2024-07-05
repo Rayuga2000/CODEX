@@ -14,5 +14,5 @@ makepkg -si
 cd ~/yay
 makepkg -si
 
-paru plasma-framework
+#paru plasma-framework
 
