@@ -18,7 +18,7 @@ sudo pacman -Syu #update pacman database
 #python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas
 #linux-headers bluez blueman bluez-utils power-profiles-daemon man-db base-devel
 
-sudo pacman -S --needed linux-headers bluez blueman bluez-utils power-profiles-daemon gnome-disks-utility fzf mpv gimp python-pip --noconfirm
+sudo pacman -S --needed linux-headers bluez blueman bluez-utils intel-ucode gnome-disks-utility fzf mpv gimp power-profiles-daemon python-pip
 
 #echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
