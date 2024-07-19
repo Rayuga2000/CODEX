@@ -7,7 +7,7 @@
 #pip install pandas
 
 #sudo dnf install gnome-tweaks gnome-extensions-app -y
-sudo dnf install gimp -y
+sudo dnf install git kitty gimp python3-pip -y
 
 ##Install code##
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -25,7 +25,16 @@ sudo dnf install code
 #install bottles
 #flatpak install flathub com.usebottles.bottles -y 
 
-#sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda #x11 will become the only display system
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda #x11 will become the only display system
+
+## Install pip packages in Python virtual env
+python -m venv ~/.venv
+source ~/.venv/bin/activate
+pip install numpy matplotlib pandas scikit-learn opencv-python
+
+git clone "https://github.com/pystardust/ani-cli.git"
+sudo cp ani-cli/ani-cli /usr/local/bin
+rm -rf ani-cli
 
 #bash -c  "$(wget -qO- https://git.io/vQgMr)" #GOGH terminal color schemes
 #set DNS 8.8.8.8,8.8.4.4
