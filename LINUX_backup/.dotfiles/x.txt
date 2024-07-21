@@ -1,0 +1,1 @@
+sudo mv **\Nerd* /usr/share/fonts -> move anything matching the word
