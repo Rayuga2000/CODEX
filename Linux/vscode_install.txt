@@ -1,0 +1,9 @@
+Downloading and Installing on Linux (Ubuntu/Debian)
+
+    Visit the official Visual Studio Code website: https://code.visualstudio.com/
+    Click on the "Download for Linux" button.
+    The download will start automatically. Once it's complete, open the Terminal.
+    Extract the downloaded archive: tar -xvf code-x.x.x.tar.gz
+    Move the extracted folder to a location of your choice (e.g., /usr/share or /opt): sudo mv VSCode-linux-x64 /usr/share/code
+    Create a symbolic link for easy access: sudo ln -s /usr/share/code/bin/code /usr/bin/code
+

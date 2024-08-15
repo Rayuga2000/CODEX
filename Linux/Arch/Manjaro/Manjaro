@@ -1,0 +1,10 @@
+sudo pacman -S python-pip
+
+git clone "https://github.com/pystardust/ani-cli.git"
+sudo cp ani-cli/ani-cli /usr/local/bin
+rm -rf ani-cli
+
+## Install pip packages in Python virtual env
+python -m venv ~/.venv
+source ~/.venv/bin/activate
+pip install numpy matplotlib pandas scikit-learn opencv-python
