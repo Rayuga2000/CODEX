@@ -1,4 +1,4 @@
-#Given an integer, , print the following values for each integer from i to n:
+#Given an integer, , print the following values for each integer from i to n in perticular order:
     # Decimal
     # Octal
     # Hexadecimal (capitalized)
