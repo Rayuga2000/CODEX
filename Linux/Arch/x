@@ -1,0 +1,3 @@
+a="abcd"
+echo $a
+echo "${a:0:-1}"
