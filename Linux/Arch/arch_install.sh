@@ -18,6 +18,3 @@ pacstrap /mnt base base-devel linux linux-firmware sof-firmware grub efibootmgr 
 
 genfstab /mnt > /mnt/etc/fstab
 cat /mnt/etc/fstab
-
-# change root
-arch-chroot /mnt

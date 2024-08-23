@@ -1,3 +1,8 @@
+device=$1
+
+# change root
+arch-chroot /mnt
+
 # MISC
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
 date
@@ -17,7 +22,7 @@ EDITOR=nano visudo
 
 systemctl enable NetworkManager
 
-grub-install ${boot:0:-1}
+grub-install $device #${boot:0:-1}
 grub-mkconfig -o /boot/grub/grub.cfg
 nano /etc/default/grub
 
