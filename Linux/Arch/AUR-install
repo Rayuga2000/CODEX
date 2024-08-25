@@ -1,4 +1,4 @@
-#sudo pacman -S --needed base-devel --noconfirm
+sudo pacman -S --needed base-devel --noconfirm
 
 cd ~
 git clone https://aur.archlinux.org/paru.git
