@@ -1,3 +1,5 @@
+device=$1
+
 # change root
 arch-chroot /mnt
 
@@ -12,15 +14,15 @@ echo "KEYMAP=us" > /etc/vconsole.conf
 echo "Arch" > /etc/hostname
 
 # add users
-useradd -m -G wheel -s /bin/bash $user
+useradd -m -G wheel -s /bin/bash Rayuga
 passwd
-passwd $user
+passwd Rayuga
 
 EDITOR=nano visudo
 
 systemctl enable NetworkManager
 
-grub-install ${boot:0:-1}
+grub-install $device #${boot:0:-1}
 grub-mkconfig -o /boot/grub/grub.cfg
 nano /etc/default/grub
 
