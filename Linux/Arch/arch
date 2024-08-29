@@ -36,7 +36,7 @@ rm -rf ani-cli
 ## Install pip packages in Python virtual env
 python -m venv ~/.venv
 source ~/.venv/bin/activate
-pip install numpy matplotlib pandas scikit-learn opencv-python
+pip install numpy matplotlib pandas scikit-learn svglib opencv-python
 
 #Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
 
