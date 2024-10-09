@@ -1,2 +1,2 @@
-﻿flatpak install flathub org.gaphor.Gaphor com.toolstack.Folio com.ktechpit.torrhunt md.obsidian.Obsidian com.heroicgameslauncher.hgl
-# flatpak install flathub com.mattjakeman.ExtensionManager
+﻿
+# flatpak install flathub com.mattjakeman.ExtensionManager com.heroicgameslauncher.hgl md.obsidian.Obsidian 
