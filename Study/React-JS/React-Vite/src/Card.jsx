@@ -1,6 +1,8 @@
+import './Card.scss'
+
 export default function Card({title,btnText="Read more"}){ {/* default value */}
     return(
-        <div className="max-w-xs mb-5 mx-5 rounded-md shadow-md bg-black text-gray-100">
+        <div className="card p-0 max-w-xs mb-5 mx-5 rounded-md shadow-md bg-black text-gray-100">
           <img
             src="vite.svg"
             alt=""
