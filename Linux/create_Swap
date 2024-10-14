@@ -5,3 +5,4 @@ sudo swapon /swapfile
 
 # add line to /etc/fstab
 sudo echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+echo "swapfile Created"
