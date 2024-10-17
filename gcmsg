@@ -2,6 +2,4 @@
 #git status
 git add -A
 git commit -m "$1"
-
-
-(git config --global user.name "Rayuga2000";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) | git push
+git push

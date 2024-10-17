@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Props from './Props.jsx'
 import Card from './Card.jsx'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(10)
