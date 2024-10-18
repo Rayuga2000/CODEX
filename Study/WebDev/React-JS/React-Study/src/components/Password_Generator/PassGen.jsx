@@ -33,7 +33,7 @@ export default function PassGen() {
     passRef.current?.select()
     window.navigator.clipboard.writeText(pass)
     btnRef.current.style.backgroundColor="#dc2626"
-  },[])
+  },[pass])
 
   useEffect(chngPass,[allowChar,allowNum,length])
 
