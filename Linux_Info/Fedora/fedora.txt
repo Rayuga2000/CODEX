@@ -1,0 +1,5 @@
+sudo dnf autoremove -> remove orphans
+
+## Install Nvidia Drivers
+sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda

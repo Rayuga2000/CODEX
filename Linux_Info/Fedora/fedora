@@ -1,0 +1,27 @@
+#!/bin/sh
+
+#sudo dnf install opencv opencv-contrib opencv-doc python3-opencv python3-matplotlib python3-numpy -y
+#sudo dnf install opencv opencv-devel
+#sudo dnf install python3-pip -y
+#pip install scikit-learn
+#pip install pandas
+
+#sudo dnf install gnome-tweaks gnome-extensions-app -y
+sudo dnf install kitty gimp python3-pip -y
+
+#install bottles
+#flatpak install flathub com.usebottles.bottles -y 
+
+#sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda #x11 will become the only display system
+
+## Install pip packages in Python virtual env
+python -m venv ~/.venv
+source ~/.venv/bin/activate
+pip install numpy matplotlib pandas scikit-learn opencv-python openpyxl ipython openai google-generativeai
+
+git clone "https://github.com/pystardust/ani-cli.git"
+sudo cp ani-cli/ani-cli /usr/local/bin
+rm -rf ani-cli
+
+#bash -c  "$(wget -qO- https://git.io/vQgMr)" #GOGH terminal color schemes
+#set DNS 8.8.8.8,8.8.4.4

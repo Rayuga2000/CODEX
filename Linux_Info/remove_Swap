@@ -1,0 +1,3 @@
+sudo swapoff -v /swapfile
+sudo rm /swapfile
+echo "swapfile Removed"
