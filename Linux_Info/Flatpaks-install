@@ -1,2 +1,2 @@
-﻿flatpak install flathub com.mattjakeman.ExtensionManager com.toolstack.Folio md.obsidian.Obsidian
-# flatpak install flathub com.heroicgameslauncher.hgl md.obsidian.Obsidian 
+﻿flatpak install flathub com.toolstack.Folio md.obsidian.Obsidian
+# flatpak install flathub com.toolstack.Folio com.heroicgameslauncher.hgl md.obsidian.Obsidian com.mattjakeman.ExtensionManager

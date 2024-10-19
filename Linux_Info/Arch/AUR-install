@@ -1,15 +1,11 @@
 sudo pacman -S --needed base-devel --noconfirm
 
 cd ~
-git clone https://aur.archlinux.org/paru.git
+#git clone https://aur.archlinux.org/paru.git
 git clone https://aur.archlinux.org/yay.git
 
-#git clone https://aur.archlinux.org/github-desktop-bin.git
-#cd ~/github-desktop-bin
+#cd paru
 #makepkg -si
-
-cd paru
-makepkg -si
 
 cd ~/yay
 makepkg -si

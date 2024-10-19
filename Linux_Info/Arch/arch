@@ -4,7 +4,7 @@
 # sudo systemctl enable ufw
 # sudo systemctl start ufw
 
-sudo cp /etc/pacman.d/mirrorlist mirrorlist.bak #make backup of mirrorlist
+sudo cp /etc/pacman.d/mirrorlist ~/Documents/mirrorlist.bak #make backup of mirrorlist
 
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist #reflector command to get fastest mirror server
 sudo pacman -Syu #update pacman database
@@ -18,7 +18,7 @@ sudo pacman -Syu #update pacman database
 #python-numpy python-matplotlib python-opencv python-scikit-learn python-pandas gnome-disks-utility
 #linux-headers bluez blueman bluez-utils power-profiles-daemon man-db base-devel
 
-sudo pacman -S --needed linux-headers bluez blueman bluez-utils intel-ucode gparted fzf mpv gimp python-pip
+sudo pacman -S --needed bluez blueman bluez-utils fzf mpv gimp python-pip libreoffice-still
 
 #echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
