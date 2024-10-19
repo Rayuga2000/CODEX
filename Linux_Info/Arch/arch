@@ -40,6 +40,10 @@ pip install numpy matplotlib pandas scikit-learn svglib opencv-python
 
 #Edit /boot/loader/entries/arch.conf so that the first initrd line is: initrd  /intel-ucode.img
 
+## Install Starship
+curl -sS https://starship.rs/install.sh | sh
+#eval "$(starship init bash)" --> add to .bashrc manually
+
 
 
 
