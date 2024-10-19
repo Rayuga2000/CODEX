@@ -1,7 +1,7 @@
-device=$1
+device=$1 #/dev/sdb or /sdc
 
 # change root
-arch-chroot /mnt
+# arch-chroot /mnt
 
 # MISC
 ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
@@ -25,5 +25,6 @@ systemctl enable NetworkManager
 grub-install $device #${boot:0:-1}
 grub-mkconfig -o /boot/grub/grub.cfg
 nano /etc/default/grub
+grub-mkconfig -o /boot/grub/grub.cfg
 
 exit
