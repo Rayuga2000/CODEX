@@ -1,4 +1,4 @@
-#### Dear Hiring Manager,
+#### Dear Hiring Manager,[[Resume Email 2]]
 
 I am a MCA student with a passion for coding & technology, seeking a position to leverage my technical skills and contribute to innovative software development projects.
 
